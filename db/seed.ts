@@ -309,10 +309,10 @@ const seedDB = async () => {
         db = PostgresDrizzle(env.DATABASE_URL, { schema });
     }
 
-    // await loadTeams(db);
+    await loadTeams(db);
     await loadMatches(db);
-    // await loadHistory(db);
-    // await loadStats(db);
+    await loadHistory(db);
+    await loadStats(db);
     console.log("✅ Seeding completed");
 
     process.exit(0);

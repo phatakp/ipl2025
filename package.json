@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "generate": "drizzle-kit generate",
+    "migrate": "tsx db/migrate.ts",
+    "build": "next build && bun generate && bun migrate",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier ./ --write",
-    "generate": "drizzle-kit generate",
     "drop": "drizzle-kit drop",
-    "migrate": "tsx db/migrate.ts",
     "seed": "tsx db/seed.ts",
     "studio": "drizzle-kit studio --verbose --config drizzle.config.ts"
   },
