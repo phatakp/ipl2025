@@ -1,0 +1,2 @@
+ALTER TABLE "predictions" ADD CONSTRAINT "amount_check" CHECK ("predictions"."amount">0);--> statement-breakpoint
+ALTER TABLE "profiles" ADD CONSTRAINT "doubles_check" CHECK ("profiles"."doubles_left">=0);

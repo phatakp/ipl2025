@@ -1,0 +1,1096 @@
+id,season,city,date,match_type,venue,team1,team2,winner,result,result_margin,target_runs,target_overs,super_over
+335982,2007/08,Bangalore,18-04-2008,League,M Chinnaswamy Stadium,RCB,KKR,KKR,runs,140,223,20,N
+335983,2007/08,Chandigarh,19-04-2008,League,"Punjab Cricket Association Stadium, Mohali",PBKS,CSK,CSK,runs,33,241,20,N
+335984,2007/08,Delhi,19-04-2008,League,Feroz Shah Kotla,DC,RR,DC,wickets,9,130,20,N
+335985,2007/08,Mumbai,20-04-2008,League,Wankhede Stadium,MI,RCB,RCB,wickets,5,166,20,N
+335986,2007/08,Kolkata,20-04-2008,League,Eden Gardens,KKR,SRH,KKR,wickets,5,111,20,N
+335987,2007/08,Jaipur,21-04-2008,League,Sawai Mansingh Stadium,RR,PBKS,RR,wickets,6,167,20,N
+335988,2007/08,Hyderabad,22-04-2008,League,"Rajiv Gandhi International Stadium, Uppal",SRH,DC,DC,wickets,9,143,20,N
+335989,2007/08,Chennai,23-04-2008,League,"MA Chidambaram Stadium, Chepauk",CSK,MI,CSK,runs,6,209,20,N
+335990,2007/08,Hyderabad,24-04-2008,League,"Rajiv Gandhi International Stadium, Uppal",SRH,RR,RR,wickets,3,215,20,N
+335991,2007/08,Chandigarh,25-04-2008,League,"Punjab Cricket Association Stadium, Mohali",PBKS,MI,PBKS,runs,66,183,20,N
+335992,2007/08,Bangalore,26-04-2008,League,M Chinnaswamy Stadium,RCB,RR,RR,wickets,7,136,20,N
+335993,2007/08,Chennai,26-04-2008,League,"MA Chidambaram Stadium, Chepauk",CSK,KKR,CSK,wickets,9,148,20,N
+335994,2007/08,Mumbai,27-04-2008,League,Dr DY Patil Sports Academy,MI,SRH,SRH,wickets,10,155,20,N
+335995,2007/08,Chandigarh,27-04-2008,League,"Punjab Cricket Association Stadium, Mohali",PBKS,DC,PBKS,wickets,4,159,20,N
+335996,2007/08,Bangalore,28-04-2008,League,M Chinnaswamy Stadium,RCB,CSK,CSK,runs,13,179,20,N
+335997,2007/08,Kolkata,29-04-2008,League,Eden Gardens,KKR,MI,MI,wickets,7,138,20,N
+335998,2007/08,Delhi,30-04-2008,League,Feroz Shah Kotla,DC,RCB,DC,runs,10,192,20,N
+335999,2007/08,Hyderabad,01-05-2008,League,"Rajiv Gandhi International Stadium, Uppal",SRH,PBKS,PBKS,wickets,7,165,20,N
+336000,2007/08,Jaipur,01-05-2008,League,Sawai Mansingh Stadium,RR,KKR,RR,runs,45,197,20,N
+336001,2007/08,Chennai,02-05-2008,League,"MA Chidambaram Stadium, Chepauk",CSK,DC,DC,wickets,8,170,20,N
+336003,2007/08,Chandigarh,03-05-2008,League,"Punjab Cricket Association Stadium, Mohali",PBKS,KKR,PBKS,runs,9,179,20,N
+336034,2007/08,Bangalore,03-05-2008,League,M Chinnaswamy Stadium,RCB,SRH,RCB,runs,3,157,20,N
+336004,2007/08,Mumbai,04-05-2008,League,Dr DY Patil Sports Academy,MI,DC,MI,runs,29,163,20,N
+336005,2007/08,Jaipur,04-05-2008,League,Sawai Mansingh Stadium,RR,CSK,RR,wickets,8,110,20,N
+336006,2007/08,Bangalore,05-05-2008,League,M Chinnaswamy Stadium,RCB,PBKS,PBKS,wickets,6,127,20,N
+336007,2007/08,Chennai,06-05-2008,League,"MA Chidambaram Stadium, Chepauk",CSK,SRH,SRH,wickets,7,145,20,N
+336008,2007/08,Mumbai,07-05-2008,League,Dr DY Patil Sports Academy,MI,RR,MI,wickets,7,104,20,N
+336009,2007/08,Delhi,08-05-2008,League,Feroz Shah Kotla,DC,CSK,CSK,wickets,4,188,20,N
+336010,2007/08,Kolkata,08-05-2008,League,Eden Gardens,KKR,RCB,KKR,runs,5,130,16,N
+336011,2007/08,Jaipur,09-05-2008,League,Sawai Mansingh Stadium,RR,SRH,RR,wickets,8,141,20,N
+336013,2007/08,Chennai,10-05-2008,League,"MA Chidambaram Stadium, Chepauk",CSK,PBKS,CSK,runs,18,182,20,N
+336014,2007/08,Hyderabad,11-05-2008,League,"Rajiv Gandhi International Stadium, Uppal",SRH,KKR,KKR,runs,23,205,20,N
+336015,2007/08,Jaipur,11-05-2008,League,Sawai Mansingh Stadium,RR,DC,RR,wickets,3,157,20,N
+336016,2007/08,Chandigarh,12-05-2008,League,"Punjab Cricket Association Stadium, Mohali",PBKS,RCB,PBKS,wickets,9,144,20,N
+336017,2007/08,Kolkata,13-05-2008,League,Eden Gardens,KKR,DC,KKR,runs,23,134,20,N
+336018,2007/08,Mumbai,14-05-2008,League,Wankhede Stadium,MI,CSK,MI,wickets,9,157,20,N
+336020,2007/08,Delhi,15-05-2008,League,Feroz Shah Kotla,DC,SRH,DC,runs,12,195,20,N
+336021,2007/08,Mumbai,16-05-2008,League,Wankhede Stadium,MI,KKR,MI,wickets,8,68,20,N
+336022,2007/08,Delhi,17-05-2008,League,Feroz Shah Kotla,DC,PBKS,PBKS,runs,6,89,8,N
+336023,2007/08,Jaipur,17-05-2008,League,Sawai Mansingh Stadium,RR,RCB,RR,runs,65,198,20,N
+336024,2007/08,Hyderabad,18-05-2008,League,"Rajiv Gandhi International Stadium, Uppal",SRH,MI,MI,runs,25,179,20,N
+336025,2007/08,Kolkata,18-05-2008,League,Eden Gardens,KKR,CSK,CSK,runs,3,53,8,N
+336026,2007/08,Bangalore,19-05-2008,League,M Chinnaswamy Stadium,RCB,DC,DC,wickets,5,155,20,N
+336027,2007/08,Kolkata,20-05-2008,League,Eden Gardens,KKR,RR,RR,wickets,6,148,20,N
+336028,2007/08,Mumbai,21-05-2008,League,Wankhede Stadium,MI,PBKS,PBKS,runs,1,190,20,N
+336029,2007/08,Chennai,21-05-2008,League,"MA Chidambaram Stadium, Chepauk",CSK,RCB,RCB,runs,14,127,20,N
+336031,2007/08,Chandigarh,23-05-2008,League,"Punjab Cricket Association Stadium, Mohali",PBKS,SRH,PBKS,wickets,6,176,20,N
+336032,2007/08,Delhi,24-05-2008,League,Feroz Shah Kotla,DC,MI,DC,wickets,5,177,20,N
+336033,2007/08,Chennai,24-05-2008,League,"MA Chidambaram Stadium, Chepauk",CSK,RR,RR,runs,10,212,20,N
+336002,2007/08,Hyderabad,25-05-2008,League,"Rajiv Gandhi International Stadium, Uppal",SRH,RCB,RCB,wickets,5,166,20,N
+336035,2007/08,Kolkata,25-05-2008,League,Eden Gardens,KKR,PBKS,KKR,wickets,3,175,20,N
+336036,2007/08,Jaipur,26-05-2008,League,Sawai Mansingh Stadium,RR,MI,RR,wickets,5,146,20,N
+336037,2007/08,Hyderabad,27-05-2008,League,"Rajiv Gandhi International Stadium, Uppal",SRH,CSK,CSK,wickets,7,148,20,N
+336012,2007/08,Bangalore,28-05-2008,League,M Chinnaswamy Stadium,RCB,MI,MI,wickets,9,123,18,N
+336019,2007/08,Chandigarh,28-05-2008,League,"Punjab Cricket Association Stadium, Mohali",PBKS,RR,PBKS,runs,41,222,20,N
+336038,2007/08,Mumbai,30-05-2008,Semi Final,Wankhede Stadium,DC,RR,RR,runs,105,193,20,N
+336039,2007/08,Mumbai,31-05-2008,Semi Final,Wankhede Stadium,CSK,PBKS,CSK,wickets,9,113,20,N
+336040,2007/08,Mumbai,01-06-2008,Final,Dr DY Patil Sports Academy,CSK,RR,RR,wickets,3,164,20,N
+392181,2009,Cape Town,18-04-2009,League,Newlands,CSK,MI,MI,runs,19,166,20,N
+392182,2009,Cape Town,18-04-2009,League,Newlands,RCB,RR,RCB,runs,75,134,20,N
+392183,2009,Cape Town,19-04-2009,League,Newlands,DC,PBKS,DC,wickets,10,54,6,N
+392184,2009,Cape Town,19-04-2009,League,Newlands,SRH,KKR,SRH,wickets,8,102,20,N
+392185,2009,Port Elizabeth,20-04-2009,League,St George's Park,RCB,CSK,CSK,runs,92,180,20,N
+392186,2009,Durban,21-04-2009,League,Kingsmead,PBKS,KKR,KKR,runs,11,69,9.2,N
+392188,2009,Cape Town,22-04-2009,League,Newlands,RCB,SRH,SRH,runs,24,185,20,N
+392189,2009,Durban,23-04-2009,League,Kingsmead,CSK,DC,DC,runs,9,190,20,N
+392190,2009,Cape Town,23-04-2009,League,Newlands,KKR,RR,RR,tie,NA,151,20,Y
+392191,2009,Durban,24-04-2009,League,Kingsmead,RCB,PBKS,PBKS,wickets,7,169,20,N
+392192,2009,Durban,25-04-2009,League,Kingsmead,SRH,MI,SRH,runs,12,169,20,N
+392194,2009,Port Elizabeth,26-04-2009,League,St George's Park,RCB,DC,DC,wickets,6,150,20,N
+392195,2009,Cape Town,26-04-2009,League,Newlands,PBKS,RR,PBKS,runs,27,140,20,N
+392196,2009,Durban,27-04-2009,League,Kingsmead,CSK,SRH,SRH,wickets,6,166,20,N
+392197,2009,Port Elizabeth,27-04-2009,League,St George's Park,KKR,MI,MI,runs,92,188,20,N
+392198,2009,Centurion,28-04-2009,League,SuperSport Park,DC,RR,RR,wickets,5,144,20,N
+392199,2009,Durban,29-04-2009,League,Kingsmead,RCB,KKR,RCB,wickets,5,140,20,N
+392200,2009,Durban,29-04-2009,League,Kingsmead,PBKS,MI,PBKS,runs,3,120,20,N
+392201,2009,Centurion,30-04-2009,League,SuperSport Park,SRH,DC,DC,wickets,6,149,20,N
+392202,2009,Centurion,30-04-2009,League,SuperSport Park,CSK,RR,CSK,runs,38,165,20,N
+392203,2009,East London,01-05-2009,League,Buffalo Park,KKR,MI,MI,runs,9,149,20,N
+392204,2009,Durban,01-05-2009,League,Kingsmead,RCB,PBKS,RCB,runs,8,146,20,N
+392205,2009,Port Elizabeth,02-05-2009,League,St George's Park,SRH,RR,RR,wickets,3,142,20,N
+392206,2009,Johannesburg,02-05-2009,League,New Wanderers Stadium,CSK,DC,CSK,runs,18,164,20,N
+392207,2009,Port Elizabeth,03-05-2009,League,St George's Park,PBKS,KKR,PBKS,wickets,6,154,20,N
+392208,2009,Johannesburg,03-05-2009,League,New Wanderers Stadium,RCB,MI,RCB,wickets,9,150,20,N
+392209,2009,East London,04-05-2009,League,Buffalo Park,CSK,SRH,CSK,runs,78,179,20,N
+392210,2009,Durban,05-05-2009,League,Kingsmead,PBKS,RR,RR,runs,78,212,20,N
+392211,2009,Durban,05-05-2009,League,Kingsmead,DC,KKR,DC,wickets,9,155,20,N
+392212,2009,Centurion,06-05-2009,League,SuperSport Park,SRH,MI,SRH,runs,19,146,20,N
+392213,2009,Centurion,07-05-2009,League,SuperSport Park,RCB,RR,RR,wickets,7,106,20,N
+392214,2009,Centurion,07-05-2009,League,SuperSport Park,CSK,PBKS,CSK,runs,12,187,18,N
+392215,2009,East London,08-05-2009,League,Buffalo Park,DC,MI,DC,wickets,7,117,20,N
+392216,2009,Kimberley,09-05-2009,League,De Beers Diamond Oval,SRH,PBKS,PBKS,wickets,3,169,20,N
+392217,2009,Kimberley,09-05-2009,League,De Beers Diamond Oval,CSK,RR,CSK,wickets,7,141,20,N
+392218,2009,Port Elizabeth,10-05-2009,League,St George's Park,RCB,MI,MI,runs,16,158,20,N
+392219,2009,Johannesburg,10-05-2009,League,New Wanderers Stadium,DC,KKR,DC,wickets,7,124,20,N
+392220,2009,Kimberley,11-05-2009,League,De Beers Diamond Oval,SRH,RR,SRH,runs,53,167,20,N
+392221,2009,Centurion,12-05-2009,League,SuperSport Park,RCB,KKR,RCB,wickets,6,174,20,N
+392222,2009,Centurion,12-05-2009,League,SuperSport Park,PBKS,MI,MI,wickets,8,120,20,N
+392223,2009,Durban,13-05-2009,League,Kingsmead,SRH,DC,DC,runs,12,174,20,N
+392224,2009,Durban,14-05-2009,League,Kingsmead,RCB,CSK,RCB,wickets,2,130,20,N
+392225,2009,Durban,14-05-2009,League,Kingsmead,MI,RR,RR,runs,2,146,20,N
+392226,2009,Bloemfontein,15-05-2009,League,OUTsurance Oval,DC,PBKS,PBKS,wickets,6,121,20,N
+392227,2009,Port Elizabeth,16-05-2009,League,St George's Park,CSK,MI,CSK,wickets,7,148,20,N
+392228,2009,Johannesburg,16-05-2009,League,New Wanderers Stadium,SRH,KKR,SRH,wickets,6,161,20,N
+392229,2009,Johannesburg,17-05-2009,League,New Wanderers Stadium,SRH,PBKS,PBKS,runs,1,135,20,N
+392230,2009,Bloemfontein,17-05-2009,League,OUTsurance Oval,DC,RR,DC,runs,14,151,20,N
+392231,2009,Centurion,18-05-2009,League,SuperSport Park,CSK,KKR,KKR,wickets,7,189,20,N
+392232,2009,Johannesburg,19-05-2009,League,New Wanderers Stadium,RCB,DC,RCB,wickets,7,135,20,N
+392233,2009,Durban,20-05-2009,League,Kingsmead,KKR,RR,KKR,wickets,4,102,20,N
+392234,2009,Durban,20-05-2009,League,Kingsmead,CSK,PBKS,CSK,runs,24,117,20,N
+392235,2009,Centurion,21-05-2009,League,SuperSport Park,DC,MI,DC,wickets,4,166,20,N
+392236,2009,Centurion,21-05-2009,League,SuperSport Park,RCB,SRH,RCB,runs,12,171,20,N
+392237,2009,Centurion,22-05-2009,Semi Final,SuperSport Park,DC,SRH,SRH,wickets,6,154,20,N
+392238,2009,Johannesburg,23-05-2009,Semi Final,New Wanderers Stadium,RCB,CSK,RCB,wickets,6,147,20,N
+392239,2009,Johannesburg,24-05-2009,Final,New Wanderers Stadium,RCB,SRH,SRH,runs,6,144,20,N
+419106,2009/10,Mumbai,12-03-2010,League,Dr DY Patil Sports Academy,SRH,KKR,KKR,runs,11,162,20,N
+419107,2009/10,Mumbai,13-03-2010,League,Brabourne Stadium,MI,RR,MI,runs,4,213,20,N
+419108,2009/10,Chandigarh,13-03-2010,League,"Punjab Cricket Association Stadium, Mohali",PBKS,DC,DC,wickets,5,143,20,N
+419109,2009/10,Kolkata,14-03-2010,League,Eden Gardens,KKR,RCB,KKR,wickets,7,136,20,N
+419110,2009/10,Chennai,14-03-2010,League,"MA Chidambaram Stadium, Chepauk",CSK,SRH,SRH,runs,31,191,20,N
+419111,2009/10,Ahmedabad,15-03-2010,League,"Sardar Patel Stadium, Motera",RR,DC,DC,wickets,6,142,20,N
+419112,2009/10,Bangalore,16-03-2010,League,M Chinnaswamy Stadium,RCB,PBKS,RCB,wickets,8,204,20,N
+419113,2009/10,Kolkata,16-03-2010,League,Eden Gardens,KKR,CSK,CSK,runs,55,165,20,N
+419114,2009/10,Delhi,17-03-2010,League,Feroz Shah Kotla,DC,MI,MI,runs,98,219,20,N
+419115,2009/10,Bangalore,18-03-2010,League,M Chinnaswamy Stadium,RCB,RR,RCB,wickets,10,93,20,N
+419116,2009/10,Delhi,19-03-2010,League,Feroz Shah Kotla,DC,CSK,CSK,wickets,5,186,20,N
+419117,2009/10,Cuttack,19-03-2010,League,Barabati Stadium,SRH,PBKS,SRH,runs,6,171,20,N
+419118,2009/10,Ahmedabad,20-03-2010,League,"Sardar Patel Stadium, Motera",RR,KKR,RR,runs,34,169,20,N
+419119,2009/10,Mumbai,20-03-2010,League,Brabourne Stadium,MI,RCB,RCB,wickets,7,152,20,N
+419120,2009/10,Cuttack,21-03-2010,League,Barabati Stadium,SRH,DC,SRH,runs,10,172,20,N
+419121,2009/10,Chennai,21-03-2010,League,"MA Chidambaram Stadium, Chepauk",CSK,PBKS,PBKS,tie,NA,137,20,Y
+419122,2009/10,Mumbai,22-03-2010,League,Brabourne Stadium,MI,KKR,MI,wickets,7,156,20,N
+419123,2009/10,Bangalore,23-03-2010,League,M Chinnaswamy Stadium,RCB,CSK,RCB,runs,36,172,20,N
+419124,2009/10,Chandigarh,24-03-2010,League,"Punjab Cricket Association Stadium, Mohali",PBKS,RR,RR,runs,31,184,20,N
+419125,2009/10,Mumbai,25-03-2010,League,"Brabourne Stadium, Mumbai",CSK,MI,MI,wickets,5,181,20,N
+419128,2009/10,Bangalore,25-03-2010,League,M Chinnaswamy Stadium,RCB,DC,DC,runs,17,184,20,N
+419126,2009/10,Ahmedabad,26-03-2010,League,"Sardar Patel Stadium, Motera",RR,SRH,RR,wickets,8,149,20,N
+419127,2009/10,Chandigarh,27-03-2010,League,"Punjab Cricket Association Stadium, Mohali",PBKS,KKR,KKR,runs,39,184,20,N
+419129,2009/10,Ahmedabad,28-03-2010,League,"Sardar Patel Stadium, Motera",RR,CSK,RR,runs,17,178,20,N
+419130,2009/10,Mumbai,28-03-2010,League,Dr DY Patil Sports Academy,SRH,MI,MI,runs,41,173,20,N
+419131,2009/10,Delhi,29-03-2010,League,Feroz Shah Kotla,DC,KKR,DC,runs,40,178,20,N
+419132,2009/10,Mumbai,30-03-2010,League,Brabourne Stadium,MI,PBKS,MI,wickets,4,164,20,N
+419133,2009/10,Chennai,31-03-2010,League,"MA Chidambaram Stadium, Chepauk",CSK,RCB,CSK,wickets,5,162,20,N
+419134,2009/10,Delhi,31-03-2010,League,Feroz Shah Kotla,DC,RR,DC,runs,67,189,20,N
+419135,2009/10,Kolkata,01-04-2010,League,Eden Gardens,KKR,SRH,KKR,runs,24,182,20,N
+419136,2009/10,Chandigarh,02-04-2010,League,"Punjab Cricket Association Stadium, Mohali",PBKS,RCB,RCB,wickets,6,182,20,N
+419137,2009/10,Chennai,03-04-2010,League,"MA Chidambaram Stadium, Chepauk",CSK,RR,CSK,runs,23,247,20,N
+419138,2009/10,Mumbai,03-04-2010,League,Brabourne Stadium,MI,SRH,MI,runs,63,179,20,N
+419139,2009/10,Kolkata,04-04-2010,League,Eden Gardens,KKR,PBKS,PBKS,wickets,8,201,20,N
+419140,2009/10,Delhi,04-04-2010,League,Feroz Shah Kotla,DC,RCB,DC,runs,37,185,20,N
+419141,2009/10,Nagpur,05-04-2010,League,"Vidarbha Cricket Association Stadium, Jamtha",SRH,RR,RR,runs,2,160,20,N
+419142,2009/10,Chennai,06-04-2010,League,"MA Chidambaram Stadium, Chepauk",CSK,MI,CSK,runs,24,166,20,N
+419143,2009/10,Jaipur,07-04-2010,League,Sawai Mansingh Stadium,RR,PBKS,RR,wickets,9,154,20,N
+419144,2009/10,Kolkata,07-04-2010,League,Eden Gardens,KKR,DC,KKR,runs,14,182,20,N
+419145,2009/10,Bangalore,08-04-2010,League,M Chinnaswamy Stadium,RCB,SRH,SRH,wickets,7,185,20,N
+419146,2009/10,Chandigarh,09-04-2010,League,"Punjab Cricket Association Stadium, Mohali",PBKS,MI,PBKS,wickets,6,155,20,N
+419147,2009/10,Nagpur,10-04-2010,League,"Vidarbha Cricket Association Stadium, Jamtha",SRH,CSK,SRH,wickets,6,139,20,N
+419148,2009/10,Bangalore,10-04-2010,League,M Chinnaswamy Stadium,RCB,KKR,RCB,wickets,7,161,20,N
+419149,2009/10,Delhi,11-04-2010,League,Feroz Shah Kotla,DC,PBKS,PBKS,wickets,7,112,20,N
+419150,2009/10,Jaipur,11-04-2010,League,Sawai Mansingh Stadium,RR,MI,MI,runs,37,175,20,N
+419151,2009/10,Nagpur,12-04-2010,League,"Vidarbha Cricket Association Stadium, Jamtha",SRH,RCB,SRH,runs,13,152,20,N
+419152,2009/10,Mumbai,13-04-2010,League,Brabourne Stadium,MI,DC,MI,runs,39,184,20,N
+419153,2009/10,Chennai,13-04-2010,League,"MA Chidambaram Stadium, Chepauk",CSK,KKR,CSK,wickets,9,140,20,N
+419154,2009/10,Jaipur,14-04-2010,League,Sawai Mansingh Stadium,RR,RCB,RCB,wickets,5,131,20,N
+419155,2009/10,Chennai,15-04-2010,League,"MA Chidambaram Stadium, Chepauk",CSK,DC,DC,wickets,6,113,20,N
+419156,2009/10,Dharamsala,16-04-2010,League,Himachal Pradesh Cricket Association Stadium,PBKS,SRH,SRH,wickets,5,175,20,N
+419157,2009/10,Bangalore,17-04-2010,League,M Chinnaswamy Stadium,RCB,MI,MI,runs,57,192,20,N
+419158,2009/10,Kolkata,17-04-2010,League,Eden Gardens,KKR,RR,KKR,wickets,8,133,20,N
+419159,2009/10,Dharamsala,18-04-2010,League,Himachal Pradesh Cricket Association Stadium,PBKS,CSK,CSK,wickets,6,193,20,N
+419160,2009/10,Delhi,18-04-2010,League,Feroz Shah Kotla,DC,SRH,SRH,runs,11,146,20,N
+419161,2009/10,Kolkata,19-04-2010,League,Eden Gardens,KKR,MI,KKR,wickets,9,134,20,N
+419162,2009/10,Mumbai,21-04-2010,Semi Final,Dr DY Patil Sports Academy,RCB,MI,MI,runs,35,185,20,N
+419163,2009/10,Mumbai,22-04-2010,Semi Final,Dr DY Patil Sports Academy,CSK,SRH,CSK,runs,38,143,20,N
+419164,2009/10,Mumbai,24-04-2010,3rd Place Play-Off,Dr DY Patil Sports Academy,RCB,SRH,RCB,wickets,9,83,20,N
+419165,2009/10,Mumbai,25-04-2010,Final,Dr DY Patil Sports Academy,CSK,MI,CSK,runs,22,169,20,N
+501198,2011,Chennai,08-04-2011,League,"MA Chidambaram Stadium, Chepauk",CSK,KKR,CSK,runs,2,154,20,N
+501199,2011,Hyderabad,09-04-2011,League,"Rajiv Gandhi International Stadium, Uppal",SRH,RR,RR,wickets,8,138,20,N
+501200,2011,Kochi,09-04-2011,League,Nehru Stadium,Kochi Tuskers Kerala,RCB,RCB,wickets,6,162,20,N
+501201,2011,Delhi,10-04-2011,League,Feroz Shah Kotla,DC,MI,MI,wickets,8,96,20,N
+501202,2011,Mumbai,10-04-2011,League,Dr DY Patil Sports Academy,Pune Warriors,PBKS,Pune Warriors,wickets,7,113,20,N
+501203,2011,Kolkata,11-04-2011,League,Eden Gardens,KKR,SRH,KKR,runs,9,164,20,N
+501204,2011,Jaipur,12-04-2011,League,Sawai Mansingh Stadium,RR,DC,RR,wickets,6,152,20,N
+501205,2011,Bangalore,12-04-2011,League,M Chinnaswamy Stadium,RCB,MI,MI,wickets,9,141,20,N
+501206,2011,Chandigarh,13-04-2011,League,"Punjab Cricket Association Stadium, Mohali",PBKS,CSK,PBKS,wickets,6,189,20,N
+501207,2011,Mumbai,13-04-2011,League,Dr DY Patil Sports Academy,Pune Warriors,Kochi Tuskers Kerala,Pune Warriors,wickets,4,149,20,N
+501208,2011,Hyderabad,14-04-2011,League,"Rajiv Gandhi International Stadium, Uppal",SRH,RCB,SRH,runs,33,176,20,N
+501209,2011,Jaipur,15-04-2011,League,Sawai Mansingh Stadium,RR,KKR,KKR,wickets,9,160,20,N
+501210,2011,Mumbai,15-04-2011,League,Wankhede Stadium,MI,Kochi Tuskers Kerala,Kochi Tuskers Kerala,wickets,8,183,20,N
+501211,2011,Chennai,16-04-2011,League,"MA Chidambaram Stadium, Chepauk",CSK,RCB,CSK,runs,21,184,20,N
+501212,2011,Hyderabad,16-04-2011,League,"Rajiv Gandhi International Stadium, Uppal",SRH,PBKS,PBKS,wickets,8,166,20,N
+501213,2011,Mumbai,17-04-2011,League,Dr DY Patil Sports Academy,Pune Warriors,DC,DC,wickets,3,188,20,N
+501214,2011,Kolkata,17-04-2011,League,Eden Gardens,KKR,RR,KKR,wickets,8,82,20,N
+501215,2011,Kochi,18-04-2011,League,Nehru Stadium,Kochi Tuskers Kerala,CSK,Kochi Tuskers Kerala,wickets,7,135,17,N
+501216,2011,Delhi,19-04-2011,League,Feroz Shah Kotla,DC,SRH,SRH,runs,16,169,20,N
+501218,2011,Mumbai,20-04-2011,League,Wankhede Stadium,MI,Pune Warriors,MI,wickets,7,119,20,N
+501219,2011,Kolkata,20-04-2011,League,Eden Gardens,KKR,Kochi Tuskers Kerala,Kochi Tuskers Kerala,runs,6,133,20,N
+501220,2011,Chandigarh,21-04-2011,League,"Punjab Cricket Association Stadium, Mohali",PBKS,RR,PBKS,runs,48,196,20,N
+501221,2011,Mumbai,22-04-2011,League,Wankhede Stadium,MI,CSK,MI,runs,8,165,20,N
+501222,2011,Kolkata,22-04-2011,League,Eden Gardens,KKR,RCB,RCB,wickets,9,172,20,N
+501223,2011,Delhi,23-04-2011,League,Feroz Shah Kotla,DC,PBKS,DC,runs,29,232,20,N
+501224,2011,Hyderabad,24-04-2011,League,"Rajiv Gandhi International Stadium, Uppal",SRH,MI,MI,runs,37,173,20,N
+501225,2011,Jaipur,24-04-2011,League,Sawai Mansingh Stadium,RR,Kochi Tuskers Kerala,RR,wickets,8,110,20,N
+501226,2011,Chennai,25-04-2011,League,"MA Chidambaram Stadium, Chepauk",CSK,Pune Warriors,CSK,runs,25,143,20,N
+501227,2011,Delhi,26-04-2011,League,Feroz Shah Kotla,DC,RCB,RCB,wickets,3,161,20,N
+501228,2011,Mumbai,27-04-2011,League,Dr DY Patil Sports Academy,Pune Warriors,CSK,CSK,wickets,8,142,20,N
+501229,2011,Kochi,27-04-2011,League,Nehru Stadium,Kochi Tuskers Kerala,SRH,SRH,runs,55,130,20,N
+501230,2011,Delhi,28-04-2011,League,Feroz Shah Kotla,DC,KKR,KKR,runs,17,149,20,N
+501231,2011,Jaipur,29-04-2011,League,Sawai Mansingh Stadium,RR,MI,RR,wickets,7,95,20,N
+501232,2011,Bangalore,29-04-2011,League,M Chinnaswamy Stadium,RCB,Pune Warriors,RCB,runs,26,182,20,N
+501233,2011,Kochi,30-04-2011,League,Nehru Stadium,Kochi Tuskers Kerala,DC,DC,runs,38,158,20,N
+501234,2011,Kolkata,30-04-2011,League,Eden Gardens,KKR,PBKS,KKR,wickets,8,120,20,N
+501235,2011,Jaipur,01-05-2011,League,Sawai Mansingh Stadium,RR,Pune Warriors,RR,wickets,6,144,20,N
+501236,2011,Chennai,01-05-2011,League,"MA Chidambaram Stadium, Chepauk",CSK,SRH,CSK,runs,19,166,20,N
+501237,2011,Mumbai,02-05-2011,League,Wankhede Stadium,MI,PBKS,MI,runs,23,160,20,N
+501238,2011,Delhi,02-05-2011,League,Feroz Shah Kotla,DC,Kochi Tuskers Kerala,Kochi Tuskers Kerala,wickets,7,141,20,N
+501239,2011,Hyderabad,03-05-2011,League,"Rajiv Gandhi International Stadium, Uppal",SRH,KKR,KKR,runs,20,170,20,N
+501240,2011,Chennai,04-05-2011,League,"MA Chidambaram Stadium, Chepauk",CSK,RR,CSK,wickets,8,148,20,N
+501241,2011,Mumbai,04-05-2011,League,Dr DY Patil Sports Academy,Pune Warriors,MI,MI,runs,21,161,20,N
+501242,2011,Kochi,05-05-2011,League,Nehru Stadium,Kochi Tuskers Kerala,KKR,Kochi Tuskers Kerala,runs,17,157,20,N
+501243,2011,Hyderabad,05-05-2011,League,"Rajiv Gandhi International Stadium, Uppal",SRH,DC,DC,wickets,4,176,20,N
+501244,2011,Bangalore,06-05-2011,League,M Chinnaswamy Stadium,RCB,PBKS,RCB,runs,85,206,20,N
+501245,2011,Kolkata,07-05-2011,League,Eden Gardens,KKR,CSK,KKR,runs,10,52,10,N
+501246,2011,Mumbai,07-05-2011,League,Wankhede Stadium,MI,DC,MI,runs,32,179,20,N
+501247,2011,Bangalore,08-05-2011,League,M Chinnaswamy Stadium,RCB,Kochi Tuskers Kerala,RCB,wickets,9,126,20,N
+501248,2011,Chandigarh,08-05-2011,League,"Punjab Cricket Association Stadium, Mohali",PBKS,Pune Warriors,Pune Warriors,wickets,5,120,20,N
+501249,2011,Jaipur,09-05-2011,League,Sawai Mansingh Stadium,RR,CSK,CSK,runs,63,197,20,N
+501250,2011,Hyderabad,10-05-2011,League,"Rajiv Gandhi International Stadium, Uppal",SRH,Pune Warriors,Pune Warriors,wickets,6,137,20,N
+501251,2011,Chandigarh,10-05-2011,League,"Punjab Cricket Association Stadium, Mohali",PBKS,MI,PBKS,runs,76,164,20,N
+501252,2011,Jaipur,11-05-2011,League,Sawai Mansingh Stadium,RR,RCB,RCB,wickets,9,147,20,N
+501253,2011,Chennai,12-05-2011,League,"MA Chidambaram Stadium, Chepauk",CSK,DC,CSK,runs,18,177,20,N
+501254,2011,Indore,13-05-2011,League,Holkar Cricket Stadium,Kochi Tuskers Kerala,PBKS,PBKS,wickets,6,179,20,N
+501255,2011,Bangalore,14-05-2011,League,M Chinnaswamy Stadium,RCB,KKR,RCB,wickets,4,102,13,N
+501256,2011,Mumbai,14-05-2011,League,Wankhede Stadium,MI,SRH,SRH,runs,10,136,20,N
+501257,2011,Dharamsala,15-05-2011,League,Himachal Pradesh Cricket Association Stadium,PBKS,DC,PBKS,runs,29,171,20,N
+501258,2011,Indore,15-05-2011,League,Holkar Cricket Stadium,Kochi Tuskers Kerala,RR,Kochi Tuskers Kerala,wickets,8,98,20,N
+501259,2011,Mumbai,16-05-2011,League,Dr DY Patil Sports Academy,Pune Warriors,SRH,SRH,wickets,6,137,20,N
+501260,2011,Dharamsala,17-05-2011,League,Himachal Pradesh Cricket Association Stadium,PBKS,RCB,PBKS,runs,111,233,20,N
+501261,2011,Chennai,18-05-2011,League,"MA Chidambaram Stadium, Chepauk",CSK,Kochi Tuskers Kerala,CSK,runs,11,153,20,N
+501262,2011,Mumbai,19-05-2011,League,Dr DY Patil Sports Academy,Pune Warriors,KKR,KKR,wickets,7,119,20,N
+501263,2011,Mumbai,20-05-2011,League,Wankhede Stadium,MI,RR,RR,wickets,10,134,20,N
+501264,2011,Dharamsala,21-05-2011,League,Himachal Pradesh Cricket Association Stadium,PBKS,SRH,SRH,runs,82,199,20,N
+501265,2011,Delhi,21-05-2011,League,Feroz Shah Kotla,DC,Pune Warriors,NA,no result,NA,NA,NA,N
+501266,2011,Bangalore,22-05-2011,League,M Chinnaswamy Stadium,RCB,CSK,RCB,wickets,8,129,20,N
+501267,2011,Kolkata,22-05-2011,League,Eden Gardens,KKR,MI,MI,wickets,5,176,20,N
+501268,2011,Mumbai,24-05-2011,Qualifier 1,Wankhede Stadium,RCB,CSK,CSK,wickets,6,176,20,N
+501269,2011,Mumbai,25-05-2011,Elimination Final,Wankhede Stadium,MI,KKR,MI,wickets,4,148,20,N
+501270,2011,Chennai,27-05-2011,Qualifier 2,"MA Chidambaram Stadium, Chepauk",RCB,MI,RCB,runs,43,186,20,N
+501271,2011,Chennai,28-05-2011,Final,"MA Chidambaram Stadium, Chepauk",CSK,RCB,CSK,runs,58,206,20,N
+548306,2012,Chennai,04-04-2012,League,"MA Chidambaram Stadium, Chepauk",CSK,MI,MI,wickets,8,113,20,N
+548307,2012,Kolkata,05-04-2012,League,Eden Gardens,KKR,DC,DC,wickets,8,98,12,N
+548308,2012,Mumbai,06-04-2012,League,Wankhede Stadium,MI,Pune Warriors,Pune Warriors,runs,28,130,20,N
+548309,2012,Jaipur,06-04-2012,League,Sawai Mansingh Stadium,RR,PBKS,RR,runs,31,192,20,N
+548310,2012,Bangalore,07-04-2012,League,M Chinnaswamy Stadium,RCB,DC,RCB,runs,20,158,20,N
+548311,2012,Visakhapatnam,07-04-2012,League,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,SRH,CSK,CSK,runs,74,194,20,N
+548312,2012,Jaipur,08-04-2012,League,Sawai Mansingh Stadium,RR,KKR,RR,runs,22,165,20,N
+548313,2012,Pune,08-04-2012,League,Subrata Roy Sahara Stadium,Pune Warriors,PBKS,Pune Warriors,runs,22,167,20,N
+548314,2012,Visakhapatnam,09-04-2012,League,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,SRH,MI,MI,wickets,5,139,20,N
+548315,2012,Bangalore,10-04-2012,League,M Chinnaswamy Stadium,RCB,KKR,KKR,runs,42,166,20,N
+548316,2012,Delhi,10-04-2012,League,Feroz Shah Kotla,DC,CSK,DC,wickets,8,111,20,N
+548317,2012,Mumbai,11-04-2012,League,Wankhede Stadium,MI,RR,MI,runs,27,198,20,N
+548318,2012,Chennai,12-04-2012,League,"MA Chidambaram Stadium, Chepauk",CSK,RCB,CSK,wickets,5,206,20,N
+548319,2012,Chandigarh,12-04-2012,League,"Punjab Cricket Association Stadium, Mohali",PBKS,Pune Warriors,PBKS,wickets,7,116,20,N
+548320,2012,Kolkata,13-04-2012,League,Eden Gardens,KKR,RR,KKR,wickets,5,132,20,N
+548322,2012,Pune,14-04-2012,League,Subrata Roy Sahara Stadium,Pune Warriors,CSK,Pune Warriors,wickets,7,156,20,N
+548323,2012,Kolkata,15-04-2012,League,Eden Gardens,KKR,PBKS,PBKS,runs,2,135,20,N
+548324,2012,Bangalore,15-04-2012,League,M Chinnaswamy Stadium,RCB,RR,RR,runs,59,196,20,N
+548325,2012,Mumbai,16-04-2012,League,Wankhede Stadium,MI,DC,DC,wickets,7,93,20,N
+548326,2012,Jaipur,17-04-2012,League,Sawai Mansingh Stadium,RR,SRH,RR,wickets,5,197,20,N
+548327,2012,Bangalore,17-04-2012,League,M Chinnaswamy Stadium,RCB,Pune Warriors,RCB,wickets,6,183,20,N
+548328,2012,Chandigarh,18-04-2012,League,"Punjab Cricket Association Stadium, Mohali",PBKS,KKR,KKR,wickets,8,125,20,N
+548321,2012,Delhi,19-04-2012,League,Feroz Shah Kotla,DC,SRH,DC,wickets,5,158,20,N
+548330,2012,Chennai,19-04-2012,League,"MA Chidambaram Stadium, Chepauk",CSK,Pune Warriors,CSK,runs,13,165,20,N
+548331,2012,Chandigarh,20-04-2012,League,"Punjab Cricket Association Stadium, Mohali",PBKS,RCB,RCB,wickets,5,164,20,N
+548332,2012,Chennai,21-04-2012,League,"MA Chidambaram Stadium, Chepauk",CSK,RR,CSK,wickets,7,147,20,N
+548333,2012,Delhi,21-04-2012,League,Feroz Shah Kotla,DC,Pune Warriors,Pune Warriors,runs,20,193,20,N
+548334,2012,Mumbai,22-04-2012,League,Wankhede Stadium,MI,PBKS,PBKS,wickets,6,164,20,N
+548335,2012,Cuttack,22-04-2012,League,Barabati Stadium,SRH,KKR,KKR,wickets,5,127,20,N
+548336,2012,Jaipur,23-04-2012,League,Sawai Mansingh Stadium,RR,RCB,RCB,runs,46,190,20,N
+548337,2012,Pune,24-04-2012,League,Subrata Roy Sahara Stadium,Pune Warriors,DC,DC,wickets,8,147,20,N
+548339,2012,Chandigarh,25-04-2012,League,"Punjab Cricket Association Stadium, Mohali",PBKS,MI,MI,wickets,4,169,20,N
+548341,2012,Pune,26-04-2012,League,Subrata Roy Sahara Stadium,Pune Warriors,SRH,SRH,runs,18,178,20,N
+548342,2012,Delhi,27-04-2012,League,Feroz Shah Kotla,DC,MI,DC,runs,37,208,20,N
+548343,2012,Chennai,28-04-2012,League,"MA Chidambaram Stadium, Chepauk",CSK,PBKS,PBKS,runs,7,157,20,N
+548344,2012,Kolkata,28-04-2012,League,Eden Gardens,KKR,RCB,KKR,runs,47,191,20,N
+548345,2012,Delhi,29-04-2012,League,Feroz Shah Kotla,DC,RR,DC,runs,1,153,20,N
+548346,2012,Mumbai,29-04-2012,League,Wankhede Stadium,MI,SRH,MI,wickets,5,101,20,N
+548347,2012,Chennai,30-04-2012,League,"MA Chidambaram Stadium, Chepauk",CSK,KKR,KKR,wickets,5,140,20,N
+548348,2012,Cuttack,01-05-2012,League,Barabati Stadium,SRH,Pune Warriors,SRH,runs,13,187,20,N
+548349,2012,Jaipur,01-05-2012,League,Sawai Mansingh Stadium,RR,DC,DC,wickets,6,142,20,N
+548350,2012,Bangalore,02-05-2012,League,M Chinnaswamy Stadium,RCB,PBKS,PBKS,wickets,4,159,20,N
+548351,2012,Pune,03-05-2012,League,Subrata Roy Sahara Stadium,Pune Warriors,MI,MI,runs,1,121,20,N
+548352,2012,Chennai,04-05-2012,League,"MA Chidambaram Stadium, Chepauk",CSK,SRH,CSK,runs,10,161,20,N
+548353,2012,Kolkata,05-05-2012,League,Eden Gardens,KKR,Pune Warriors,KKR,runs,7,151,20,N
+548354,2012,Chandigarh,05-05-2012,League,"Punjab Cricket Association Stadium, Mohali",PBKS,RR,RR,runs,43,178,20,N
+548355,2012,Mumbai,06-05-2012,League,Wankhede Stadium,MI,CSK,MI,wickets,2,174,20,N
+548356,2012,Bangalore,06-05-2012,League,M Chinnaswamy Stadium,RCB,SRH,RCB,wickets,5,182,20,N
+548357,2012,Delhi,07-05-2012,League,Feroz Shah Kotla,DC,KKR,KKR,wickets,6,154,20,N
+548358,2012,Pune,08-05-2012,League,Subrata Roy Sahara Stadium,Pune Warriors,RR,RR,wickets,7,126,20,N
+548359,2012,Hyderabad,08-05-2012,League,"Rajiv Gandhi International Stadium, Uppal",SRH,PBKS,PBKS,runs,25,171,20,N
+548360,2012,Mumbai,09-05-2012,League,Wankhede Stadium,MI,RCB,RCB,wickets,9,142,20,N
+548329,2012,Hyderabad,10-05-2012,League,"Rajiv Gandhi International Stadium, Uppal",SRH,DC,DC,wickets,9,188,20,N
+548361,2012,Jaipur,10-05-2012,League,Sawai Mansingh Stadium,RR,CSK,CSK,wickets,4,127,20,N
+548362,2012,Pune,11-05-2012,League,Subrata Roy Sahara Stadium,Pune Warriors,RCB,RCB,runs,35,174,20,N
+548363,2012,Kolkata,12-05-2012,League,Eden Gardens,KKR,MI,MI,runs,27,183,20,N
+548364,2012,Chennai,12-05-2012,League,"MA Chidambaram Stadium, Chepauk",CSK,DC,CSK,wickets,9,115,20,N
+548365,2012,Jaipur,13-05-2012,League,Sawai Mansingh Stadium,RR,Pune Warriors,RR,runs,45,171,20,N
+548366,2012,Chandigarh,13-05-2012,League,"Punjab Cricket Association Stadium, Mohali",PBKS,SRH,PBKS,wickets,4,191,20,N
+548367,2012,Bangalore,14-05-2012,League,M Chinnaswamy Stadium,RCB,MI,MI,wickets,5,172,20,N
+548368,2012,Kolkata,14-05-2012,League,Eden Gardens,KKR,CSK,CSK,wickets,5,159,20,N
+548369,2012,Delhi,15-05-2012,League,Feroz Shah Kotla,DC,PBKS,DC,wickets,5,137,20,N
+548370,2012,Mumbai,16-05-2012,League,Wankhede Stadium,MI,KKR,KKR,runs,32,141,20,N
+548371,2012,Dharamsala,17-05-2012,League,Himachal Pradesh Cricket Association Stadium,PBKS,CSK,PBKS,wickets,6,121,20,N
+548372,2012,Delhi,17-05-2012,League,Feroz Shah Kotla,DC,RCB,RCB,runs,21,216,20,N
+548373,2012,Hyderabad,18-05-2012,League,"Rajiv Gandhi International Stadium, Uppal",SRH,RR,SRH,wickets,5,127,20,N
+548374,2012,Dharamsala,19-05-2012,League,Himachal Pradesh Cricket Association Stadium,PBKS,DC,DC,wickets,6,142,20,N
+548375,2012,Pune,19-05-2012,League,Subrata Roy Sahara Stadium,Pune Warriors,KKR,KKR,runs,34,137,20,N
+548376,2012,Hyderabad,20-05-2012,League,"Rajiv Gandhi International Stadium, Uppal",SRH,RCB,SRH,runs,9,133,20,N
+548377,2012,Jaipur,20-05-2012,League,Sawai Mansingh Stadium,RR,MI,MI,wickets,10,163,20,N
+548378,2012,Pune,22-05-2012,Qualifier 1,Subrata Roy Sahara Stadium,DC,KKR,KKR,runs,18,163,20,N
+548379,2012,Bangalore,23-05-2012,Elimination Final,M Chinnaswamy Stadium,CSK,MI,CSK,runs,38,188,20,N
+548380,2012,Chennai,25-05-2012,Qualifier 2,"MA Chidambaram Stadium, Chepauk",DC,CSK,CSK,runs,86,223,20,N
+548381,2012,Chennai,27-05-2012,Final,"MA Chidambaram Stadium, Chepauk",KKR,CSK,KKR,wickets,5,191,20,N
+597998,2013,Kolkata,03-04-2013,League,Eden Gardens,KKR,DC,KKR,wickets,6,129,20,N
+597999,2013,Bangalore,04-04-2013,League,M Chinnaswamy Stadium,RCB,MI,RCB,runs,2,157,20,N
+598000,2013,Hyderabad,05-04-2013,League,"Rajiv Gandhi International Stadium, Uppal",SRH,Pune Warriors,SRH,runs,22,127,20,N
+598001,2013,Delhi,06-04-2013,League,Feroz Shah Kotla,DC,RR,RR,runs,5,166,20,N
+598002,2013,Chennai,06-04-2013,League,"MA Chidambaram Stadium, Chepauk",CSK,MI,MI,runs,9,149,20,N
+598003,2013,Pune,07-04-2013,League,Subrata Roy Sahara Stadium,Pune Warriors,PBKS,PBKS,wickets,8,100,20,N
+598004,2013,Hyderabad,07-04-2013,League,"Rajiv Gandhi International Stadium, Uppal",SRH,RCB,SRH,tie,NA,131,20,Y
+598005,2013,Jaipur,08-04-2013,League,Sawai Mansingh Stadium,RR,KKR,RR,runs,19,145,20,N
+598006,2013,Mumbai,09-04-2013,League,Wankhede Stadium,MI,DC,MI,runs,44,210,20,N
+598048,2013,Bangalore,09-04-2013,League,M Chinnaswamy Stadium,RCB,SRH,RCB,wickets,7,162,20,N
+598007,2013,Chandigarh,10-04-2013,League,"Punjab Cricket Association Stadium, Mohali",PBKS,CSK,CSK,wickets,10,139,20,N
+598008,2013,Bangalore,11-04-2013,League,M Chinnaswamy Stadium,RCB,KKR,RCB,wickets,8,155,20,N
+598009,2013,Pune,11-04-2013,League,Subrata Roy Sahara Stadium,Pune Warriors,RR,Pune Warriors,wickets,7,146,20,N
+598010,2013,Delhi,12-04-2013,League,Feroz Shah Kotla,DC,SRH,SRH,wickets,3,115,20,N
+598011,2013,Mumbai,13-04-2013,League,Wankhede Stadium,MI,Pune Warriors,MI,runs,41,184,20,N
+598012,2013,Chennai,13-04-2013,League,"MA Chidambaram Stadium, Chepauk",CSK,RCB,CSK,wickets,4,166,20,N
+598013,2013,Kolkata,14-04-2013,League,Eden Gardens,KKR,SRH,KKR,runs,48,181,20,N
+598014,2013,Jaipur,14-04-2013,League,Sawai Mansingh Stadium,RR,PBKS,RR,wickets,6,125,20,N
+598015,2013,Chennai,15-04-2013,League,"MA Chidambaram Stadium, Chepauk",CSK,Pune Warriors,Pune Warriors,runs,24,160,20,N
+598016,2013,Chandigarh,16-04-2013,League,"Punjab Cricket Association Stadium, Mohali",PBKS,KKR,PBKS,runs,4,158,20,N
+598017,2013,Bangalore,16-04-2013,League,M Chinnaswamy Stadium,RCB,DC,RCB,tie,NA,153,20,Y
+598018,2013,Pune,17-04-2013,League,Maharashtra Cricket Association Stadium,Pune Warriors,SRH,SRH,runs,11,120,20,N
+598019,2013,Jaipur,17-04-2013,League,Sawai Mansingh Stadium,RR,MI,RR,runs,87,180,20,N
+598020,2013,Delhi,18-04-2013,League,Feroz Shah Kotla,DC,CSK,CSK,runs,86,170,20,N
+598021,2013,Hyderabad,19-04-2013,League,"Rajiv Gandhi International Stadium, Uppal",SRH,PBKS,SRH,wickets,5,124,20,N
+598022,2013,Kolkata,20-04-2013,League,Eden Gardens,KKR,CSK,CSK,wickets,4,120,20,N
+598023,2013,Bangalore,20-04-2013,League,M Chinnaswamy Stadium,RCB,RR,RCB,wickets,7,118,20,N
+598024,2013,Delhi,21-04-2013,League,Feroz Shah Kotla,DC,MI,DC,wickets,9,162,20,N
+598025,2013,Chandigarh,21-04-2013,League,"Punjab Cricket Association Stadium, Mohali",PBKS,Pune Warriors,PBKS,wickets,7,186,20,N
+598026,2013,Chennai,22-04-2013,League,"MA Chidambaram Stadium, Chepauk",CSK,RR,CSK,wickets,5,186,20,N
+598027,2013,Bangalore,23-04-2013,League,M Chinnaswamy Stadium,RCB,Pune Warriors,RCB,runs,130,264,20,N
+598059,2013,Delhi,23-04-2013,League,Feroz Shah Kotla,DC,PBKS,PBKS,wickets,5,121,20,N
+598029,2013,Kolkata,24-04-2013,League,Eden Gardens,KKR,MI,MI,wickets,5,160,20,N
+598030,2013,Chennai,25-04-2013,League,"MA Chidambaram Stadium, Chepauk",CSK,SRH,CSK,wickets,5,160,20,N
+598031,2013,Kolkata,26-04-2013,League,Eden Gardens,KKR,PBKS,KKR,wickets,6,150,20,N
+598032,2013,Jaipur,27-04-2013,League,Sawai Mansingh Stadium,RR,SRH,RR,wickets,8,145,20,N
+598033,2013,Mumbai,27-04-2013,League,Wankhede Stadium,MI,RCB,MI,runs,58,195,20,N
+598034,2013,Chennai,28-04-2013,League,"MA Chidambaram Stadium, Chepauk",CSK,KKR,CSK,runs,14,201,20,N
+598035,2013,Raipur,28-04-2013,League,Shaheed Veer Narayan Singh International Stadium,DC,Pune Warriors,DC,runs,15,165,20,N
+598036,2013,Jaipur,29-04-2013,League,Sawai Mansingh Stadium,RR,RCB,RR,wickets,4,172,20,N
+598037,2013,Mumbai,29-04-2013,League,Wankhede Stadium,MI,PBKS,MI,runs,4,175,20,N
+598038,2013,Pune,30-04-2013,League,Subrata Roy Sahara Stadium,Pune Warriors,CSK,CSK,runs,37,165,20,N
+598039,2013,Hyderabad,01-05-2013,League,"Rajiv Gandhi International Stadium, Uppal",SRH,MI,SRH,wickets,7,130,20,N
+598040,2013,Raipur,01-05-2013,League,Shaheed Veer Narayan Singh International Stadium,DC,KKR,DC,wickets,7,137,20,N
+598041,2013,Chennai,02-05-2013,League,"MA Chidambaram Stadium, Chepauk",CSK,PBKS,CSK,runs,15,187,20,N
+598042,2013,Pune,02-05-2013,League,Subrata Roy Sahara Stadium,Pune Warriors,RCB,RCB,runs,17,188,20,N
+598043,2013,Kolkata,03-05-2013,League,Eden Gardens,KKR,RR,KKR,wickets,8,133,20,N
+598044,2013,Hyderabad,04-05-2013,League,"Rajiv Gandhi International Stadium, Uppal",SRH,DC,SRH,wickets,6,81,20,N
+598046,2013,Mumbai,05-05-2013,League,Wankhede Stadium,MI,CSK,MI,runs,60,140,20,N
+598047,2013,Jaipur,05-05-2013,League,Sawai Mansingh Stadium,RR,Pune Warriors,RR,wickets,5,179,20,N
+598064,2013,Chandigarh,06-05-2013,League,"Punjab Cricket Association Stadium, Mohali",PBKS,RCB,PBKS,wickets,6,191,20,N
+598049,2013,Jaipur,07-05-2013,League,Sawai Mansingh Stadium,RR,DC,RR,wickets,9,155,20,N
+598050,2013,Mumbai,07-05-2013,League,Wankhede Stadium,MI,KKR,MI,runs,65,171,20,N
+598051,2013,Hyderabad,08-05-2013,League,"Rajiv Gandhi International Stadium, Uppal",SRH,CSK,CSK,runs,77,224,20,N
+598052,2013,Chandigarh,09-05-2013,League,"Punjab Cricket Association Stadium, Mohali",PBKS,RR,RR,wickets,8,146,20,N
+598053,2013,Pune,09-05-2013,League,Subrata Roy Sahara Stadium,Pune Warriors,KKR,KKR,runs,46,153,20,N
+598054,2013,Delhi,10-05-2013,League,Feroz Shah Kotla,DC,RCB,RCB,runs,4,184,20,N
+598055,2013,Pune,11-05-2013,League,Subrata Roy Sahara Stadium,Pune Warriors,MI,MI,wickets,5,113,20,N
+598056,2013,Chandigarh,11-05-2013,League,"Punjab Cricket Association Stadium, Mohali",PBKS,SRH,SRH,runs,30,151,20,N
+598057,2013,Ranchi,12-05-2013,League,JSCA International Stadium Complex,KKR,RCB,KKR,wickets,5,116,20,N
+598058,2013,Jaipur,12-05-2013,League,Sawai Mansingh Stadium,RR,CSK,RR,wickets,5,142,20,N
+598060,2013,Mumbai,13-05-2013,League,Wankhede Stadium,MI,SRH,MI,wickets,7,179,20,N
+598045,2013,Bangalore,14-05-2013,League,M Chinnaswamy Stadium,RCB,PBKS,PBKS,wickets,7,175,20,N
+598062,2013,Chennai,14-05-2013,League,"MA Chidambaram Stadium, Chepauk",CSK,DC,CSK,runs,33,169,20,N
+598061,2013,Ranchi,15-05-2013,League,JSCA International Stadium Complex,KKR,Pune Warriors,Pune Warriors,runs,7,171,20,N
+598063,2013,Mumbai,15-05-2013,League,Wankhede Stadium,MI,RR,MI,runs,14,167,20,N
+598028,2013,Dharamsala,16-05-2013,League,Himachal Pradesh Cricket Association Stadium,PBKS,DC,PBKS,runs,7,172,20,N
+598065,2013,Hyderabad,17-05-2013,League,"Rajiv Gandhi International Stadium, Uppal",SRH,RR,SRH,runs,23,137,20,N
+598066,2013,Dharamsala,18-05-2013,League,Himachal Pradesh Cricket Association Stadium,PBKS,MI,PBKS,runs,50,184,20,N
+598068,2013,Bangalore,18-05-2013,League,M Chinnaswamy Stadium,RCB,CSK,RCB,runs,24,107,8,N
+598067,2013,Pune,19-05-2013,League,Subrata Roy Sahara Stadium,Pune Warriors,DC,Pune Warriors,runs,38,173,20,N
+598069,2013,Hyderabad,19-05-2013,League,"Rajiv Gandhi International Stadium, Uppal",SRH,KKR,SRH,wickets,5,131,20,N
+598070,2013,Delhi,21-05-2013,Qualifier 1,Feroz Shah Kotla,CSK,MI,CSK,runs,48,193,20,N
+598071,2013,Delhi,22-05-2013,Eliminator,Feroz Shah Kotla,RR,SRH,RR,wickets,4,133,20,N
+598072,2013,Kolkata,24-05-2013,Qualifier 2,Eden Gardens,MI,RR,MI,wickets,4,166,20,N
+598073,2013,Kolkata,26-05-2013,Final,Eden Gardens,CSK,MI,MI,runs,23,149,20,N
+729279,2014,Abu Dhabi,16-04-2014,League,Sheikh Zayed Stadium,MI,KKR,KKR,runs,41,164,20,N
+729281,2014,NA,17-04-2014,League,Sharjah Cricket Stadium,DC,RCB,RCB,wickets,8,146,20,N
+729283,2014,Abu Dhabi,18-04-2014,League,Sheikh Zayed Stadium,CSK,PBKS,PBKS,wickets,6,206,20,N
+729285,2014,Abu Dhabi,18-04-2014,League,Sheikh Zayed Stadium,SRH,RR,RR,wickets,4,134,20,N
+729287,2014,NA,19-04-2014,League,Dubai International Cricket Stadium,RCB,MI,RCB,wickets,7,116,20,N
+729289,2014,NA,19-04-2014,League,Dubai International Cricket Stadium,KKR,DC,DC,wickets,4,167,20,N
+729291,2014,NA,20-04-2014,League,Sharjah Cricket Stadium,RR,PBKS,PBKS,wickets,7,192,20,N
+729293,2014,Abu Dhabi,21-04-2014,League,Sheikh Zayed Stadium,CSK,DC,CSK,runs,93,178,20,N
+729295,2014,NA,22-04-2014,League,Sharjah Cricket Stadium,PBKS,SRH,PBKS,runs,72,194,20,N
+729297,2014,NA,23-04-2014,League,Dubai International Cricket Stadium,RR,CSK,CSK,runs,7,141,20,N
+729299,2014,NA,24-04-2014,League,Sharjah Cricket Stadium,RCB,KKR,KKR,runs,2,151,20,N
+729301,2014,NA,25-04-2014,League,Dubai International Cricket Stadium,SRH,DC,SRH,runs,4,185,20,N
+729303,2014,NA,25-04-2014,League,Dubai International Cricket Stadium,CSK,MI,CSK,wickets,7,142,20,N
+729305,2014,Abu Dhabi,26-04-2014,League,Sheikh Zayed Stadium,RR,RCB,RR,wickets,6,71,20,N
+729307,2014,Abu Dhabi,26-04-2014,League,Sheikh Zayed Stadium,KKR,PBKS,PBKS,runs,23,133,20,N
+729309,2014,NA,27-04-2014,League,Sharjah Cricket Stadium,DC,MI,DC,wickets,6,126,20,N
+729311,2014,NA,27-04-2014,League,Sharjah Cricket Stadium,SRH,CSK,CSK,wickets,5,146,20,N
+729313,2014,NA,28-04-2014,League,Dubai International Cricket Stadium,PBKS,RCB,PBKS,wickets,5,125,20,N
+729315,2014,Abu Dhabi,29-04-2014,League,Sheikh Zayed Stadium,KKR,RR,RR,tie,NA,153,20,Y
+729317,2014,NA,30-04-2014,League,Dubai International Cricket Stadium,MI,SRH,SRH,runs,15,173,20,N
+733971,2014,Ranchi,02-05-2014,League,JSCA International Stadium Complex,CSK,KKR,CSK,runs,34,149,17,N
+733973,2014,Mumbai,03-05-2014,League,Wankhede Stadium,MI,PBKS,MI,wickets,5,169,20,N
+733975,2014,Delhi,03-05-2014,League,Feroz Shah Kotla,DC,RR,RR,wickets,7,153,20,N
+733977,2014,Bangalore,04-05-2014,League,M Chinnaswamy Stadium,RCB,SRH,RCB,wickets,4,156,20,N
+733979,2014,Ahmedabad,05-05-2014,League,"Sardar Patel Stadium, Motera",RR,KKR,RR,runs,10,171,20,N
+733981,2014,Delhi,05-05-2014,League,Feroz Shah Kotla,DC,CSK,CSK,wickets,8,179,20,N
+733983,2014,Mumbai,06-05-2014,League,Wankhede Stadium,MI,RCB,MI,runs,19,188,20,N
+733985,2014,Delhi,07-05-2014,League,Feroz Shah Kotla,DC,KKR,KKR,wickets,8,161,20,N
+733987,2014,Cuttack,07-05-2014,League,Barabati Stadium,PBKS,CSK,PBKS,runs,44,232,20,N
+733989,2014,Ahmedabad,08-05-2014,League,"Sardar Patel Stadium, Motera",RR,SRH,SRH,runs,32,135,20,N
+733991,2014,Bangalore,09-05-2014,League,M Chinnaswamy Stadium,RCB,PBKS,PBKS,runs,32,199,20,N
+733993,2014,Delhi,10-05-2014,League,Feroz Shah Kotla,DC,SRH,SRH,wickets,8,43,5,N
+733995,2014,Mumbai,10-05-2014,League,Wankhede Stadium,MI,CSK,CSK,wickets,4,158,20,N
+733997,2014,Cuttack,11-05-2014,League,Barabati Stadium,PBKS,KKR,KKR,wickets,9,150,20,N
+733999,2014,Bangalore,11-05-2014,League,M Chinnaswamy Stadium,RCB,RR,RR,wickets,5,191,20,N
+734001,2014,Hyderabad,12-05-2014,League,"Rajiv Gandhi International Stadium, Uppal",SRH,MI,MI,wickets,7,158,20,N
+734003,2014,Ranchi,13-05-2014,League,JSCA International Stadium Complex,CSK,RR,CSK,wickets,5,149,20,N
+734005,2014,Bangalore,13-05-2014,League,M Chinnaswamy Stadium,RCB,DC,RCB,runs,16,187,20,N
+734007,2014,Hyderabad,14-05-2014,League,"Rajiv Gandhi International Stadium, Uppal",SRH,PBKS,PBKS,wickets,6,206,20,N
+734009,2014,Cuttack,14-05-2014,League,Barabati Stadium,KKR,MI,KKR,wickets,6,142,20,N
+734011,2014,Ahmedabad,15-05-2014,League,"Sardar Patel Stadium, Motera",RR,DC,RR,runs,62,202,20,N
+734013,2014,Ranchi,18-05-2014,League,JSCA International Stadium Complex,CSK,RCB,RCB,wickets,5,139,20,N
+734015,2014,Hyderabad,18-05-2014,League,"Rajiv Gandhi International Stadium, Uppal",SRH,KKR,KKR,wickets,7,143,20,N
+734017,2014,Ahmedabad,19-05-2014,League,"Sardar Patel Stadium, Motera",RR,MI,MI,runs,25,179,20,N
+734019,2014,Delhi,19-05-2014,League,Feroz Shah Kotla,DC,PBKS,PBKS,wickets,4,165,20,N
+734021,2014,Hyderabad,20-05-2014,League,"Rajiv Gandhi International Stadium, Uppal",SRH,RCB,SRH,wickets,7,161,20,N
+734023,2014,Kolkata,20-05-2014,League,Eden Gardens,KKR,CSK,KKR,wickets,8,155,20,N
+734025,2014,Chandigarh,21-05-2014,League,"Punjab Cricket Association Stadium, Mohali",PBKS,MI,MI,wickets,7,157,20,N
+734027,2014,Kolkata,22-05-2014,League,Eden Gardens,KKR,RCB,KKR,runs,30,196,20,N
+734029,2014,Ranchi,22-05-2014,League,JSCA International Stadium Complex,CSK,SRH,SRH,wickets,6,186,20,N
+734031,2014,Mumbai,23-05-2014,League,Wankhede Stadium,MI,DC,MI,runs,15,174,20,N
+734033,2014,Chandigarh,23-05-2014,League,"Punjab Cricket Association Stadium, Mohali",PBKS,RR,PBKS,runs,16,180,20,N
+734035,2014,Bangalore,24-05-2014,League,M Chinnaswamy Stadium,RCB,CSK,CSK,wickets,8,155,20,N
+734037,2014,Kolkata,24-05-2014,League,Eden Gardens,KKR,SRH,KKR,wickets,4,161,20,N
+734039,2014,Chandigarh,25-05-2014,League,"Punjab Cricket Association Stadium, Mohali",PBKS,DC,PBKS,wickets,7,116,20,N
+734041,2014,Mumbai,25-05-2014,League,Wankhede Stadium,MI,RR,MI,wickets,5,190,20,N
+734043,2014,Kolkata,27-05-2014,Qualifier 1,Eden Gardens,PBKS,KKR,KKR,runs,28,164,20,N
+734045,2014,Mumbai,28-05-2014,Eliminator,Brabourne Stadium,CSK,MI,CSK,wickets,7,174,20,N
+734047,2014,Mumbai,30-05-2014,Qualifier 2,Wankhede Stadium,CSK,PBKS,PBKS,runs,24,227,20,N
+734049,2014,Bangalore,01-06-2014,Final,M Chinnaswamy Stadium,KKR,PBKS,KKR,wickets,3,200,20,N
+829705,2015,Kolkata,08-04-2015,League,Eden Gardens,KKR,MI,KKR,wickets,7,169,20,N
+829707,2015,Chennai,09-04-2015,League,"MA Chidambaram Stadium, Chepauk",CSK,DC,CSK,runs,1,151,20,N
+829709,2015,Pune,10-04-2015,League,Maharashtra Cricket Association Stadium,PBKS,RR,RR,runs,26,163,20,N
+829711,2015,Chennai,11-04-2015,League,"MA Chidambaram Stadium, Chepauk",CSK,SRH,CSK,runs,45,210,20,N
+829713,2015,Kolkata,11-04-2015,League,Eden Gardens,KKR,RCB,RCB,wickets,3,178,20,N
+829715,2015,Delhi,12-04-2015,League,Feroz Shah Kotla,DC,RR,RR,wickets,3,185,20,N
+829717,2015,Mumbai,12-04-2015,League,Wankhede Stadium,MI,PBKS,PBKS,runs,18,178,20,N
+829719,2015,Bangalore,13-04-2015,League,M Chinnaswamy Stadium,RCB,SRH,SRH,wickets,8,167,20,N
+829721,2015,Ahmedabad,14-04-2015,League,"Sardar Patel Stadium, Motera",RR,MI,RR,wickets,7,165,20,N
+829725,2015,Pune,15-04-2015,League,Maharashtra Cricket Association Stadium,PBKS,DC,DC,wickets,5,166,20,N
+829727,2015,Visakhapatnam,16-04-2015,League,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,SRH,RR,RR,wickets,6,128,20,N
+829729,2015,Mumbai,17-04-2015,League,Wankhede Stadium,MI,CSK,CSK,wickets,6,184,20,N
+829731,2015,Visakhapatnam,18-04-2015,League,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,SRH,DC,DC,runs,4,168,20,N
+829733,2015,Pune,18-04-2015,League,Maharashtra Cricket Association Stadium,PBKS,KKR,KKR,wickets,4,156,20,N
+829735,2015,Ahmedabad,19-04-2015,League,"Sardar Patel Stadium, Motera",RR,CSK,RR,wickets,8,157,20,N
+829737,2015,Bangalore,19-04-2015,League,M Chinnaswamy Stadium,RCB,MI,MI,runs,18,210,20,N
+829739,2015,Delhi,20-04-2015,League,Feroz Shah Kotla,DC,KKR,KKR,wickets,6,147,20,N
+829741,2015,Ahmedabad,21-04-2015,League,"Sardar Patel Stadium, Motera",RR,PBKS,PBKS,tie,NA,192,20,Y
+829743,2015,Visakhapatnam,22-04-2015,League,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,SRH,KKR,SRH,runs,16,118,12,N
+829745,2015,Bangalore,22-04-2015,League,M Chinnaswamy Stadium,RCB,CSK,CSK,runs,27,182,20,N
+829747,2015,Delhi,23-04-2015,League,Feroz Shah Kotla,DC,MI,DC,runs,37,191,20,N
+829749,2015,Ahmedabad,24-04-2015,League,"Sardar Patel Stadium, Motera",RR,RCB,RCB,wickets,9,131,20,N
+829751,2015,Mumbai,25-04-2015,League,Wankhede Stadium,MI,SRH,MI,runs,20,158,20,N
+829753,2015,Chennai,25-04-2015,League,"MA Chidambaram Stadium, Chepauk",CSK,PBKS,CSK,runs,97,193,20,N
+829757,2015,Delhi,26-04-2015,League,Feroz Shah Kotla,DC,RCB,RCB,wickets,10,96,20,N
+829759,2015,Chandigarh,27-04-2015,League,"Punjab Cricket Association Stadium, Mohali",PBKS,SRH,SRH,runs,20,151,20,N
+829765,2015,Chennai,28-04-2015,League,"MA Chidambaram Stadium, Chepauk",CSK,KKR,CSK,runs,2,135,20,N
+829763,2015,Bangalore,29-04-2015,League,M Chinnaswamy Stadium,RCB,RR,NA,no result,NA,NA,NA,N
+829723,2015,Kolkata,30-04-2015,League,Eden Gardens,KKR,CSK,KKR,wickets,7,166,20,N
+829767,2015,Delhi,01-05-2015,League,Feroz Shah Kotla,DC,PBKS,DC,wickets,9,119,20,N
+829769,2015,Mumbai,01-05-2015,League,Wankhede Stadium,MI,RR,MI,runs,8,188,20,N
+829771,2015,Bangalore,02-05-2015,League,M Chinnaswamy Stadium,RCB,KKR,RCB,wickets,7,112,10,N
+829773,2015,Hyderabad,02-05-2015,League,"Rajiv Gandhi International Stadium, Uppal",SRH,CSK,SRH,runs,22,193,20,N
+829775,2015,Chandigarh,03-05-2015,League,"Punjab Cricket Association Stadium, Mohali",PBKS,MI,MI,runs,23,173,20,N
+829777,2015,Mumbai,03-05-2015,League,Brabourne Stadium,RR,DC,RR,runs,14,190,20,N
+829779,2015,Chennai,04-05-2015,League,"MA Chidambaram Stadium, Chepauk",CSK,RCB,CSK,runs,24,149,20,N
+829781,2015,Kolkata,04-05-2015,League,Eden Gardens,KKR,SRH,KKR,runs,35,168,20,N
+829783,2015,Mumbai,05-05-2015,League,Wankhede Stadium,MI,DC,MI,wickets,5,153,20,N
+829785,2015,Bangalore,06-05-2015,League,M Chinnaswamy Stadium,RCB,PBKS,RCB,runs,138,227,20,N
+829761,2015,Kolkata,07-05-2015,League,Eden Gardens,KKR,DC,KKR,runs,13,172,20,N
+829787,2015,Mumbai,07-05-2015,League,Brabourne Stadium,RR,SRH,SRH,runs,7,202,20,N
+829789,2015,Chennai,08-05-2015,League,"MA Chidambaram Stadium, Chepauk",CSK,MI,MI,wickets,6,159,20,N
+829791,2015,Kolkata,09-05-2015,League,Eden Gardens,KKR,PBKS,KKR,wickets,1,184,20,N
+829793,2015,Raipur,09-05-2015,League,Shaheed Veer Narayan Singh International Stadium,DC,SRH,SRH,runs,6,164,20,N
+829795,2015,Mumbai,10-05-2015,League,Wankhede Stadium,MI,RCB,RCB,runs,39,236,20,N
+829797,2015,Chennai,10-05-2015,League,"MA Chidambaram Stadium, Chepauk",CSK,RR,CSK,runs,12,158,20,N
+829799,2015,Hyderabad,11-05-2015,League,"Rajiv Gandhi International Stadium, Uppal",SRH,PBKS,SRH,runs,5,186,20,N
+829801,2015,Raipur,12-05-2015,League,Shaheed Veer Narayan Singh International Stadium,DC,CSK,DC,wickets,6,120,20,N
+829803,2015,Chandigarh,13-05-2015,League,"Punjab Cricket Association Stadium, Mohali",PBKS,RCB,PBKS,runs,22,107,10,N
+829805,2015,Mumbai,14-05-2015,League,Wankhede Stadium,MI,KKR,MI,runs,5,172,20,N
+829807,2015,Hyderabad,15-05-2015,League,"Rajiv Gandhi International Stadium, Uppal",SRH,RCB,RCB,wickets,6,81,6,N
+829809,2015,Chandigarh,16-05-2015,League,"Punjab Cricket Association Stadium, Mohali",PBKS,CSK,CSK,wickets,7,131,20,N
+829811,2015,Mumbai,16-05-2015,League,Brabourne Stadium,RR,KKR,RR,runs,9,200,20,N
+829813,2015,Bangalore,17-05-2015,League,M Chinnaswamy Stadium,RCB,DC,NA,no result,NA,188,20,N
+829815,2015,Hyderabad,17-05-2015,League,"Rajiv Gandhi International Stadium, Uppal",SRH,MI,MI,wickets,9,114,20,N
+829817,2015,Mumbai,19-05-2015,Qualifier 1,Wankhede Stadium,CSK,MI,MI,runs,25,188,20,N
+829819,2015,Pune,20-05-2015,Eliminator,Maharashtra Cricket Association Stadium,RCB,RR,RCB,runs,71,181,20,N
+829821,2015,Ranchi,22-05-2015,Qualifier 2,JSCA International Stadium Complex,CSK,RCB,CSK,wickets,3,140,20,N
+829823,2015,Kolkata,24-05-2015,Final,Eden Gardens,MI,CSK,MI,runs,41,203,20,N
+980901,2016,Mumbai,09-04-2016,League,Wankhede Stadium,MI,Rising Pune Supergiants,Rising Pune Supergiants,wickets,9,122,20,N
+980903,2016,Kolkata,10-04-2016,League,Eden Gardens,KKR,DC,KKR,wickets,9,99,20,N
+980905,2016,Chandigarh,11-04-2016,League,"Punjab Cricket Association IS Bindra Stadium, Mohali",PBKS,Gujarat Lions,Gujarat Lions,wickets,5,162,20,N
+980907,2016,Bangalore,12-04-2016,League,M Chinnaswamy Stadium,RCB,SRH,RCB,runs,45,228,20,N
+980909,2016,Kolkata,13-04-2016,League,Eden Gardens,KKR,MI,MI,wickets,6,188,20,N
+980911,2016,Rajkot,14-04-2016,League,Saurashtra Cricket Association Stadium,Gujarat Lions,Rising Pune Supergiants,Gujarat Lions,wickets,7,164,20,N
+980913,2016,Delhi,15-04-2016,League,Feroz Shah Kotla,DC,PBKS,DC,wickets,8,112,20,N
+980915,2016,Hyderabad,16-04-2016,League,"Rajiv Gandhi International Stadium, Uppal",SRH,KKR,KKR,wickets,8,143,20,N
+980917,2016,Mumbai,16-04-2016,League,Wankhede Stadium,MI,Gujarat Lions,Gujarat Lions,wickets,3,144,20,N
+980919,2016,Chandigarh,17-04-2016,League,"Punjab Cricket Association IS Bindra Stadium, Mohali",PBKS,Rising Pune Supergiants,PBKS,wickets,6,153,20,N
+980921,2016,Bangalore,17-04-2016,League,M Chinnaswamy Stadium,RCB,DC,DC,wickets,7,192,20,N
+980923,2016,Hyderabad,18-04-2016,League,"Rajiv Gandhi International Stadium, Uppal",SRH,MI,SRH,wickets,7,143,20,N
+980925,2016,Chandigarh,19-04-2016,League,"Punjab Cricket Association IS Bindra Stadium, Mohali",PBKS,KKR,KKR,wickets,6,139,20,N
+980927,2016,Mumbai,20-04-2016,League,Wankhede Stadium,MI,RCB,MI,wickets,6,171,20,N
+980929,2016,Rajkot,21-04-2016,League,Saurashtra Cricket Association Stadium,Gujarat Lions,SRH,SRH,wickets,10,136,20,N
+980931,2016,Pune,22-04-2016,League,Maharashtra Cricket Association Stadium,Rising Pune Supergiants,RCB,RCB,runs,13,186,20,N
+980933,2016,Delhi,23-04-2016,League,Feroz Shah Kotla,DC,MI,DC,runs,10,165,20,N
+980935,2016,Hyderabad,23-04-2016,League,"Rajiv Gandhi International Stadium, Uppal",SRH,PBKS,SRH,wickets,5,144,20,N
+980937,2016,Rajkot,24-04-2016,League,Saurashtra Cricket Association Stadium,Gujarat Lions,RCB,Gujarat Lions,wickets,6,181,20,N
+980939,2016,Pune,24-04-2016,League,Maharashtra Cricket Association Stadium,Rising Pune Supergiants,KKR,KKR,wickets,2,161,20,N
+980941,2016,Chandigarh,25-04-2016,League,"Punjab Cricket Association IS Bindra Stadium, Mohali",PBKS,MI,MI,runs,25,190,20,N
+980943,2016,Hyderabad,26-04-2016,League,"Rajiv Gandhi International Stadium, Uppal",SRH,Rising Pune Supergiants,Rising Pune Supergiants,runs,34,61,11,N
+980945,2016,Delhi,27-04-2016,League,Feroz Shah Kotla,DC,Gujarat Lions,Gujarat Lions,runs,1,173,20,N
+980947,2016,Mumbai,28-04-2016,League,Wankhede Stadium,MI,KKR,MI,wickets,6,175,20,N
+980949,2016,Pune,29-04-2016,League,Maharashtra Cricket Association Stadium,Rising Pune Supergiants,Gujarat Lions,Gujarat Lions,wickets,3,196,20,N
+980951,2016,Delhi,30-04-2016,League,Feroz Shah Kotla,DC,KKR,DC,runs,27,187,20,N
+980953,2016,Hyderabad,30-04-2016,League,"Rajiv Gandhi International Stadium, Uppal",SRH,RCB,SRH,runs,15,195,20,N
+980955,2016,Rajkot,01-05-2016,League,Saurashtra Cricket Association Stadium,Gujarat Lions,PBKS,PBKS,runs,23,155,20,N
+980957,2016,Pune,01-05-2016,League,Maharashtra Cricket Association Stadium,Rising Pune Supergiants,MI,MI,wickets,8,160,20,N
+980959,2016,Bangalore,02-05-2016,League,M Chinnaswamy Stadium,RCB,KKR,KKR,wickets,5,186,20,N
+980961,2016,Rajkot,03-05-2016,League,Saurashtra Cricket Association Stadium,Gujarat Lions,DC,DC,wickets,8,150,20,N
+980963,2016,Kolkata,04-05-2016,League,Eden Gardens,KKR,PBKS,KKR,runs,7,165,20,N
+980965,2016,Delhi,05-05-2016,League,Feroz Shah Kotla,DC,Rising Pune Supergiants,Rising Pune Supergiants,wickets,7,163,20,N
+980967,2016,Hyderabad,06-05-2016,League,"Rajiv Gandhi International Stadium, Uppal",SRH,Gujarat Lions,SRH,wickets,5,127,20,N
+980969,2016,Bangalore,07-05-2016,League,M Chinnaswamy Stadium,RCB,Rising Pune Supergiants,RCB,wickets,7,192,20,N
+980971,2016,Chandigarh,07-05-2016,League,"Punjab Cricket Association IS Bindra Stadium, Mohali",PBKS,DC,PBKS,runs,9,182,20,N
+980973,2016,Visakhapatnam,08-05-2016,League,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,MI,SRH,SRH,runs,85,178,20,N
+980975,2016,Kolkata,08-05-2016,League,Eden Gardens,KKR,Gujarat Lions,Gujarat Lions,wickets,5,159,20,N
+980977,2016,Chandigarh,09-05-2016,League,"Punjab Cricket Association IS Bindra Stadium, Mohali",PBKS,RCB,RCB,runs,1,176,20,N
+980979,2016,Visakhapatnam,10-05-2016,League,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,Rising Pune Supergiants,SRH,SRH,runs,4,138,20,N
+980981,2016,Bangalore,11-05-2016,League,M Chinnaswamy Stadium,RCB,MI,MI,wickets,6,152,20,N
+980983,2016,Hyderabad,12-05-2016,League,"Rajiv Gandhi International Stadium, Uppal",SRH,DC,DC,wickets,7,147,20,N
+980985,2016,Visakhapatnam,13-05-2016,League,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,MI,PBKS,PBKS,wickets,7,125,20,N
+980987,2016,Bangalore,14-05-2016,League,M Chinnaswamy Stadium,RCB,Gujarat Lions,RCB,runs,144,249,20,N
+980989,2016,Kolkata,14-05-2016,League,Eden Gardens,KKR,Rising Pune Supergiants,KKR,wickets,8,66,9,N
+980991,2016,Chandigarh,15-05-2016,League,"Punjab Cricket Association IS Bindra Stadium, Mohali",PBKS,SRH,SRH,wickets,7,180,20,N
+980993,2016,Visakhapatnam,15-05-2016,League,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,MI,DC,MI,runs,80,207,20,N
+980995,2016,Kolkata,16-05-2016,League,Eden Gardens,KKR,RCB,RCB,wickets,9,184,20,N
+980997,2016,Visakhapatnam,17-05-2016,League,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,Rising Pune Supergiants,DC,Rising Pune Supergiants,runs,19,58,11,N
+980999,2016,Bangalore,18-05-2016,League,M Chinnaswamy Stadium,RCB,PBKS,RCB,runs,82,203,14,N
+981001,2016,Kanpur,19-05-2016,League,Green Park,Gujarat Lions,KKR,Gujarat Lions,wickets,6,125,20,N
+981003,2016,Raipur,20-05-2016,League,Shaheed Veer Narayan Singh International Stadium,DC,SRH,DC,wickets,6,159,20,N
+981005,2016,Visakhapatnam,21-05-2016,League,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,Rising Pune Supergiants,PBKS,Rising Pune Supergiants,wickets,4,173,20,N
+981007,2016,Kanpur,21-05-2016,League,Green Park,Gujarat Lions,MI,Gujarat Lions,wickets,6,173,20,N
+981009,2016,Kolkata,22-05-2016,League,Eden Gardens,KKR,SRH,KKR,runs,22,172,20,N
+981011,2016,Raipur,22-05-2016,League,Shaheed Veer Narayan Singh International Stadium,DC,RCB,RCB,wickets,6,139,20,N
+981013,2016,Bangalore,24-05-2016,Qualifier 1,M Chinnaswamy Stadium,Gujarat Lions,RCB,RCB,wickets,4,159,20,N
+981015,2016,Delhi,25-05-2016,Elimination Final,Feroz Shah Kotla,SRH,KKR,SRH,runs,22,163,20,N
+981017,2016,Delhi,27-05-2016,Qualifier 2,Feroz Shah Kotla,Gujarat Lions,SRH,SRH,wickets,4,163,20,N
+981019,2016,Bangalore,29-05-2016,Final,M Chinnaswamy Stadium,RCB,SRH,SRH,runs,8,209,20,N
+1082591,2017,Hyderabad,05-04-2017,League,"Rajiv Gandhi International Stadium, Uppal",SRH,RCB,SRH,runs,35,208,20,N
+1082592,2017,Pune,06-04-2017,League,Maharashtra Cricket Association Stadium,Rising Pune Supergiant,MI,Rising Pune Supergiant,wickets,7,185,20,N
+1082593,2017,Rajkot,07-04-2017,League,Saurashtra Cricket Association Stadium,Gujarat Lions,KKR,KKR,wickets,10,184,20,N
+1082594,2017,Indore,08-04-2017,League,Holkar Cricket Stadium,PBKS,Rising Pune Supergiant,PBKS,wickets,6,164,20,N
+1082595,2017,Bengaluru,08-04-2017,League,M.Chinnaswamy Stadium,RCB,DC,RCB,runs,15,158,20,N
+1082596,2017,Hyderabad,09-04-2017,League,"Rajiv Gandhi International Stadium, Uppal",SRH,Gujarat Lions,SRH,wickets,9,136,20,N
+1082597,2017,Mumbai,09-04-2017,League,Wankhede Stadium,MI,KKR,MI,wickets,4,179,20,N
+1082598,2017,Indore,10-04-2017,League,Holkar Cricket Stadium,PBKS,RCB,PBKS,wickets,8,149,20,N
+1082599,2017,Pune,11-04-2017,League,Maharashtra Cricket Association Stadium,Rising Pune Supergiant,DC,DC,runs,97,206,20,N
+1082600,2017,Mumbai,12-04-2017,League,Wankhede Stadium,MI,SRH,MI,wickets,4,159,20,N
+1082601,2017,Kolkata,13-04-2017,League,Eden Gardens,KKR,PBKS,KKR,wickets,8,171,20,N
+1082602,2017,Bangalore,14-04-2017,League,M Chinnaswamy Stadium,RCB,MI,MI,wickets,4,143,20,N
+1082603,2017,Rajkot,14-04-2017,League,Saurashtra Cricket Association Stadium,Gujarat Lions,Rising Pune Supergiant,Gujarat Lions,wickets,7,172,20,N
+1082604,2017,Kolkata,15-04-2017,League,Eden Gardens,KKR,SRH,KKR,runs,17,173,20,N
+1082605,2017,Delhi,15-04-2017,League,Feroz Shah Kotla,DC,PBKS,DC,runs,51,189,20,N
+1082606,2017,Mumbai,16-04-2017,League,Wankhede Stadium,MI,Gujarat Lions,MI,wickets,6,177,20,N
+1082607,2017,Bangalore,16-04-2017,League,M Chinnaswamy Stadium,RCB,Rising Pune Supergiant,Rising Pune Supergiant,runs,27,162,20,N
+1082608,2017,Delhi,17-04-2017,League,Feroz Shah Kotla,DC,KKR,KKR,wickets,4,169,20,N
+1082609,2017,Hyderabad,17-04-2017,League,"Rajiv Gandhi International Stadium, Uppal",SRH,PBKS,SRH,runs,5,160,20,N
+1082610,2017,Rajkot,18-04-2017,League,Saurashtra Cricket Association Stadium,Gujarat Lions,RCB,RCB,runs,21,214,20,N
+1082611,2017,Hyderabad,19-04-2017,League,"Rajiv Gandhi International Stadium, Uppal",SRH,DC,SRH,runs,15,192,20,N
+1082612,2017,Indore,20-04-2017,League,Holkar Cricket Stadium,PBKS,MI,MI,wickets,8,199,20,N
+1082613,2017,Kolkata,21-04-2017,League,Eden Gardens,KKR,Gujarat Lions,Gujarat Lions,wickets,4,188,20,N
+1082614,2017,Mumbai,22-04-2017,League,Wankhede Stadium,MI,DC,MI,runs,14,143,20,N
+1082615,2017,Pune,22-04-2017,League,Maharashtra Cricket Association Stadium,Rising Pune Supergiant,SRH,Rising Pune Supergiant,wickets,6,177,20,N
+1082616,2017,Rajkot,23-04-2017,League,Saurashtra Cricket Association Stadium,Gujarat Lions,PBKS,PBKS,runs,26,189,20,N
+1082617,2017,Kolkata,23-04-2017,League,Eden Gardens,KKR,RCB,KKR,runs,82,132,20,N
+1082618,2017,Mumbai,24-04-2017,League,Wankhede Stadium,MI,Rising Pune Supergiant,Rising Pune Supergiant,runs,3,161,20,N
+1082620,2017,Pune,26-04-2017,League,Maharashtra Cricket Association Stadium,Rising Pune Supergiant,KKR,KKR,wickets,7,183,20,N
+1082621,2017,Bangalore,27-04-2017,League,M Chinnaswamy Stadium,RCB,Gujarat Lions,Gujarat Lions,wickets,7,135,20,N
+1082622,2017,Kolkata,28-04-2017,League,Eden Gardens,KKR,DC,KKR,wickets,7,161,20,N
+1082623,2017,Chandigarh,28-04-2017,League,"Punjab Cricket Association IS Bindra Stadium, Mohali",PBKS,SRH,SRH,runs,26,208,20,N
+1082624,2017,Pune,29-04-2017,League,Maharashtra Cricket Association Stadium,Rising Pune Supergiant,RCB,Rising Pune Supergiant,runs,61,158,20,N
+1082625,2017,Rajkot,29-04-2017,League,Saurashtra Cricket Association Stadium,Gujarat Lions,MI,MI,tie,NA,154,20,Y
+1082626,2017,Chandigarh,30-04-2017,League,"Punjab Cricket Association IS Bindra Stadium, Mohali",PBKS,DC,PBKS,wickets,10,68,20,N
+1082627,2017,Hyderabad,30-04-2017,League,"Rajiv Gandhi International Stadium, Uppal",SRH,KKR,SRH,runs,48,210,20,N
+1082628,2017,Mumbai,01-05-2017,League,Wankhede Stadium,MI,RCB,MI,wickets,5,163,20,N
+1082629,2017,Pune,01-05-2017,League,Maharashtra Cricket Association Stadium,Rising Pune Supergiant,Gujarat Lions,Rising Pune Supergiant,wickets,5,162,20,N
+1082630,2017,Delhi,02-05-2017,League,Feroz Shah Kotla,DC,SRH,DC,wickets,6,186,20,N
+1082631,2017,Kolkata,03-05-2017,League,Eden Gardens,KKR,Rising Pune Supergiant,Rising Pune Supergiant,wickets,4,156,20,N
+1082632,2017,Delhi,04-05-2017,League,Feroz Shah Kotla,DC,Gujarat Lions,DC,wickets,7,209,20,N
+1082633,2017,Bangalore,05-05-2017,League,M Chinnaswamy Stadium,RCB,PBKS,PBKS,runs,19,139,20,N
+1082634,2017,Hyderabad,06-05-2017,League,"Rajiv Gandhi International Stadium, Uppal",SRH,Rising Pune Supergiant,Rising Pune Supergiant,runs,12,149,20,N
+1082635,2017,Delhi,06-05-2017,League,Feroz Shah Kotla,DC,MI,MI,runs,146,213,20,N
+1082636,2017,Bangalore,07-05-2017,League,M Chinnaswamy Stadium,RCB,KKR,KKR,wickets,6,159,20,N
+1082637,2017,Chandigarh,07-05-2017,League,"Punjab Cricket Association IS Bindra Stadium, Mohali",PBKS,Gujarat Lions,Gujarat Lions,wickets,6,190,20,N
+1082638,2017,Hyderabad,08-05-2017,League,"Rajiv Gandhi International Stadium, Uppal",SRH,MI,SRH,wickets,7,139,20,N
+1082639,2017,Chandigarh,09-05-2017,League,"Punjab Cricket Association IS Bindra Stadium, Mohali",PBKS,KKR,PBKS,runs,14,168,20,N
+1082640,2017,Kanpur,10-05-2017,League,Green Park,Gujarat Lions,DC,DC,wickets,2,196,20,N
+1082641,2017,Mumbai,11-05-2017,League,Wankhede Stadium,MI,PBKS,PBKS,runs,7,231,20,N
+1082642,2017,Delhi,12-05-2017,League,Feroz Shah Kotla,DC,Rising Pune Supergiant,DC,runs,7,169,20,N
+1082643,2017,Kanpur,13-05-2017,League,Green Park,Gujarat Lions,SRH,SRH,wickets,8,155,20,N
+1082644,2017,Kolkata,13-05-2017,League,Eden Gardens,KKR,MI,MI,runs,9,174,20,N
+1082645,2017,Pune,14-05-2017,League,Maharashtra Cricket Association Stadium,Rising Pune Supergiant,PBKS,Rising Pune Supergiant,wickets,9,74,20,N
+1082646,2017,Delhi,14-05-2017,League,Feroz Shah Kotla,DC,RCB,RCB,runs,10,162,20,N
+1082647,2017,Mumbai,16-05-2017,Qualifier 1,Wankhede Stadium,MI,Rising Pune Supergiant,Rising Pune Supergiant,runs,20,163,20,N
+1082648,2017,Bangalore,17-05-2017,Eliminator,M Chinnaswamy Stadium,SRH,KKR,KKR,wickets,7,48,6,N
+1082649,2017,Bangalore,19-05-2017,Qualifier 2,M Chinnaswamy Stadium,MI,KKR,MI,wickets,6,108,20,N
+1082650,2017,Hyderabad,21-05-2017,Final,"Rajiv Gandhi International Stadium, Uppal",MI,Rising Pune Supergiant,MI,runs,1,130,20,N
+1136561,2018,Mumbai,07-04-2018,League,Wankhede Stadium,MI,CSK,CSK,wickets,1,166,20,N
+1136562,2018,Chandigarh,08-04-2018,League,Punjab Cricket Association IS Bindra Stadium,DC,PBKS,PBKS,wickets,6,167,20,N
+1136563,2018,Kolkata,08-04-2018,League,Eden Gardens,RCB,KKR,KKR,wickets,4,177,20,N
+1136564,2018,Hyderabad,09-04-2018,League,Rajiv Gandhi International Stadium,RR,SRH,SRH,wickets,9,126,20,N
+1136565,2018,Chennai,10-04-2018,League,MA Chidambaram Stadium,KKR,CSK,CSK,wickets,5,203,20,N
+1136566,2018,Jaipur,11-04-2018,League,Sawai Mansingh Stadium,RR,DC,RR,runs,10,71,6,N
+1136567,2018,Hyderabad,12-04-2018,League,Rajiv Gandhi International Stadium,MI,SRH,SRH,wickets,1,148,20,N
+1136568,2018,Bengaluru,13-04-2018,League,M.Chinnaswamy Stadium,PBKS,RCB,RCB,wickets,4,156,20,N
+1136569,2018,Mumbai,14-04-2018,League,Wankhede Stadium,MI,DC,DC,wickets,7,195,20,N
+1136570,2018,Kolkata,14-04-2018,League,Eden Gardens,KKR,SRH,SRH,wickets,5,139,20,N
+1136571,2018,Bengaluru,15-04-2018,League,M.Chinnaswamy Stadium,RR,RCB,RR,runs,19,218,20,N
+1136572,2018,Chandigarh,15-04-2018,League,Punjab Cricket Association IS Bindra Stadium,PBKS,CSK,PBKS,runs,4,198,20,N
+1136573,2018,Kolkata,16-04-2018,League,Eden Gardens,KKR,DC,KKR,runs,71,201,20,N
+1136574,2018,Mumbai,17-04-2018,League,Wankhede Stadium,MI,RCB,MI,runs,46,214,20,N
+1136575,2018,Jaipur,18-04-2018,League,Sawai Mansingh Stadium,RR,KKR,KKR,wickets,7,161,20,N
+1136576,2018,Chandigarh,19-04-2018,League,Punjab Cricket Association IS Bindra Stadium,PBKS,SRH,PBKS,runs,15,194,20,N
+1136577,2018,Pune,20-04-2018,League,Maharashtra Cricket Association Stadium,CSK,RR,CSK,runs,64,205,20,N
+1136578,2018,Kolkata,21-04-2018,League,Eden Gardens,KKR,PBKS,PBKS,wickets,9,125,13,N
+1136579,2018,Bengaluru,21-04-2018,League,M.Chinnaswamy Stadium,DC,RCB,RCB,wickets,6,175,20,N
+1136580,2018,Hyderabad,22-04-2018,League,Rajiv Gandhi International Stadium,CSK,SRH,CSK,runs,4,183,20,N
+1136581,2018,Jaipur,22-04-2018,League,Sawai Mansingh Stadium,MI,RR,RR,wickets,3,168,20,N
+1136582,2018,Delhi,23-04-2018,League,Arun Jaitley Stadium,PBKS,DC,PBKS,runs,4,144,20,N
+1136583,2018,Mumbai,24-04-2018,League,Wankhede Stadium,SRH,MI,SRH,runs,31,119,20,N
+1136584,2018,Bengaluru,25-04-2018,League,M.Chinnaswamy Stadium,RCB,CSK,CSK,wickets,5,206,20,N
+1136585,2018,Hyderabad,26-04-2018,League,Rajiv Gandhi International Stadium,SRH,PBKS,SRH,runs,13,133,20,N
+1136586,2018,Delhi,27-04-2018,League,Arun Jaitley Stadium,DC,KKR,DC,runs,55,220,20,N
+1136587,2018,Pune,28-04-2018,League,Maharashtra Cricket Association Stadium,CSK,MI,MI,wickets,8,170,20,N
+1136588,2018,Jaipur,29-04-2018,League,Sawai Mansingh Stadium,SRH,RR,SRH,runs,11,152,20,N
+1136589,2018,Bengaluru,29-04-2018,League,M.Chinnaswamy Stadium,RCB,KKR,KKR,wickets,6,176,20,N
+1136590,2018,Pune,30-04-2018,League,Maharashtra Cricket Association Stadium,CSK,DC,CSK,runs,13,212,20,N
+1136591,2018,Bengaluru,01-05-2018,League,M.Chinnaswamy Stadium,RCB,MI,RCB,runs,14,168,20,N
+1136592,2018,Delhi,02-05-2018,League,Arun Jaitley Stadium,DC,RR,DC,runs,4,151,12,N
+1136593,2018,Kolkata,03-05-2018,League,Eden Gardens,CSK,KKR,KKR,wickets,6,178,20,N
+1136594,2018,Indore,04-05-2018,League,Holkar Cricket Stadium,PBKS,MI,MI,wickets,6,175,20,N
+1136595,2018,Pune,05-05-2018,League,Maharashtra Cricket Association Stadium,RCB,CSK,CSK,wickets,6,128,20,N
+1136596,2018,Hyderabad,05-05-2018,League,Rajiv Gandhi International Stadium,DC,SRH,SRH,wickets,7,164,20,N
+1136597,2018,Mumbai,06-05-2018,League,Wankhede Stadium,MI,KKR,MI,runs,13,182,20,N
+1136598,2018,Indore,06-05-2018,League,Holkar Cricket Stadium,RR,PBKS,PBKS,wickets,6,153,20,N
+1136599,2018,Hyderabad,07-05-2018,League,Rajiv Gandhi International Stadium,SRH,RCB,SRH,runs,5,147,20,N
+1136600,2018,Jaipur,08-05-2018,League,Sawai Mansingh Stadium,RR,PBKS,RR,runs,15,159,20,N
+1136601,2018,Kolkata,09-05-2018,League,Eden Gardens,MI,KKR,MI,runs,102,211,20,N
+1136602,2018,Delhi,10-05-2018,League,Arun Jaitley Stadium,DC,SRH,SRH,wickets,9,188,20,N
+1136603,2018,Jaipur,11-05-2018,League,Sawai Mansingh Stadium,CSK,RR,RR,wickets,4,177,20,N
+1136604,2018,Indore,12-05-2018,League,Holkar Cricket Stadium,KKR,PBKS,KKR,runs,31,246,20,N
+1136605,2018,Delhi,12-05-2018,League,Arun Jaitley Stadium,DC,RCB,RCB,wickets,5,182,20,N
+1136606,2018,Pune,13-05-2018,League,Maharashtra Cricket Association Stadium,SRH,CSK,CSK,wickets,8,180,20,N
+1136607,2018,Mumbai,13-05-2018,League,Wankhede Stadium,MI,RR,RR,wickets,7,169,20,N
+1136608,2018,Indore,14-05-2018,League,Holkar Cricket Stadium,PBKS,RCB,RCB,wickets,10,89,20,N
+1136609,2018,Kolkata,15-05-2018,League,Eden Gardens,RR,KKR,KKR,wickets,6,143,20,N
+1136610,2018,Mumbai,16-05-2018,League,Wankhede Stadium,MI,PBKS,MI,runs,3,187,20,N
+1136611,2018,Bengaluru,17-05-2018,League,M.Chinnaswamy Stadium,RCB,SRH,RCB,runs,14,219,20,N
+1136612,2018,Delhi,18-05-2018,League,Arun Jaitley Stadium,DC,CSK,DC,runs,34,163,20,N
+1136613,2018,Jaipur,19-05-2018,League,Sawai Mansingh Stadium,RR,RCB,RR,runs,30,165,20,N
+1136614,2018,Hyderabad,19-05-2018,League,Rajiv Gandhi International Stadium,SRH,KKR,KKR,wickets,5,173,20,N
+1136615,2018,Delhi,20-05-2018,League,Arun Jaitley Stadium,DC,MI,DC,runs,11,175,20,N
+1136616,2018,Pune,20-05-2018,League,Maharashtra Cricket Association Stadium,PBKS,CSK,CSK,wickets,5,154,20,N
+1136617,2018,Mumbai,22-05-2018,Qualifier 1,Wankhede Stadium,SRH,CSK,CSK,wickets,2,140,20,N
+1136618,2018,Kolkata,23-05-2018,Eliminator,Eden Gardens,KKR,RR,KKR,runs,25,170,20,N
+1136619,2018,Kolkata,25-05-2018,Qualifier 2,Eden Gardens,SRH,KKR,SRH,runs,14,175,20,N
+1136620,2018,Mumbai,27-05-2018,Final,Wankhede Stadium,SRH,CSK,CSK,wickets,8,179,20,N
+1175356,2019,Chennai,23-03-2019,League,MA Chidambaram Stadium,RCB,CSK,CSK,wickets,7,71,20,N
+1175357,2019,Kolkata,24-03-2019,League,Eden Gardens,SRH,KKR,KKR,wickets,6,182,20,N
+1175358,2019,Mumbai,24-03-2019,League,Wankhede Stadium,DC,MI,DC,runs,37,214,20,N
+1175359,2019,Jaipur,25-03-2019,League,Sawai Mansingh Stadium,PBKS,RR,PBKS,runs,14,185,20,N
+1175360,2019,Delhi,26-03-2019,League,Arun Jaitley Stadium,DC,CSK,CSK,wickets,6,148,20,N
+1175361,2019,Kolkata,27-03-2019,League,Eden Gardens,KKR,PBKS,KKR,runs,28,219,20,N
+1175362,2019,Bengaluru,28-03-2019,League,M.Chinnaswamy Stadium,MI,RCB,MI,runs,6,188,20,N
+1175363,2019,Hyderabad,29-03-2019,League,Rajiv Gandhi International Stadium,RR,SRH,SRH,wickets,5,199,20,N
+1175364,2019,Chandigarh,30-03-2019,League,Punjab Cricket Association IS Bindra Stadium,MI,PBKS,PBKS,wickets,8,177,20,N
+1175365,2019,Delhi,30-03-2019,League,Arun Jaitley Stadium,KKR,DC,DC,tie,NA,186,20,Y
+1175366,2019,Hyderabad,31-03-2019,League,Rajiv Gandhi International Stadium,SRH,RCB,SRH,runs,118,232,20,N
+1175367,2019,Chennai,31-03-2019,League,MA Chidambaram Stadium,CSK,RR,CSK,runs,8,176,20,N
+1175368,2019,Chandigarh,01-04-2019,League,Punjab Cricket Association IS Bindra Stadium,PBKS,DC,PBKS,runs,14,167,20,N
+1175369,2019,Jaipur,02-04-2019,League,Sawai Mansingh Stadium,RCB,RR,RR,wickets,7,159,20,N
+1175370,2019,Mumbai,03-04-2019,League,Wankhede Stadium,MI,CSK,MI,runs,37,171,20,N
+1175371,2019,Delhi,04-04-2019,League,Arun Jaitley Stadium,DC,SRH,SRH,wickets,5,130,20,N
+1175372,2019,Bengaluru,05-04-2019,League,M.Chinnaswamy Stadium,RCB,KKR,KKR,wickets,5,206,20,N
+1178393,2019,Chennai,06-04-2019,League,MA Chidambaram Stadium,CSK,PBKS,CSK,runs,22,161,20,N
+1178394,2019,Hyderabad,06-04-2019,League,Rajiv Gandhi International Stadium,MI,SRH,MI,runs,40,137,20,N
+1178395,2019,Bengaluru,07-04-2019,League,M.Chinnaswamy Stadium,RCB,DC,DC,wickets,4,150,20,N
+1178396,2019,Jaipur,07-04-2019,League,Sawai Mansingh Stadium,RR,KKR,KKR,wickets,8,140,20,N
+1178397,2019,Chandigarh,08-04-2019,League,Punjab Cricket Association IS Bindra Stadium,SRH,PBKS,PBKS,wickets,6,151,20,N
+1178398,2019,Chennai,09-04-2019,League,MA Chidambaram Stadium,KKR,CSK,CSK,wickets,7,109,20,N
+1178399,2019,Mumbai,10-04-2019,League,Wankhede Stadium,PBKS,MI,MI,wickets,3,198,20,N
+1178400,2019,Jaipur,11-04-2019,League,Sawai Mansingh Stadium,RR,CSK,CSK,wickets,4,152,20,N
+1178401,2019,Kolkata,12-04-2019,League,Eden Gardens,KKR,DC,DC,wickets,7,179,20,N
+1178402,2019,Mumbai,13-04-2019,League,Wankhede Stadium,MI,RR,RR,wickets,4,188,20,N
+1178403,2019,Chandigarh,13-04-2019,League,Punjab Cricket Association IS Bindra Stadium,PBKS,RCB,RCB,wickets,8,174,20,N
+1178404,2019,Kolkata,14-04-2019,League,Eden Gardens,KKR,CSK,CSK,wickets,5,162,20,N
+1178405,2019,Hyderabad,14-04-2019,League,Rajiv Gandhi International Stadium,DC,SRH,DC,runs,39,156,20,N
+1178406,2019,Mumbai,15-04-2019,League,Wankhede Stadium,RCB,MI,MI,wickets,5,172,20,N
+1178407,2019,Chandigarh,16-04-2019,League,Punjab Cricket Association IS Bindra Stadium,PBKS,RR,PBKS,runs,12,183,20,N
+1178408,2019,Hyderabad,17-04-2019,League,Rajiv Gandhi International Stadium,CSK,SRH,SRH,wickets,6,133,20,N
+1178409,2019,Delhi,18-04-2019,League,Arun Jaitley Stadium,MI,DC,MI,runs,40,169,20,N
+1178410,2019,Kolkata,19-04-2019,League,Eden Gardens,RCB,KKR,RCB,runs,10,214,20,N
+1178411,2019,Jaipur,20-04-2019,League,Sawai Mansingh Stadium,MI,RR,RR,wickets,5,162,20,N
+1178412,2019,Delhi,20-04-2019,League,Arun Jaitley Stadium,PBKS,DC,DC,wickets,5,164,20,N
+1178413,2019,Hyderabad,21-04-2019,League,Rajiv Gandhi International Stadium,KKR,SRH,SRH,wickets,9,160,20,N
+1178414,2019,Bengaluru,21-04-2019,League,M.Chinnaswamy Stadium,RCB,CSK,RCB,runs,1,162,20,N
+1178415,2019,Jaipur,22-04-2019,League,Sawai Mansingh Stadium,RR,DC,DC,wickets,6,192,20,N
+1178416,2019,Chennai,23-04-2019,League,MA Chidambaram Stadium,SRH,CSK,CSK,wickets,6,176,20,N
+1178417,2019,Bengaluru,24-04-2019,League,M.Chinnaswamy Stadium,RCB,PBKS,RCB,runs,17,203,20,N
+1178418,2019,Kolkata,25-04-2019,League,Eden Gardens,KKR,RR,RR,wickets,3,176,20,N
+1178419,2019,Chennai,26-04-2019,League,MA Chidambaram Stadium,MI,CSK,MI,runs,46,156,20,N
+1178420,2019,Jaipur,27-04-2019,League,Sawai Mansingh Stadium,SRH,RR,RR,wickets,7,161,20,N
+1178421,2019,Delhi,28-04-2019,League,Arun Jaitley Stadium,DC,RCB,DC,runs,16,188,20,N
+1178422,2019,Kolkata,28-04-2019,League,Eden Gardens,KKR,MI,KKR,runs,34,233,20,N
+1178423,2019,Hyderabad,29-04-2019,League,Rajiv Gandhi International Stadium,SRH,PBKS,SRH,runs,45,213,20,N
+1178424,2019,Bengaluru,30-04-2019,League,M.Chinnaswamy Stadium,RCB,RR,NA,no result,NA,63,5,N
+1178425,2019,Chennai,01-05-2019,League,MA Chidambaram Stadium,CSK,DC,CSK,runs,80,180,20,N
+1178426,2019,Mumbai,02-05-2019,League,Wankhede Stadium,MI,SRH,MI,tie,NA,163,20,Y
+1178427,2019,Chandigarh,03-05-2019,League,Punjab Cricket Association IS Bindra Stadium,PBKS,KKR,KKR,wickets,7,184,20,N
+1178428,2019,Delhi,04-05-2019,League,Arun Jaitley Stadium,RR,DC,DC,wickets,5,116,20,N
+1178429,2019,Bengaluru,04-05-2019,League,M.Chinnaswamy Stadium,SRH,RCB,RCB,wickets,4,176,20,N
+1178430,2019,Chandigarh,05-05-2019,League,Punjab Cricket Association IS Bindra Stadium,CSK,PBKS,PBKS,wickets,6,171,20,N
+1178431,2019,Mumbai,05-05-2019,League,Wankhede Stadium,KKR,MI,MI,wickets,9,134,20,N
+1181764,2019,Chennai,07-05-2019,Qualifier 1,MA Chidambaram Stadium,CSK,MI,MI,wickets,6,132,20,N
+1181766,2019,Visakhapatnam,08-05-2019,Eliminator,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,SRH,DC,DC,wickets,2,163,20,N
+1181767,2019,Visakhapatnam,10-05-2019,Qualifier 2,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,DC,CSK,CSK,wickets,6,148,20,N
+1181768,2019,Hyderabad,12-05-2019,Final,Rajiv Gandhi International Stadium,MI,CSK,MI,runs,1,150,20,N
+1216492,2020/21,Abu Dhabi,19-09-2020,League,Sheikh Zayed Stadium,MI,CSK,CSK,wickets,5,163,20,N
+1216493,2020/21,NA,20-09-2020,League,Dubai International Cricket Stadium,DC,PBKS,DC,tie,NA,158,20,Y
+1216534,2020/21,NA,21-09-2020,League,Dubai International Cricket Stadium,RCB,SRH,RCB,runs,10,164,20,N
+1216496,2020/21,NA,22-09-2020,League,Sharjah Cricket Stadium,RR,CSK,RR,runs,16,217,20,N
+1216508,2020/21,Abu Dhabi,23-09-2020,League,Sheikh Zayed Stadium,MI,KKR,MI,runs,49,196,20,N
+1216510,2020/21,NA,24-09-2020,League,Dubai International Cricket Stadium,PBKS,RCB,PBKS,runs,97,207,20,N
+1216539,2020/21,NA,25-09-2020,League,Dubai International Cricket Stadium,DC,CSK,DC,runs,44,176,20,N
+1216545,2020/21,Abu Dhabi,26-09-2020,League,Sheikh Zayed Stadium,SRH,KKR,KKR,wickets,7,143,20,N
+1216527,2020/21,NA,27-09-2020,League,Sharjah Cricket Stadium,PBKS,RR,RR,wickets,4,224,20,N
+1216547,2020/21,NA,28-09-2020,League,Dubai International Cricket Stadium,RCB,MI,RCB,tie,NA,202,20,Y
+1216532,2020/21,Abu Dhabi,29-09-2020,League,Sheikh Zayed Stadium,SRH,DC,SRH,runs,15,163,20,N
+1216504,2020/21,NA,30-09-2020,League,Dubai International Cricket Stadium,KKR,RR,KKR,runs,37,175,20,N
+1216503,2020/21,Abu Dhabi,01-10-2020,League,Sheikh Zayed Stadium,MI,PBKS,MI,runs,48,192,20,N
+1216516,2020/21,NA,02-10-2020,League,Dubai International Cricket Stadium,SRH,CSK,SRH,runs,7,165,20,N
+1216514,2020/21,Abu Dhabi,03-10-2020,League,Sheikh Zayed Stadium,RR,RCB,RCB,wickets,8,155,20,N
+1216515,2020/21,NA,03-10-2020,League,Sharjah Cricket Stadium,DC,KKR,DC,runs,18,229,20,N
+1216513,2020/21,NA,04-10-2020,League,Dubai International Cricket Stadium,PBKS,CSK,CSK,wickets,10,179,20,N
+1216538,2020/21,NA,04-10-2020,League,Sharjah Cricket Stadium,MI,SRH,MI,runs,34,209,20,N
+1216519,2020/21,NA,05-10-2020,League,Dubai International Cricket Stadium,DC,RCB,DC,runs,59,197,20,N
+1216511,2020/21,Abu Dhabi,06-10-2020,League,Sheikh Zayed Stadium,MI,RR,MI,runs,57,194,20,N
+1216501,2020/21,Abu Dhabi,07-10-2020,League,Sheikh Zayed Stadium,KKR,CSK,KKR,runs,10,168,20,N
+1216542,2020/21,NA,08-10-2020,League,Dubai International Cricket Stadium,SRH,PBKS,SRH,runs,69,202,20,N
+1216500,2020/21,NA,09-10-2020,League,Sharjah Cricket Stadium,DC,RR,DC,runs,46,185,20,N
+1216523,2020/21,Abu Dhabi,10-10-2020,League,Sheikh Zayed Stadium,KKR,PBKS,KKR,runs,2,165,20,N
+1216525,2020/21,NA,10-10-2020,League,Dubai International Cricket Stadium,RCB,CSK,RCB,runs,37,170,20,N
+1216507,2020/21,NA,11-10-2020,League,Dubai International Cricket Stadium,SRH,RR,RR,wickets,5,159,20,N
+1216529,2020/21,Abu Dhabi,11-10-2020,League,Sheikh Zayed Stadium,DC,MI,MI,wickets,5,163,20,N
+1216540,2020/21,NA,12-10-2020,League,Sharjah Cricket Stadium,RCB,KKR,RCB,runs,82,195,20,N
+1216528,2020/21,NA,13-10-2020,League,Dubai International Cricket Stadium,CSK,SRH,CSK,runs,20,168,20,N
+1216543,2020/21,NA,14-10-2020,League,Dubai International Cricket Stadium,DC,RR,DC,runs,13,162,20,N
+1216531,2020/21,NA,15-10-2020,League,Sharjah Cricket Stadium,RCB,PBKS,PBKS,wickets,8,172,20,N
+1216526,2020/21,Abu Dhabi,16-10-2020,League,Sheikh Zayed Stadium,KKR,MI,MI,wickets,8,149,20,N
+1216509,2020/21,NA,17-10-2020,League,Sharjah Cricket Stadium,CSK,DC,DC,wickets,5,180,20,N
+1216522,2020/21,NA,17-10-2020,League,Dubai International Cricket Stadium,RR,RCB,RCB,wickets,7,178,20,N
+1216512,2020/21,Abu Dhabi,18-10-2020,League,Sheikh Zayed Stadium,KKR,SRH,KKR,tie,NA,164,20,Y
+1216517,2020/21,NA,18-10-2020,League,Dubai International Cricket Stadium,MI,PBKS,PBKS,tie,NA,177,20,Y
+1216533,2020/21,Abu Dhabi,19-10-2020,League,Sheikh Zayed Stadium,CSK,RR,RR,wickets,7,126,20,N
+1216546,2020/21,NA,20-10-2020,League,Dubai International Cricket Stadium,DC,PBKS,PBKS,wickets,5,165,20,N
+1216494,2020/21,Abu Dhabi,21-10-2020,League,Sheikh Zayed Stadium,KKR,RCB,RCB,wickets,8,85,20,N
+1216518,2020/21,NA,22-10-2020,League,Dubai International Cricket Stadium,RR,SRH,SRH,wickets,8,155,20,N
+1216521,2020/21,NA,23-10-2020,League,Sharjah Cricket Stadium,CSK,MI,MI,wickets,10,115,20,N
+1216497,2020/21,Abu Dhabi,24-10-2020,League,Sheikh Zayed Stadium,KKR,DC,KKR,runs,59,195,20,N
+1216498,2020/21,NA,24-10-2020,League,Dubai International Cricket Stadium,PBKS,SRH,PBKS,runs,12,127,20,N
+1216541,2020/21,Abu Dhabi,25-10-2020,League,Sheikh Zayed Stadium,MI,RR,RR,wickets,8,196,20,N
+1216544,2020/21,NA,25-10-2020,League,Dubai International Cricket Stadium,RCB,CSK,CSK,wickets,8,146,20,N
+1216520,2020/21,NA,26-10-2020,League,Sharjah Cricket Stadium,KKR,PBKS,PBKS,wickets,8,150,20,N
+1216524,2020/21,NA,27-10-2020,League,Dubai International Cricket Stadium,SRH,DC,SRH,runs,88,220,20,N
+1216499,2020/21,Abu Dhabi,28-10-2020,League,Sheikh Zayed Stadium,RCB,MI,MI,wickets,5,165,20,N
+1216536,2020/21,NA,29-10-2020,League,Dubai International Cricket Stadium,KKR,CSK,CSK,wickets,6,173,20,N
+1216537,2020/21,Abu Dhabi,30-10-2020,League,Sheikh Zayed Stadium,PBKS,RR,RR,wickets,7,186,20,N
+1216502,2020/21,NA,31-10-2020,League,Sharjah Cricket Stadium,RCB,SRH,SRH,wickets,5,121,20,N
+1216535,2020/21,NA,31-10-2020,League,Dubai International Cricket Stadium,DC,MI,MI,wickets,9,111,20,N
+1216506,2020/21,Abu Dhabi,01-11-2020,League,Sheikh Zayed Stadium,PBKS,CSK,CSK,wickets,9,154,20,N
+1216530,2020/21,NA,01-11-2020,League,Dubai International Cricket Stadium,KKR,RR,KKR,runs,60,192,20,N
+1216505,2020/21,Abu Dhabi,02-11-2020,League,Sheikh Zayed Stadium,RCB,DC,DC,wickets,6,153,20,N
+1216495,2020/21,NA,03-11-2020,League,Sharjah Cricket Stadium,MI,SRH,SRH,wickets,10,150,20,N
+1237177,2020/21,NA,05-11-2020,Qualifier 1,Dubai International Cricket Stadium,MI,DC,MI,runs,57,201,20,N
+1237178,2020/21,Abu Dhabi,06-11-2020,Eliminator,Sheikh Zayed Stadium,RCB,SRH,SRH,wickets,6,132,20,N
+1237180,2020/21,Abu Dhabi,08-11-2020,Qualifier 2,Sheikh Zayed Stadium,DC,SRH,DC,runs,17,190,20,N
+1237181,2020/21,NA,10-11-2020,Final,Dubai International Cricket Stadium,DC,MI,MI,wickets,5,157,20,N
+1254058,2021,Chennai,09-04-2021,League,"MA Chidambaram Stadium, Chepauk, Chennai",MI,RCB,RCB,wickets,2,160,20,N
+1254059,2021,Mumbai,10-04-2021,League,"Wankhede Stadium, Mumbai",CSK,DC,DC,wickets,7,189,20,N
+1254060,2021,Chennai,11-04-2021,League,"MA Chidambaram Stadium, Chepauk, Chennai",KKR,SRH,KKR,runs,10,188,20,N
+1254061,2021,Mumbai,12-04-2021,League,"Wankhede Stadium, Mumbai",PBKS,RR,PBKS,runs,4,222,20,N
+1254062,2021,Chennai,13-04-2021,League,"MA Chidambaram Stadium, Chepauk, Chennai",MI,KKR,MI,runs,10,153,20,N
+1254063,2021,Chennai,14-04-2021,League,"MA Chidambaram Stadium, Chepauk, Chennai",RCB,SRH,RCB,runs,6,150,20,N
+1254064,2021,Mumbai,15-04-2021,League,"Wankhede Stadium, Mumbai",DC,RR,RR,wickets,3,148,20,N
+1254065,2021,Mumbai,16-04-2021,League,"Wankhede Stadium, Mumbai",PBKS,CSK,CSK,wickets,6,107,20,N
+1254066,2021,Chennai,17-04-2021,League,"MA Chidambaram Stadium, Chepauk, Chennai",MI,SRH,MI,runs,13,151,20,N
+1254067,2021,Chennai,18-04-2021,League,"MA Chidambaram Stadium, Chepauk, Chennai",RCB,KKR,RCB,runs,38,205,20,N
+1254068,2021,Mumbai,18-04-2021,League,"Wankhede Stadium, Mumbai",PBKS,DC,DC,wickets,6,196,20,N
+1254069,2021,Mumbai,19-04-2021,League,"Wankhede Stadium, Mumbai",CSK,RR,CSK,runs,45,189,20,N
+1254070,2021,Chennai,20-04-2021,League,"MA Chidambaram Stadium, Chepauk, Chennai",MI,DC,DC,wickets,6,138,20,N
+1254071,2021,Chennai,21-04-2021,League,"MA Chidambaram Stadium, Chepauk, Chennai",PBKS,SRH,SRH,wickets,9,121,20,N
+1254072,2021,Mumbai,21-04-2021,League,"Wankhede Stadium, Mumbai",CSK,KKR,CSK,runs,18,221,20,N
+1254073,2021,Mumbai,22-04-2021,League,"Wankhede Stadium, Mumbai",RR,RCB,RCB,wickets,10,178,20,N
+1254074,2021,Chennai,23-04-2021,League,"MA Chidambaram Stadium, Chepauk, Chennai",MI,PBKS,PBKS,wickets,9,132,20,N
+1254075,2021,Mumbai,24-04-2021,League,"Wankhede Stadium, Mumbai",KKR,RR,RR,wickets,6,134,20,N
+1254076,2021,Mumbai,25-04-2021,League,"Wankhede Stadium, Mumbai",CSK,RCB,CSK,runs,69,192,20,N
+1254077,2021,Chennai,25-04-2021,League,"MA Chidambaram Stadium, Chepauk, Chennai",DC,SRH,DC,tie,NA,160,20,Y
+1254078,2021,Ahmedabad,26-04-2021,League,"Narendra Modi Stadium, Ahmedabad",PBKS,KKR,KKR,wickets,5,124,20,N
+1254079,2021,Ahmedabad,27-04-2021,League,"Narendra Modi Stadium, Ahmedabad",RCB,DC,RCB,runs,1,172,20,N
+1254080,2021,Delhi,28-04-2021,League,"Arun Jaitley Stadium, Delhi",SRH,CSK,CSK,wickets,7,172,20,N
+1254081,2021,Delhi,29-04-2021,League,"Arun Jaitley Stadium, Delhi",RR,MI,MI,wickets,7,172,20,N
+1254082,2021,Ahmedabad,29-04-2021,League,"Narendra Modi Stadium, Ahmedabad",KKR,DC,DC,wickets,7,155,20,N
+1254083,2021,Ahmedabad,30-04-2021,League,"Narendra Modi Stadium, Ahmedabad",PBKS,RCB,PBKS,runs,34,180,20,N
+1254084,2021,Delhi,01-05-2021,League,"Arun Jaitley Stadium, Delhi",CSK,MI,MI,wickets,4,219,20,N
+1254085,2021,Delhi,02-05-2021,League,"Arun Jaitley Stadium, Delhi",RR,SRH,RR,runs,55,221,20,N
+1254086,2021,Ahmedabad,02-05-2021,League,"Narendra Modi Stadium, Ahmedabad",PBKS,DC,DC,wickets,7,167,20,N
+1254104,2021,Dubai,19-09-2021,League,Dubai International Cricket Stadium,CSK,MI,CSK,runs,20,157,20,N
+1254087,2021,Abu Dhabi,20-09-2021,League,"Zayed Cricket Stadium, Abu Dhabi",RCB,KKR,KKR,wickets,9,93,20,N
+1254111,2021,Dubai,21-09-2021,League,Dubai International Cricket Stadium,RR,PBKS,RR,runs,2,186,20,N
+1254105,2021,Dubai,22-09-2021,League,Dubai International Cricket Stadium,SRH,DC,DC,wickets,8,135,20,N
+1254096,2021,Abu Dhabi,23-09-2021,League,"Zayed Cricket Stadium, Abu Dhabi",MI,KKR,KKR,wickets,7,156,20,N
+1254113,2021,Sharjah,24-09-2021,League,Sharjah Cricket Stadium,RCB,CSK,CSK,wickets,6,157,20,N
+1254097,2021,Abu Dhabi,25-09-2021,League,"Zayed Cricket Stadium, Abu Dhabi",DC,RR,DC,runs,33,155,20,N
+1254107,2021,Sharjah,25-09-2021,League,Sharjah Cricket Stadium,PBKS,SRH,PBKS,runs,5,126,20,N
+1254098,2021,Abu Dhabi,26-09-2021,League,"Zayed Cricket Stadium, Abu Dhabi",KKR,CSK,CSK,wickets,2,172,20,N
+1254108,2021,Dubai,26-09-2021,League,Dubai International Cricket Stadium,RCB,MI,RCB,runs,54,166,20,N
+1254100,2021,Dubai,27-09-2021,League,Dubai International Cricket Stadium,RR,SRH,SRH,wickets,7,165,20,N
+1254092,2021,Sharjah,28-09-2021,League,Sharjah Cricket Stadium,DC,KKR,KKR,wickets,3,128,20,N
+1254099,2021,Abu Dhabi,28-09-2021,League,"Zayed Cricket Stadium, Abu Dhabi",PBKS,MI,MI,wickets,6,136,20,N
+1254103,2021,Dubai,29-09-2021,League,Dubai International Cricket Stadium,RR,RCB,RCB,wickets,7,150,20,N
+1254091,2021,Sharjah,30-09-2021,League,Sharjah Cricket Stadium,SRH,CSK,CSK,wickets,6,135,20,N
+1254102,2021,Dubai,01-10-2021,League,Dubai International Cricket Stadium,KKR,PBKS,PBKS,wickets,5,166,20,N
+1254089,2021,Abu Dhabi,02-10-2021,League,"Zayed Cricket Stadium, Abu Dhabi",CSK,RR,RR,wickets,7,190,20,N
+1254112,2021,Sharjah,02-10-2021,League,Sharjah Cricket Stadium,MI,DC,DC,wickets,4,130,20,N
+1254090,2021,Sharjah,03-10-2021,League,Sharjah Cricket Stadium,RCB,PBKS,RCB,runs,6,165,20,N
+1254109,2021,Dubai,03-10-2021,League,Dubai International Cricket Stadium,SRH,KKR,KKR,wickets,6,116,20,N
+1254110,2021,Dubai,04-10-2021,League,Dubai International Cricket Stadium,CSK,DC,DC,wickets,3,137,20,N
+1254093,2021,Sharjah,05-10-2021,League,Sharjah Cricket Stadium,RR,MI,MI,wickets,8,91,20,N
+1254095,2021,Abu Dhabi,06-10-2021,League,"Zayed Cricket Stadium, Abu Dhabi",SRH,RCB,SRH,runs,4,142,20,N
+1254094,2021,Dubai,07-10-2021,League,Dubai International Cricket Stadium,CSK,PBKS,PBKS,wickets,6,135,20,N
+1254106,2021,Sharjah,07-10-2021,League,Sharjah Cricket Stadium,KKR,RR,KKR,runs,86,172,20,N
+1254088,2021,Abu Dhabi,08-10-2021,League,"Zayed Cricket Stadium, Abu Dhabi",MI,SRH,MI,runs,42,236,20,N
+1254101,2021,Dubai,08-10-2021,League,Dubai International Cricket Stadium,DC,RCB,RCB,wickets,7,165,20,N
+1254114,2021,Dubai,10-10-2021,Qualifier 1,Dubai International Cricket Stadium,DC,CSK,CSK,wickets,4,173,20,N
+1254115,2021,Sharjah,11-10-2021,Eliminator,Sharjah Cricket Stadium,RCB,KKR,KKR,wickets,4,139,20,N
+1254116,2021,Sharjah,13-10-2021,Qualifier 2,Sharjah Cricket Stadium,DC,KKR,KKR,wickets,3,136,20,N
+1254117,2021,Dubai,15-10-2021,Final,Dubai International Cricket Stadium,CSK,KKR,CSK,runs,27,193,20,N
+1304047,2022,Mumbai,26-03-2022,League,"Wankhede Stadium, Mumbai",CSK,KKR,KKR,wickets,6,132,20,N
+1304048,2022,Mumbai,27-03-2022,League,"Brabourne Stadium, Mumbai",MI,DC,DC,wickets,4,178,20,N
+1304049,2022,Mumbai,27-03-2022,League,"Dr DY Patil Sports Academy, Mumbai",RCB,PBKS,PBKS,wickets,5,206,20,N
+1304050,2022,Mumbai,28-03-2022,League,"Wankhede Stadium, Mumbai",LSG,GT,GT,wickets,5,159,20,N
+1304051,2022,Pune,29-03-2022,League,"Maharashtra Cricket Association Stadium, Pune",RR,SRH,RR,runs,61,211,20,N
+1304052,2022,Mumbai,30-03-2022,League,"Dr DY Patil Sports Academy, Mumbai",KKR,RCB,RCB,wickets,3,129,20,N
+1304053,2022,Mumbai,31-03-2022,League,"Brabourne Stadium, Mumbai",CSK,LSG,LSG,wickets,6,211,20,N
+1304054,2022,Mumbai,01-04-2022,League,"Wankhede Stadium, Mumbai",PBKS,KKR,KKR,wickets,6,138,20,N
+1304055,2022,Mumbai,02-04-2022,League,"Dr DY Patil Sports Academy, Mumbai",RR,MI,RR,runs,23,194,20,N
+1304056,2022,Pune,02-04-2022,League,"Maharashtra Cricket Association Stadium, Pune",GT,DC,GT,runs,14,172,20,N
+1304057,2022,Mumbai,03-04-2022,League,"Brabourne Stadium, Mumbai",PBKS,CSK,PBKS,runs,54,181,20,N
+1304058,2022,Mumbai,04-04-2022,League,"Dr DY Patil Sports Academy, Mumbai",LSG,SRH,LSG,runs,12,170,20,N
+1304059,2022,Mumbai,05-04-2022,League,"Wankhede Stadium, Mumbai",RR,RCB,RCB,wickets,4,170,20,N
+1304060,2022,Pune,06-04-2022,League,"Maharashtra Cricket Association Stadium, Pune",MI,KKR,KKR,wickets,5,162,20,N
+1304061,2022,Mumbai,07-04-2022,League,"Dr DY Patil Sports Academy, Mumbai",DC,LSG,LSG,wickets,6,150,20,N
+1304062,2022,Mumbai,08-04-2022,League,"Brabourne Stadium, Mumbai",PBKS,GT,GT,wickets,6,190,20,N
+1304063,2022,Mumbai,09-04-2022,League,"Dr DY Patil Sports Academy, Mumbai",CSK,SRH,SRH,wickets,8,155,20,N
+1304064,2022,Pune,09-04-2022,League,"Maharashtra Cricket Association Stadium, Pune",MI,RCB,RCB,wickets,7,152,20,N
+1304065,2022,Mumbai,10-04-2022,League,"Brabourne Stadium, Mumbai",DC,KKR,DC,runs,44,216,20,N
+1304066,2022,Mumbai,10-04-2022,League,"Wankhede Stadium, Mumbai",RR,LSG,RR,runs,3,166,20,N
+1304067,2022,Mumbai,11-04-2022,League,"Dr DY Patil Sports Academy, Mumbai",GT,SRH,SRH,wickets,8,163,20,N
+1304068,2022,Mumbai,12-04-2022,League,"Dr DY Patil Sports Academy, Mumbai",CSK,RCB,CSK,runs,23,217,20,N
+1304069,2022,Pune,13-04-2022,League,"Maharashtra Cricket Association Stadium, Pune",PBKS,MI,PBKS,runs,12,199,20,N
+1304070,2022,Mumbai,14-04-2022,League,"Dr DY Patil Sports Academy, Mumbai",GT,RR,GT,runs,37,193,20,N
+1304071,2022,Mumbai,15-04-2022,League,"Brabourne Stadium, Mumbai",KKR,SRH,SRH,wickets,7,176,20,N
+1304072,2022,Mumbai,16-04-2022,League,"Brabourne Stadium, Mumbai",LSG,MI,LSG,runs,18,200,20,N
+1304073,2022,Mumbai,16-04-2022,League,"Wankhede Stadium, Mumbai",RCB,DC,RCB,runs,16,190,20,N
+1304074,2022,Mumbai,17-04-2022,League,"Dr DY Patil Sports Academy, Mumbai",PBKS,SRH,SRH,wickets,7,152,20,N
+1304075,2022,Pune,17-04-2022,League,"Maharashtra Cricket Association Stadium, Pune",CSK,GT,GT,wickets,3,170,20,N
+1304076,2022,Mumbai,18-04-2022,League,"Brabourne Stadium, Mumbai",RR,KKR,RR,runs,7,218,20,N
+1304077,2022,Mumbai,19-04-2022,League,"Dr DY Patil Sports Academy, Mumbai",RCB,LSG,RCB,runs,18,182,20,N
+1304078,2022,Mumbai,20-04-2022,League,"Brabourne Stadium, Mumbai",PBKS,DC,DC,wickets,9,116,20,N
+1304079,2022,Navi Mumbai,21-04-2022,League,"Dr DY Patil Sports Academy, Mumbai",MI,CSK,CSK,wickets,3,156,20,N
+1304080,2022,Mumbai,22-04-2022,League,"Wankhede Stadium, Mumbai",RR,DC,RR,runs,15,223,20,N
+1304081,2022,Navi Mumbai,23-04-2022,League,"Dr DY Patil Sports Academy, Mumbai",GT,KKR,GT,runs,8,157,20,N
+1304082,2022,Mumbai,23-04-2022,League,"Brabourne Stadium, Mumbai",RCB,SRH,SRH,wickets,9,69,20,N
+1304083,2022,Mumbai,24-04-2022,League,"Wankhede Stadium, Mumbai",LSG,MI,LSG,runs,36,169,20,N
+1304084,2022,Mumbai,25-04-2022,League,"Wankhede Stadium, Mumbai",PBKS,CSK,PBKS,runs,11,188,20,N
+1304085,2022,Pune,26-04-2022,League,"Maharashtra Cricket Association Stadium, Pune",RR,RCB,RR,runs,29,145,20,N
+1304086,2022,Mumbai,27-04-2022,League,"Wankhede Stadium, Mumbai",SRH,GT,GT,wickets,5,196,20,N
+1304087,2022,Mumbai,28-04-2022,League,"Wankhede Stadium, Mumbai",KKR,DC,DC,wickets,4,147,20,N
+1304088,2022,Pune,29-04-2022,League,"Maharashtra Cricket Association Stadium, Pune",LSG,PBKS,LSG,runs,20,154,20,N
+1304089,2022,Mumbai,30-04-2022,League,"Brabourne Stadium, Mumbai",RCB,GT,GT,wickets,6,171,20,N
+1304090,2022,Navi Mumbai,30-04-2022,League,"Dr DY Patil Sports Academy, Mumbai",RR,MI,MI,wickets,5,159,20,N
+1304091,2022,Mumbai,01-05-2022,League,"Wankhede Stadium, Mumbai",LSG,DC,LSG,runs,6,196,20,N
+1304092,2022,Pune,01-05-2022,League,"Maharashtra Cricket Association Stadium, Pune",CSK,SRH,CSK,runs,13,203,20,N
+1304093,2022,Mumbai,02-05-2022,League,"Wankhede Stadium, Mumbai",RR,KKR,KKR,wickets,7,153,20,N
+1304094,2022,Navi Mumbai,03-05-2022,League,"Dr DY Patil Sports Academy, Mumbai",GT,PBKS,PBKS,wickets,8,144,20,N
+1304095,2022,Pune,04-05-2022,League,"Maharashtra Cricket Association Stadium, Pune",RCB,CSK,RCB,runs,13,174,20,N
+1304096,2022,Mumbai,05-05-2022,League,"Brabourne Stadium, Mumbai",DC,SRH,DC,runs,21,208,20,N
+1304097,2022,Mumbai,06-05-2022,League,"Brabourne Stadium, Mumbai",MI,GT,MI,runs,5,178,20,N
+1304098,2022,Mumbai,07-05-2022,League,"Wankhede Stadium, Mumbai",PBKS,RR,RR,wickets,6,190,20,N
+1304099,2022,Pune,07-05-2022,League,"Maharashtra Cricket Association Stadium, Pune",LSG,KKR,LSG,runs,75,177,20,N
+1304100,2022,Mumbai,08-05-2022,League,"Wankhede Stadium, Mumbai",RCB,SRH,RCB,runs,67,193,20,N
+1304101,2022,Navi Mumbai,08-05-2022,League,"Dr DY Patil Sports Academy, Mumbai",CSK,DC,CSK,runs,91,209,20,N
+1304102,2022,Navi Mumbai,09-05-2022,League,"Dr DY Patil Sports Academy, Mumbai",KKR,MI,KKR,runs,52,166,20,N
+1304103,2022,Pune,10-05-2022,League,"Maharashtra Cricket Association Stadium, Pune",GT,LSG,GT,runs,62,145,20,N
+1304104,2022,Navi Mumbai,11-05-2022,League,"Dr DY Patil Sports Academy, Mumbai",RR,DC,DC,wickets,8,161,20,N
+1304105,2022,Mumbai,12-05-2022,League,"Wankhede Stadium, Mumbai",CSK,MI,MI,wickets,5,98,20,N
+1304106,2022,Mumbai,13-05-2022,League,"Brabourne Stadium, Mumbai",PBKS,RCB,PBKS,runs,54,210,20,N
+1304107,2022,Pune,14-05-2022,League,"Maharashtra Cricket Association Stadium, Pune",KKR,SRH,KKR,runs,54,178,20,N
+1304108,2022,Mumbai,15-05-2022,League,"Wankhede Stadium, Mumbai",CSK,GT,GT,wickets,7,134,20,N
+1304109,2022,Mumbai,15-05-2022,League,"Brabourne Stadium, Mumbai",RR,LSG,RR,runs,24,179,20,N
+1304110,2022,Navi Mumbai,16-05-2022,League,"Dr DY Patil Sports Academy, Mumbai",DC,PBKS,DC,runs,17,160,20,N
+1304111,2022,Mumbai,17-05-2022,League,"Wankhede Stadium, Mumbai",SRH,MI,SRH,runs,3,194,20,N
+1304112,2022,Navi Mumbai,18-05-2022,League,"Dr DY Patil Sports Academy, Mumbai",LSG,KKR,LSG,runs,2,211,20,N
+1304113,2022,Mumbai,19-05-2022,League,"Wankhede Stadium, Mumbai",GT,RCB,RCB,wickets,8,169,20,N
+1304114,2022,Mumbai,20-05-2022,League,"Brabourne Stadium, Mumbai",CSK,RR,RR,wickets,5,151,20,N
+1304115,2022,Mumbai,21-05-2022,League,"Wankhede Stadium, Mumbai",DC,MI,MI,wickets,5,160,20,N
+1304116,2022,Mumbai,22-05-2022,League,"Wankhede Stadium, Mumbai",SRH,PBKS,PBKS,wickets,5,158,20,N
+1312197,2022,Kolkata,24-05-2022,Qualifier 1,"Eden Gardens, Kolkata",RR,GT,GT,wickets,7,189,20,N
+1312198,2022,Kolkata,25-05-2022,Eliminator,"Eden Gardens, Kolkata",RCB,LSG,RCB,runs,14,208,20,N
+1312199,2022,Ahmedabad,27-05-2022,Qualifier 2,"Narendra Modi Stadium, Ahmedabad",RCB,RR,RR,wickets,7,158,20,N
+1312200,2022,Ahmedabad,29-05-2022,Final,"Narendra Modi Stadium, Ahmedabad",RR,GT,GT,wickets,7,131,20,N
+1359475,2023,Ahmedabad,31-03-2023,League,"Narendra Modi Stadium, Ahmedabad",CSK,GT,GT,wickets,5,179,20,N
+1359476,2023,Chandigarh,01-04-2023,League,"Punjab Cricket Association IS Bindra Stadium, Mohali, Chandigarh",PBKS,KKR,PBKS,runs,7,154,16,N
+1359477,2023,Lucknow,01-04-2023,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",LSG,DC,LSG,runs,50,194,20,N
+1359478,2023,Hyderabad,02-04-2023,League,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",RR,SRH,RR,runs,72,204,20,N
+1359479,2023,Bengaluru,02-04-2023,League,"M Chinnaswamy Stadium, Bengaluru",MI,RCB,RCB,wickets,8,172,20,N
+1359480,2023,Chennai,03-04-2023,League,"MA Chidambaram Stadium, Chepauk, Chennai",CSK,LSG,CSK,runs,12,218,20,N
+1359481,2023,Delhi,04-04-2023,League,"Arun Jaitley Stadium, Delhi",DC,GT,GT,wickets,6,163,20,N
+1359482,2023,Guwahati,05-04-2023,League,"Barsapara Cricket Stadium, Guwahati",PBKS,RR,PBKS,runs,5,198,20,N
+1359483,2023,Kolkata,06-04-2023,League,"Eden Gardens, Kolkata",KKR,RCB,KKR,runs,81,205,20,N
+1359484,2023,Lucknow,07-04-2023,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",SRH,LSG,LSG,wickets,5,122,20,N
+1359485,2023,Guwahati,08-04-2023,League,"Barsapara Cricket Stadium, Guwahati",RR,DC,RR,runs,57,200,20,N
+1359486,2023,Mumbai,08-04-2023,League,"Wankhede Stadium, Mumbai",MI,CSK,CSK,wickets,7,158,20,N
+1359487,2023,Ahmedabad,09-04-2023,League,"Narendra Modi Stadium, Ahmedabad",GT,KKR,KKR,wickets,3,205,20,N
+1359488,2023,Hyderabad,09-04-2023,League,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",PBKS,SRH,SRH,wickets,8,144,20,N
+1359489,2023,Bengaluru,10-04-2023,League,"M Chinnaswamy Stadium, Bengaluru",RCB,LSG,LSG,wickets,1,213,20,N
+1359490,2023,Delhi,11-04-2023,League,"Arun Jaitley Stadium, Delhi",DC,MI,MI,wickets,6,173,20,N
+1359491,2023,Chennai,12-04-2023,League,"MA Chidambaram Stadium, Chepauk, Chennai",RR,CSK,RR,runs,3,176,20,N
+1359492,2023,Chandigarh,13-04-2023,League,"Punjab Cricket Association IS Bindra Stadium, Mohali, Chandigarh",PBKS,GT,GT,wickets,6,154,20,N
+1359493,2023,Kolkata,14-04-2023,League,"Eden Gardens, Kolkata",SRH,KKR,SRH,runs,23,229,20,N
+1359494,2023,Bengaluru,15-04-2023,League,"M Chinnaswamy Stadium, Bengaluru",RCB,DC,RCB,runs,23,175,20,N
+1359495,2023,Lucknow,15-04-2023,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",LSG,PBKS,PBKS,wickets,2,160,20,N
+1359496,2023,Mumbai,16-04-2023,League,"Wankhede Stadium, Mumbai",KKR,MI,MI,wickets,5,186,20,N
+1359497,2023,Ahmedabad,16-04-2023,League,"Narendra Modi Stadium, Ahmedabad",GT,RR,RR,wickets,3,178,20,N
+1359498,2023,Bengaluru,17-04-2023,League,"M Chinnaswamy Stadium, Bengaluru",CSK,RCB,CSK,runs,8,227,20,N
+1359499,2023,Hyderabad,18-04-2023,League,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",MI,SRH,MI,runs,14,193,20,N
+1359500,2023,Jaipur,19-04-2023,League,"Sawai Mansingh Stadium, Jaipur",LSG,RR,LSG,runs,10,155,20,N
+1359501,2023,Chandigarh,20-04-2023,League,"Punjab Cricket Association IS Bindra Stadium, Mohali, Chandigarh",RCB,PBKS,RCB,runs,24,175,20,N
+1359502,2023,Delhi,20-04-2023,League,"Arun Jaitley Stadium, Delhi",KKR,DC,DC,wickets,4,128,20,N
+1359503,2023,Chennai,21-04-2023,League,"MA Chidambaram Stadium, Chepauk, Chennai",SRH,CSK,CSK,wickets,7,135,20,N
+1359504,2023,Lucknow,22-04-2023,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",GT,LSG,GT,runs,7,136,20,N
+1359505,2023,Mumbai,22-04-2023,League,"Wankhede Stadium, Mumbai",PBKS,MI,PBKS,runs,13,215,20,N
+1359506,2023,Bengaluru,23-04-2023,League,"M Chinnaswamy Stadium, Bengaluru",RCB,RR,RCB,runs,7,190,20,N
+1359507,2023,Kolkata,23-04-2023,League,"Eden Gardens, Kolkata",CSK,KKR,CSK,runs,49,236,20,N
+1359508,2023,Hyderabad,24-04-2023,League,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",DC,SRH,DC,runs,7,145,20,N
+1359509,2023,Ahmedabad,25-04-2023,League,"Narendra Modi Stadium, Ahmedabad",GT,MI,GT,runs,55,208,20,N
+1359510,2023,Bengaluru,26-04-2023,League,"M Chinnaswamy Stadium, Bengaluru",KKR,RCB,KKR,runs,21,201,20,N
+1359511,2023,Jaipur,27-04-2023,League,"Sawai Mansingh Stadium, Jaipur",RR,CSK,RR,runs,32,203,20,N
+1359512,2023,Chandigarh,28-04-2023,League,"Punjab Cricket Association IS Bindra Stadium, Mohali, Chandigarh",LSG,PBKS,LSG,runs,56,258,20,N
+1359513,2023,Kolkata,29-04-2023,League,"Eden Gardens, Kolkata",KKR,GT,GT,wickets,7,180,20,N
+1359514,2023,Delhi,29-04-2023,League,"Arun Jaitley Stadium, Delhi",SRH,DC,SRH,runs,9,198,20,N
+1359515,2023,Chennai,30-04-2023,League,"MA Chidambaram Stadium, Chepauk, Chennai",CSK,PBKS,PBKS,wickets,4,201,20,N
+1359516,2023,Mumbai,30-04-2023,League,"Wankhede Stadium, Mumbai",RR,MI,MI,wickets,6,213,20,N
+1359517,2023,Lucknow,01-05-2023,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",RCB,LSG,RCB,runs,18,127,20,N
+1359518,2023,Ahmedabad,02-05-2023,League,"Narendra Modi Stadium, Ahmedabad",DC,GT,DC,runs,5,131,20,N
+1359519,2023,Lucknow,03-05-2023,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",LSG,CSK,NA,no result,NA,NA,NA,N
+1359520,2023,Chandigarh,03-05-2023,League,"Punjab Cricket Association IS Bindra Stadium, Mohali, Chandigarh",PBKS,MI,MI,wickets,6,215,20,N
+1359521,2023,Hyderabad,04-05-2023,League,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",KKR,SRH,KKR,runs,5,172,20,N
+1359522,2023,Jaipur,05-05-2023,League,"Sawai Mansingh Stadium, Jaipur",RR,GT,GT,wickets,9,119,20,N
+1359523,2023,Chennai,06-05-2023,League,"MA Chidambaram Stadium, Chepauk, Chennai",MI,CSK,CSK,wickets,6,140,20,N
+1359524,2023,Delhi,06-05-2023,League,"Arun Jaitley Stadium, Delhi",RCB,DC,DC,wickets,7,182,20,N
+1359525,2023,Ahmedabad,07-05-2023,League,"Narendra Modi Stadium, Ahmedabad",GT,LSG,GT,runs,56,228,20,N
+1359526,2023,Jaipur,07-05-2023,League,"Sawai Mansingh Stadium, Jaipur",RR,SRH,SRH,wickets,4,215,20,N
+1359527,2023,Kolkata,08-05-2023,League,"Eden Gardens, Kolkata",PBKS,KKR,KKR,wickets,5,180,20,N
+1359528,2023,Mumbai,09-05-2023,League,"Wankhede Stadium, Mumbai",RCB,MI,MI,wickets,6,200,20,N
+1359529,2023,Chennai,10-05-2023,League,"MA Chidambaram Stadium, Chepauk, Chennai",CSK,DC,CSK,runs,27,168,20,N
+1359530,2023,Kolkata,11-05-2023,League,"Eden Gardens, Kolkata",KKR,RR,RR,wickets,9,150,20,N
+1359531,2023,Mumbai,12-05-2023,League,"Wankhede Stadium, Mumbai",MI,GT,MI,runs,27,219,20,N
+1359532,2023,Hyderabad,13-05-2023,League,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",SRH,LSG,LSG,wickets,7,183,20,N
+1359533,2023,Delhi,13-05-2023,League,"Arun Jaitley Stadium, Delhi",PBKS,DC,PBKS,runs,31,168,20,N
+1359534,2023,Jaipur,14-05-2023,League,"Sawai Mansingh Stadium, Jaipur",RCB,RR,RCB,runs,112,172,20,N
+1359535,2023,Chennai,14-05-2023,League,"MA Chidambaram Stadium, Chepauk, Chennai",CSK,KKR,KKR,wickets,6,145,20,N
+1359536,2023,Ahmedabad,15-05-2023,League,"Narendra Modi Stadium, Ahmedabad",GT,SRH,GT,runs,34,189,20,N
+1359537,2023,Lucknow,16-05-2023,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",LSG,MI,LSG,runs,5,178,20,N
+1359538,2023,Dharamsala,17-05-2023,League,"Himachal Pradesh Cricket Association Stadium, Dharamsala",DC,PBKS,DC,runs,15,214,20,N
+1359539,2023,Hyderabad,18-05-2023,League,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",SRH,RCB,RCB,wickets,8,187,20,N
+1359540,2023,Dharamsala,19-05-2023,League,"Himachal Pradesh Cricket Association Stadium, Dharamsala",PBKS,RR,RR,wickets,4,188,20,N
+1359541,2023,Delhi,20-05-2023,League,"Arun Jaitley Stadium, Delhi",CSK,DC,CSK,runs,77,224,20,N
+1359542,2023,Kolkata,20-05-2023,League,"Eden Gardens, Kolkata",LSG,KKR,LSG,runs,1,177,20,N
+1359543,2023,Mumbai,21-05-2023,League,"Wankhede Stadium, Mumbai",SRH,MI,MI,wickets,8,201,20,N
+1359544,2023,Bengaluru,21-05-2023,League,"M Chinnaswamy Stadium, Bengaluru",RCB,GT,GT,wickets,6,198,20,N
+1370350,2023,Chennai,23-05-2023,Qualifier 1,"MA Chidambaram Stadium, Chepauk, Chennai",CSK,GT,CSK,runs,15,173,20,N
+1370351,2023,Chennai,24-05-2023,Eliminator,"MA Chidambaram Stadium, Chepauk, Chennai",MI,LSG,MI,runs,81,183,20,N
+1370352,2023,Ahmedabad,26-05-2023,Qualifier 2,"Narendra Modi Stadium, Ahmedabad",GT,MI,GT,runs,62,234,20,N
+1370353,2023,Ahmedabad,29-05-2023,Final,"Narendra Modi Stadium, Ahmedabad",GT,CSK,CSK,wickets,5,171,15,N
+1422119,2024,Chennai,22-03-2024,League,"MA Chidambaram Stadium, Chepauk, Chennai",RCB,CSK,CSK,wickets,6,174,20,N
+1422120,2024,Mohali,23-03-2024,League,"Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur",DC,PBKS,PBKS,wickets,4,175,20,N
+1422121,2024,Kolkata,23-03-2024,League,"Eden Gardens, Kolkata",KKR,SRH,KKR,runs,4,209,20,N
+1422122,2024,Jaipur,24-03-2024,League,"Sawai Mansingh Stadium, Jaipur",RR,LSG,RR,runs,20,194,20,N
+1422123,2024,Ahmedabad,24-03-2024,League,"Narendra Modi Stadium, Ahmedabad",GT,MI,GT,runs,6,169,20,N
+1422124,2024,Bengaluru,25-03-2024,League,"M Chinnaswamy Stadium, Bengaluru",PBKS,RCB,RCB,wickets,4,177,20,N
+1422125,2024,Chennai,26-03-2024,League,"MA Chidambaram Stadium, Chepauk, Chennai",CSK,GT,CSK,runs,63,207,20,N
+1422126,2024,Hyderabad,27-03-2024,League,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",SRH,MI,SRH,runs,31,278,20,N
+1422127,2024,Jaipur,28-03-2024,League,"Sawai Mansingh Stadium, Jaipur",RR,DC,RR,runs,12,186,20,N
+1422128,2024,Bengaluru,29-03-2024,League,"M Chinnaswamy Stadium, Bengaluru",RCB,KKR,KKR,wickets,7,183,20,N
+1422129,2024,Lucknow,30-03-2024,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",LSG,PBKS,LSG,runs,21,200,20,N
+1422130,2024,Ahmedabad,31-03-2024,League,"Narendra Modi Stadium, Ahmedabad",SRH,GT,GT,wickets,7,163,20,N
+1422131,2024,Visakhapatnam,31-03-2024,League,"Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam",DC,CSK,DC,runs,20,192,20,N
+1422132,2024,Mumbai,01-04-2024,League,"Wankhede Stadium, Mumbai",MI,RR,RR,wickets,6,126,20,N
+1422133,2024,Bengaluru,02-04-2024,League,"M Chinnaswamy Stadium, Bengaluru",LSG,RCB,LSG,runs,28,182,20,N
+1422134,2024,Visakhapatnam,03-04-2024,League,"Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam",KKR,DC,KKR,runs,106,273,20,N
+1422135,2024,Ahmedabad,04-04-2024,League,"Narendra Modi Stadium, Ahmedabad",GT,PBKS,PBKS,wickets,3,200,20,N
+1422136,2024,Hyderabad,05-04-2024,League,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",CSK,SRH,SRH,wickets,6,166,20,N
+1422137,2024,Jaipur,06-04-2024,League,"Sawai Mansingh Stadium, Jaipur",RCB,RR,RR,wickets,6,184,20,N
+1422138,2024,Mumbai,07-04-2024,League,"Wankhede Stadium, Mumbai",MI,DC,MI,runs,29,235,20,N
+1422139,2024,Lucknow,07-04-2024,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",LSG,GT,LSG,runs,33,164,20,N
+1426260,2024,Chennai,08-04-2024,League,"MA Chidambaram Stadium, Chepauk, Chennai",KKR,CSK,CSK,wickets,7,138,20,N
+1426261,2024,Mohali,09-04-2024,League,"Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur",SRH,PBKS,SRH,runs,2,183,20,N
+1426262,2024,Jaipur,10-04-2024,League,"Sawai Mansingh Stadium, Jaipur",RR,GT,GT,wickets,3,197,20,N
+1426263,2024,Mumbai,11-04-2024,League,"Wankhede Stadium, Mumbai",RCB,MI,MI,wickets,7,197,20,N
+1426264,2024,Lucknow,12-04-2024,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",LSG,DC,DC,wickets,6,168,20,N
+1426265,2024,Mohali,13-04-2024,League,"Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur",PBKS,RR,RR,wickets,3,148,20,N
+1426266,2024,Kolkata,14-04-2024,League,"Eden Gardens, Kolkata",LSG,KKR,KKR,wickets,8,162,20,N
+1426267,2024,Mumbai,14-04-2024,League,"Wankhede Stadium, Mumbai",CSK,MI,CSK,runs,20,207,20,N
+1426268,2024,Bengaluru,15-04-2024,League,"M Chinnaswamy Stadium, Bengaluru",SRH,RCB,SRH,runs,25,288,20,N
+1426269,2024,Kolkata,16-04-2024,League,"Eden Gardens, Kolkata",KKR,RR,RR,wickets,2,224,20,N
+1426270,2024,Ahmedabad,17-04-2024,League,"Narendra Modi Stadium, Ahmedabad",GT,DC,DC,wickets,6,90,20,N
+1426271,2024,Mohali,18-04-2024,League,"Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur",MI,PBKS,MI,runs,9,193,20,N
+1426272,2024,Lucknow,19-04-2024,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",CSK,LSG,LSG,wickets,8,177,20,N
+1426273,2024,Delhi,20-04-2024,League,"Arun Jaitley Stadium, Delhi",SRH,DC,SRH,runs,67,267,20,N
+1426274,2024,Kolkata,21-04-2024,League,"Eden Gardens, Kolkata",KKR,RCB,KKR,runs,1,223,20,N
+1426275,2024,Mohali,21-04-2024,League,"Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur",PBKS,GT,GT,wickets,3,143,20,N
+1426276,2024,Jaipur,22-04-2024,League,"Sawai Mansingh Stadium, Jaipur",MI,RR,RR,wickets,9,180,20,N
+1426277,2024,Chennai,23-04-2024,League,"MA Chidambaram Stadium, Chepauk, Chennai",CSK,LSG,LSG,wickets,6,211,20,N
+1426278,2024,Delhi,24-04-2024,League,"Arun Jaitley Stadium, Delhi",DC,GT,DC,runs,4,225,20,N
+1426279,2024,Hyderabad,25-04-2024,League,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",RCB,SRH,RCB,runs,35,207,20,N
+1426280,2024,Kolkata,26-04-2024,League,"Eden Gardens, Kolkata",KKR,PBKS,PBKS,wickets,8,262,20,N
+1426281,2024,Delhi,27-04-2024,League,"Arun Jaitley Stadium, Delhi",DC,MI,DC,runs,10,258,20,N
+1426282,2024,Lucknow,27-04-2024,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",LSG,RR,RR,wickets,7,197,20,N
+1426283,2024,Ahmedabad,28-04-2024,League,"Narendra Modi Stadium, Ahmedabad",GT,RCB,RCB,wickets,9,201,20,N
+1426284,2024,Chennai,28-04-2024,League,"MA Chidambaram Stadium, Chepauk, Chennai",CSK,SRH,CSK,runs,78,213,20,N
+1426285,2024,Kolkata,29-04-2024,League,"Eden Gardens, Kolkata",DC,KKR,KKR,wickets,7,154,20,N
+1426286,2024,Lucknow,30-04-2024,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",MI,LSG,LSG,wickets,4,145,20,N
+1426287,2024,Chennai,01-05-2024,League,"MA Chidambaram Stadium, Chepauk, Chennai",CSK,PBKS,PBKS,wickets,7,163,20,N
+1426288,2024,Hyderabad,02-05-2024,League,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",SRH,RR,SRH,runs,1,202,20,N
+1426289,2024,Mumbai,03-05-2024,League,"Wankhede Stadium, Mumbai",KKR,MI,KKR,runs,24,170,20,N
+1426290,2024,Bengaluru,04-05-2024,League,"M Chinnaswamy Stadium, Bengaluru",GT,RCB,RCB,wickets,4,148,20,N
+1426291,2024,Dharamsala,05-05-2024,League,"Himachal Pradesh Cricket Association Stadium, Dharamsala",CSK,PBKS,CSK,runs,28,168,20,N
+1426292,2024,Lucknow,05-05-2024,League,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",KKR,LSG,KKR,runs,98,236,20,N
+1426293,2024,Mumbai,06-05-2024,League,"Wankhede Stadium, Mumbai",SRH,MI,MI,wickets,7,174,20,N
+1426294,2024,Delhi,07-05-2024,League,"Arun Jaitley Stadium, Delhi",DC,RR,DC,runs,20,222,20,N
+1426295,2024,Hyderabad,08-05-2024,League,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",LSG,SRH,SRH,wickets,10,166,20,N
+1426296,2024,Dharamsala,09-05-2024,League,"Himachal Pradesh Cricket Association Stadium, Dharamsala",RCB,PBKS,RCB,runs,60,242,20,N
+1426297,2024,Ahmedabad,10-05-2024,League,"Narendra Modi Stadium, Ahmedabad",GT,CSK,GT,runs,35,232,20,N
+1426298,2024,Kolkata,11-05-2024,League,"Eden Gardens, Kolkata",KKR,MI,KKR,runs,18,158,16,N
+1426299,2024,Chennai,12-05-2024,League,"MA Chidambaram Stadium, Chepauk, Chennai",RR,CSK,CSK,wickets,5,142,20,N
+1426300,2024,Bengaluru,12-05-2024,League,"M Chinnaswamy Stadium, Bengaluru",RCB,DC,RCB,runs,47,188,20,N
+1426302,2024,Delhi,14-05-2024,League,"Arun Jaitley Stadium, Delhi",DC,LSG,DC,runs,19,209,20,N
+1426303,2024,Guwahati,15-05-2024,League,"Barsapara Cricket Stadium, Guwahati",RR,PBKS,PBKS,wickets,5,145,20,N
+1426305,2024,Mumbai,17-05-2024,League,"Wankhede Stadium, Mumbai",LSG,MI,LSG,runs,18,215,20,N
+1426306,2024,Bengaluru,18-05-2024,League,"M Chinnaswamy Stadium, Bengaluru",RCB,CSK,RCB,runs,27,219,20,N
+1426307,2024,Hyderabad,19-05-2024,League,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",PBKS,SRH,SRH,wickets,4,215,20,N
+1426309,2024,Ahmedabad,21-05-2024,Qualifier 1,"Narendra Modi Stadium, Ahmedabad",SRH,KKR,KKR,wickets,8,160,20,N
+1426310,2024,Ahmedabad,22-05-2024,Eliminator,"Narendra Modi Stadium, Ahmedabad",RCB,RR,RR,wickets,4,173,20,N
+1426311,2024,Chennai,24-05-2024,Qualifier 2,"MA Chidambaram Stadium, Chepauk, Chennai",SRH,RR,SRH,runs,36,176,20,N
+1426312,2024,Chennai,26-05-2024,Final,"MA Chidambaram Stadium, Chepauk, Chennai",SRH,KKR,KKR,wickets,8,114,20,N
