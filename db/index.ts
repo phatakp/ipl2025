@@ -1,9 +1,9 @@
-import { NeonQueryFunction, neon } from "@neondatabase/serverless";
-import { NeonHttpDatabase, drizzle } from "drizzle-orm/neon-http";
+import { Pool, PoolClient, neonConfig } from "@neondatabase/serverless";
 import {
     drizzle as PostgresDrizzle,
     PostgresJsDatabase,
 } from "drizzle-orm/postgres-js";
+import ws from "ws";
 
 import * as matchHist from "@/db/schema/history.schema";
 import * as matches from "@/db/schema/matches.schema";
@@ -24,10 +24,11 @@ const schema = {
     ...relations,
 };
 
-let db: NeonHttpDatabase<typeof schema> | PostgresJsDatabase<typeof schema>;
+let db: PoolClient | PostgresJsDatabase<typeof schema>;
 if (env.NODE_ENV === "production") {
-    const sql: NeonQueryFunction<boolean, boolean> = neon(env.DATABASE_URL);
-    db = drizzle(sql, { schema });
+    neonConfig.webSocketConstructor = ws;
+    const pool = new Pool({ connectionString: env.DATABASE_URL });
+    db = await pool.connect();
 } else {
     db = PostgresDrizzle(env.DATABASE_URL, { schema });
 }
