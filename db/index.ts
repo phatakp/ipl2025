@@ -1,3 +1,4 @@
+import { Pool, neonConfig } from "@neondatabase/serverless";
 import { NeonDatabase, drizzle } from "drizzle-orm/neon-serverless";
 import {
     drizzle as PostgresDrizzle,
@@ -26,7 +27,9 @@ const schema = {
 
 let db: NeonDatabase<typeof schema> | PostgresJsDatabase<typeof schema>;
 if (env.NODE_ENV === "production") {
-    db = drizzle({ connection: env.DATABASE_URL, ws, schema });
+    neonConfig.webSocketConstructor = ws;
+    const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+    db = drizzle({ client: pool, schema });
 } else {
     db = PostgresDrizzle(env.DATABASE_URL, { schema });
 }
