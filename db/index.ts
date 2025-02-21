@@ -1,4 +1,4 @@
-import { Client, neonConfig } from "@neondatabase/serverless";
+import { NeonDatabase, drizzle } from "drizzle-orm/neon-serverless";
 import {
     drizzle as PostgresDrizzle,
     PostgresJsDatabase,
@@ -24,10 +24,9 @@ const schema = {
     ...relations,
 };
 
-let db: Client | PostgresJsDatabase<typeof schema>;
+let db: NeonDatabase<typeof schema> | PostgresJsDatabase<typeof schema>;
 if (env.NODE_ENV === "production") {
-    neonConfig.webSocketConstructor = ws;
-    db = new Client({ connectionString: env.DATABASE_URL });
+    db = drizzle({ connection: env.DATABASE_URL, ws, schema });
 } else {
     db = PostgresDrizzle(env.DATABASE_URL, { schema });
 }
