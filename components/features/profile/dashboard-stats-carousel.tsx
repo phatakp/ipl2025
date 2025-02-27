@@ -2,9 +2,8 @@ import TeamStandings from "@/components/features/team/team-standings";
 import {
     Carousel,
     CarouselContent,
+    CarouselIndicator,
     CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
 } from "@/components/ui/carousel";
 
 import PlayerStandings from "./player-standings";
@@ -14,7 +13,7 @@ export default function DashboardStatsCarousel() {
     return (
         <div>
             <Carousel>
-                <CarouselContent>
+                <CarouselContent className="mb-4">
                     <CarouselItem className="basis-1/1 sm:basis-1/2 md:basis-1/3">
                         <PlayerStandings />
                     </CarouselItem>
@@ -25,8 +24,8 @@ export default function DashboardStatsCarousel() {
                         <UserPredictions />
                     </CarouselItem>
                 </CarouselContent>
-                <CarouselPrevious className="left-4 top-full translate-y-1" />
-                <CarouselNext className="right-4 top-full translate-y-1" />
+                {/* <CarouselNavigation /> */}
+                <CarouselIndicator className="absolute left-auto w-full justify-center gap-2" />
             </Carousel>
         </div>
     );

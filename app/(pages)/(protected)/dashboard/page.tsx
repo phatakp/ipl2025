@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
+import { getAllFixtures, getAllResults } from "@/actions/match.actions";
 import { getCurrUser, getRank } from "@/actions/user.actions";
 import MatchCarousel from "@/components/features/match/match-carousel";
 import DashboardStatsCarousel from "@/components/features/profile/dashboard-stats-carousel";
@@ -18,6 +19,9 @@ export default async function DashboardPage() {
     const [user] = await getCurrUser();
     if (!user?.teamName) redirect("/profile");
     const [rank] = await getRank();
+    const [fixtures] = await getAllFixtures();
+    const [results] = await getAllResults();
+
     return (
         <AuthProvider currUser={user}>
             <div className="flex flex-col gap-16">
@@ -62,7 +66,8 @@ export default async function DashboardPage() {
                         </PageActions>
                     </PageHeaderGrid>
                 </PageHeader>
-                <MatchCarousel />
+                <MatchCarousel matches={results ?? []} type="results" />
+                <MatchCarousel matches={fixtures ?? []} type="fixtures" />
                 <DashboardStatsCarousel />
             </div>
         </AuthProvider>

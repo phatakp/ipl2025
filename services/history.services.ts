@@ -1,9 +1,14 @@
 import { asc, isNotNull, sql } from "drizzle-orm";
 
-import { HistTotalsReturn, MatchHistWithTeams } from "@/app/types";
+import {
+    HistTotalsReturn,
+    MatchHistParams,
+    MatchHistWithTeams,
+} from "@/app/types";
 import { matchHistory, matchTeamsSchema } from "@/db/schema/history.schema";
+import { matchParams } from "@/db/schema/matches.schema";
 import { teamNameSchema } from "@/db/schema/teams.schema";
-import { publicProcedure } from "@/lib/zsa";
+import { protectedProcedure, publicProcedure } from "@/lib/zsa";
 
 class HistoryService {
     getAllHistory = publicProcedure
@@ -142,6 +147,36 @@ class HistoryService {
                 .groupBy(matchHistory.team2Name);
 
             return rows as Pick<HistTotalsReturn, "team2" | "count">[];
+        });
+
+    createHistory = protectedProcedure
+        .createServerAction()
+        .input(matchParams)
+        .handler(async ({ ctx: { db }, input }) => {
+            const {
+                winnerName,
+                resultType,
+                resultMargin,
+                team1Runs,
+                team1Balls,
+                team2Runs,
+                team2Balls,
+            } = input;
+            const data: MatchHistParams = {
+                date: input.date,
+                team1Name: input.team1Name!,
+                team2Name: input.team2Name!,
+                winnerName: winnerName ?? null,
+                venue: input.venue,
+                resultMargin: resultMargin ?? 0,
+                resultType: resultType!,
+                team1Runs,
+                team1Balls,
+                team2Runs,
+                team2Balls,
+                isLeagueMatch: input.type === "league",
+            };
+            await db.insert(matchHistory).values(data);
         });
 }
 

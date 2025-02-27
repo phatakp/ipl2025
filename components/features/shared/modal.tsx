@@ -22,6 +22,7 @@ import {
     DrawerTitle,
     DrawerTrigger,
 } from "@/components/ui/drawer";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 
@@ -116,8 +117,16 @@ const ModalContent = ({ className, children, ...props }: ModalProps) => {
     const ModalContent = isDesktop ? DialogContent : DrawerContent;
 
     return (
-        <ModalContent className={className} {...props}>
-            {children}
+        <ModalContent
+            className={cn(
+                "max-h-[calc(90dvh-1.5rem)] sm:w-[calc(100dvw-1.5rem)]",
+                className
+            )}
+            {...props}
+        >
+            <ScrollArea className="max-h-[calc(90dvh-3rem)]">
+                {children}
+            </ScrollArea>
         </ModalContent>
     );
 };

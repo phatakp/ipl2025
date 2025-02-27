@@ -1,4 +1,4 @@
-import { useStatsContext } from "@/components/providers/stats.context";
+import { MatchStats } from "@/app/types";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -6,15 +6,13 @@ import StatsBar from "../shared/stats-bar";
 import StatsHeader from "../shared/stats-header";
 
 type Props = {
+    data: MatchStats;
     title: string;
     asModal?: boolean;
     versus?: boolean;
 };
 
-export default function MatchStatsCard({ title, asModal, versus }: Props) {
-    const { overall, h2h } = useStatsContext();
-    const data = versus ? h2h : overall;
-
+export default function MatchStatsCard({ data, title, asModal }: Props) {
     return (
         <Card className="w-full rounded-none md:rounded-xl">
             <StatsHeader title={title} asModal={asModal} />

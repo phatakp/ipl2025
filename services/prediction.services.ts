@@ -1,9 +1,10 @@
-import { and, eq, max, sql } from "drizzle-orm";
+import { and, eq, max, ne, sql } from "drizzle-orm";
 
 import { CompletePred, Pred } from "@/app/types";
 import {
     matchDefaultSchema,
     matchNumSchema,
+    matchParams,
     matches,
 } from "@/db/schema/matches.schema";
 import {
@@ -13,6 +14,7 @@ import {
     updatePredParams,
 } from "@/db/schema/predictions.schema";
 import { profiles } from "@/db/schema/profiles.schema";
+import { getCurrentISTDate, getISTDate } from "@/lib/utils";
 import { protectedProcedure } from "@/lib/zsa";
 
 const shortProfile = {
@@ -37,11 +39,6 @@ class PredictionService {
                         columns: { longName: true },
                     },
                     match: {
-                        columns: {
-                            minStake: true,
-                            team1Name: true,
-                            team2Name: true,
-                        },
                         with: {
                             team1: {
                                 columns: { longName: true },
@@ -77,11 +74,6 @@ class PredictionService {
                         columns: { longName: true },
                     },
                     match: {
-                        columns: {
-                            minStake: true,
-                            team1Name: true,
-                            team2Name: true,
-                        },
                         with: {
                             team1: {
                                 columns: { longName: true },
@@ -120,11 +112,6 @@ class PredictionService {
                         columns: { longName: true },
                     },
                     match: {
-                        columns: {
-                            minStake: true,
-                            team1Name: true,
-                            team2Name: true,
-                        },
                         with: {
                             team1: {
                                 columns: { longName: true },
@@ -169,21 +156,35 @@ class PredictionService {
             return row as Pred;
         });
 
-    addDefaultPredictionForMatch = protectedProcedure
+    addDefaultPredictionsForMatch = protectedProcedure
         .createServerAction()
         .input(matchDefaultSchema)
         .handler(async ({ ctx: { db, session }, input }) => {
-            const [row] = await db
-                .insert(predictions)
-                .values({
-                    ...input,
-                    matchNum: input.num,
-                    userId: session.user.id,
-                    amount: input.minStake,
-                    status: "default",
-                })
-                .returning();
-            return row as Pred;
+            const newPredCutoff = getISTDate(input.date, -30);
+            const currentISTTime = getCurrentISTDate();
+            if (currentISTTime >= newPredCutoff) {
+                const players = await db
+                    .select({ profile: profiles })
+                    .from(profiles)
+                    .leftJoin(
+                        predictions,
+                        eq(profiles.userId, predictions.userId)
+                    )
+                    .where(
+                        and(
+                            eq(predictions.matchNum, input.num),
+                            ne(predictions.status, "placed")
+                        )
+                    );
+                players?.forEach(async (p) => {
+                    await db.insert(predictions).values({
+                        matchNum: input.num,
+                        userId: p.profile.userId,
+                        amount: input.minStake,
+                        status: "default",
+                    });
+                });
+            }
         });
 
     updatePrediction = protectedProcedure
@@ -239,6 +240,114 @@ class PredictionService {
                     )
                     .returning();
                 return row as Pred;
+            });
+        });
+
+    settleCompletedPredictions = protectedProcedure
+        .createServerAction()
+        .input(matchParams)
+        .handler(async ({ ctx: { db, session }, input }) => {
+            const [preds] = await this.getMatchPredictions({ num: input.num });
+
+            const totalWon =
+                preds?.reduce(
+                    (acc, r) =>
+                        r.teamName === input.winnerName ? acc + r.amount : acc,
+                    0
+                ) ?? 0;
+            const totalLost =
+                preds?.reduce(
+                    (acc, r) =>
+                        r.teamName !== input.winnerName ? acc + r.amount : acc,
+                    0
+                ) ?? 0;
+            preds?.forEach(async (pred: CompletePred) => {
+                const status =
+                    pred.teamName === input.winnerName &&
+                    totalWon > 0 &&
+                    totalLost > 0
+                        ? "won"
+                        : totalWon > 0 && totalLost > 0
+                          ? "lost"
+                          : "no_result";
+                const resultAmt =
+                    pred.teamName === input.winnerName &&
+                    totalWon > 0 &&
+                    totalLost > 0 &&
+                    pred.isDouble
+                        ? (pred.amount / totalWon) * totalLost + totalLost
+                        : pred.teamName === input.winnerName &&
+                            totalWon > 0 &&
+                            totalLost > 0
+                          ? (pred.amount / totalWon) * totalLost
+                          : totalWon > 0 &&
+                              totalLost > 0 &&
+                              input.isDoublePlayed
+                            ? pred.amount * -2
+                            : totalWon > 0 && totalLost > 0
+                              ? pred.amount * -1
+                              : 0;
+                await db
+                    .update(predictions)
+                    .set({ status, resultAmt })
+                    .where(eq(predictions.id, pred.id));
+                if (resultAmt !== 0)
+                    await db
+                        .update(profiles)
+                        .set({ balance: sql`${profiles.balance}+${resultAmt}` })
+                        .where(eq(profiles.userId, pred.userId));
+            });
+        });
+
+    settleAbandonedPredictions = protectedProcedure
+        .createServerAction()
+        .input(matchParams)
+        .handler(async ({ ctx: { db, session }, input }) => {
+            const [preds] = await this.getMatchPredictions({ num: input.num });
+
+            const totalWon =
+                preds?.reduce(
+                    (acc, r) => (r.status !== "default" ? acc + r.amount : acc),
+                    0
+                ) ?? 0;
+            const totalLost =
+                preds?.reduce(
+                    (acc, r) => (r.status === "default" ? acc + r.amount : acc),
+                    0
+                ) ?? 0;
+            preds?.forEach(async (pred: CompletePred) => {
+                const status =
+                    pred.status !== "default" && totalWon > 0 && totalLost > 0
+                        ? "won"
+                        : totalWon > 0 && totalLost > 0
+                          ? "lost"
+                          : "no_result";
+                const resultAmt =
+                    pred.status !== "default" &&
+                    totalWon > 0 &&
+                    totalLost > 0 &&
+                    pred.isDouble
+                        ? (pred.amount / totalWon) * totalLost + totalLost
+                        : pred.teamName === input.winnerName &&
+                            totalWon > 0 &&
+                            totalLost > 0
+                          ? (pred.amount / totalWon) * totalLost
+                          : totalWon > 0 &&
+                              totalLost > 0 &&
+                              input.isDoublePlayed
+                            ? pred.amount * -2
+                            : totalWon > 0 && totalLost > 0
+                              ? pred.amount * -1
+                              : 0;
+                await db
+                    .update(predictions)
+                    .set({ status, resultAmt })
+                    .where(eq(predictions.id, pred.id));
+                if (resultAmt !== 0)
+                    await db
+                        .update(profiles)
+                        .set({ balance: sql`${profiles.balance}+${resultAmt}` })
+                        .where(eq(profiles.userId, pred.userId));
             });
         });
 }

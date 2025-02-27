@@ -4,12 +4,22 @@ import StatsTableProvider from "@/components/providers/stats-table.context";
 
 export default async function TeamStandings() {
     const [teams] = await getAllTeams();
-    const data = teams?.map((t) => ({
+    const data = teams?.map((t, i) => ({
+        pos: i + 1,
         id: t.shortName,
         team: t.shortName,
         name1: t.longName.split(" ")[0],
         name2: t.longName.split(" ").slice(1).join(" "),
+        extra: (
+            <div className="flex items-center text-xs font-extralight text-muted-foreground">
+                {t.nrr >= 0 && "+"}
+                {t.nrr.toFixed(3)}
+            </div>
+        ),
         value: t.points,
+        title: t.longName,
+        desc: `Rank ${i + 1}`,
+        content: "Content",
     }));
 
     return (

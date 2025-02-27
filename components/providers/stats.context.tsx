@@ -1,42 +1,37 @@
 "use client";
 
-import {
-    PropsWithChildren,
-    createContext,
-    useContext,
-    useEffect,
-    useState,
-} from "react";
+import { PropsWithChildren, createContext, useContext } from "react";
+
+import { useQuery } from "@tanstack/react-query";
 
 import { getMatchStats } from "@/actions/stats.actions";
-import { MatchWithTeams, Stats } from "@/app/types";
+import { MatchStats, MatchWithTeams, Stats } from "@/app/types";
+import { QueryKeys } from "@/lib/constants";
 
 type StatsContextProps = {
     stats: Stats[];
     match: MatchWithTeams;
+    isLoading: boolean;
 };
 
-const StatsContext = createContext<StatsContextProps | undefined>(undefined);
+const StatsContext = createContext<StatsContextProps>({} as StatsContextProps);
 
 export default function StatsProvider({
     children,
     match,
 }: PropsWithChildren & { match: MatchWithTeams }) {
-    const [stats, setStats] = useState<Stats[]>([]);
-
-    useEffect(() => {
-        async function getData() {
-            const [data, err] = await getMatchStats({
+    const { data, isLoading } = useQuery({
+        queryKey: [QueryKeys.MATCH_STATS, match.team1Name, match.team2Name],
+        queryFn: async () =>
+            await getMatchStats({
                 team1Name: match.team1Name!,
                 team2Name: match.team2Name!,
-            });
-            if (data) setStats(data);
-        }
-        getData();
-    }, []);
+            }),
+    });
+    const stats = data?.[0] ?? [];
 
     return (
-        <StatsContext.Provider value={{ stats, match }}>
+        <StatsContext.Provider value={{ stats, match, isLoading }}>
             {children}
         </StatsContext.Provider>
     );
@@ -45,7 +40,7 @@ export default function StatsProvider({
 export const useStatsContext = () => {
     const context = useContext(StatsContext);
     if (!context) throw new Error("Stat Context not used!");
-    const { stats, match } = context;
+    const { stats, match, isLoading } = context;
     const t1Stats = stats.find(
         (s) => s.team1Name === match.team1Name && !s.team2Name
     );
@@ -60,7 +55,7 @@ export const useStatsContext = () => {
         (s) =>
             s.team1Name === match.team2Name && s.team2Name === match.team1Name
     );
-    const result = {
+    const result: { overall: MatchStats; h2h: MatchStats } = {
         overall: {
             played: t1Stats?.played ?? 0,
             t1Wins: t1Stats?.won ?? 0,
@@ -128,5 +123,5 @@ export const useStatsContext = () => {
                 : 0,
         },
     };
-    return { match, ...result };
+    return { isLoading, match, ...result };
 };

@@ -2,7 +2,11 @@
 
 import { z } from "zod";
 
-import { matchDefaultSchema, matchNumSchema } from "@/db/schema/matches.schema";
+import {
+    matchDefaultSchema,
+    matchNumSchema,
+    matchParams,
+} from "@/db/schema/matches.schema";
 import {
     insertPredParams,
     predDoubleSchema,
@@ -43,14 +47,26 @@ export const updatePrediction = async (
     return await predictionService.updatePrediction(values);
 };
 
-export const addDefaultPredictionForMatch = async (
+export const addDefaultPredictionsForMatch = async (
     values: z.infer<typeof matchDefaultSchema>
 ) => {
-    return await predictionService.addDefaultPredictionForMatch(values);
+    return await predictionService.addDefaultPredictionsForMatch(values);
 };
 
 export const playDoublePrediction = async (
     values: z.infer<typeof predDoubleSchema>
 ) => {
     return await predictionService.playDoublePrediction(values);
+};
+
+export const settleCompletedPredictions = async (
+    values: z.infer<typeof matchParams>
+) => {
+    return await predictionService.settleCompletedPredictions(values);
+};
+
+export const settleAbandonedPredictions = async (
+    values: z.infer<typeof matchParams>
+) => {
+    return await predictionService.settleAbandonedPredictions(values);
 };

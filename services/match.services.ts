@@ -1,10 +1,26 @@
-import { and, eq, ne } from "drizzle-orm";
+import { and, eq, ne, or, sql } from "drizzle-orm";
 import { z } from "zod";
 
-import { MatchWithTeams } from "@/app/types";
-import { matchNumSchema, matches } from "@/db/schema/matches.schema";
-import { teamNameSchema } from "@/db/schema/teams.schema";
-import { publicProcedure } from "@/lib/zsa";
+import { createHistory } from "@/actions/history.actions";
+import {
+    addDefaultPredictionsForMatch,
+    settleAbandonedPredictions,
+    settleCompletedPredictions,
+} from "@/actions/prediction.actions";
+import {
+    updateStatsForTeam1,
+    updateStatsForTeam2,
+} from "@/actions/stats.actions";
+import { updateTeamsForCompletedMatch } from "@/actions/team.actions";
+import { getCurrUser } from "@/actions/user.actions";
+import { Match, MatchWithTeams, TeamOption } from "@/app/types";
+import {
+    matchNumSchema,
+    matchParams,
+    matches,
+} from "@/db/schema/matches.schema";
+import { teamNameSchema, teams } from "@/db/schema/teams.schema";
+import { protectedProcedure, publicProcedure } from "@/lib/zsa";
 
 class MatchService {
     getAllMatches = publicProcedure
@@ -171,6 +187,119 @@ class MatchService {
                 matches,
                 and(ne(matches.num, 0), ne(matches.status, "scheduled"))
             );
+        });
+    updateMatchTable = protectedProcedure
+        .createServerAction()
+        .input(matchParams)
+        .handler(async ({ ctx: { db }, input }) => {
+            const {
+                status,
+                winnerName,
+                resultType,
+                resultMargin,
+                team1Runs,
+                team1Wickets,
+                team1Balls,
+                team2Runs,
+                team2Wickets,
+                team2Balls,
+            } = input;
+            const [row] = await db
+                .update(matches)
+                .set({
+                    status,
+                    winnerName,
+                    resultType,
+                    resultMargin,
+                    team1Runs,
+                    team1Wickets,
+                    team1Balls,
+                    team2Runs,
+                    team2Wickets,
+                    team2Balls,
+                })
+                .where(eq(matches.num, input.num))
+                .returning();
+            return row as Match;
+        });
+
+    updateMatch = protectedProcedure
+        .createServerAction()
+        .input(matchParams)
+        .handler(async ({ ctx: { db, session }, input }) => {
+            const [user] = await getCurrUser();
+            if (!user?.isAdmin) throw "You are not authorized";
+            const { winnerName, resultType, resultMargin } = input;
+
+            await addDefaultPredictionsForMatch({
+                date: input.date,
+                num: input.num,
+                minStake: input.minStake!,
+            });
+
+            const [match] = await this.updateMatchTable(input);
+            if (!match) throw "Could not update Matches table";
+
+            await db.transaction(async (tx) => {
+                if (winnerName) {
+                    await createHistory(input);
+                    await updateStatsForTeam1({
+                        ...match,
+                        winnerName: match.winnerName ?? undefined,
+                        resultType: match.resultType ?? undefined,
+                        resultMargin: match.resultMargin ?? 0,
+                    });
+                    await updateStatsForTeam2({
+                        ...match,
+                        winnerName: match.winnerName ?? undefined,
+                        resultType: match.resultType ?? undefined,
+                        resultMargin: match.resultMargin ?? 0,
+                    });
+
+                    await settleCompletedPredictions({
+                        ...match,
+                        date: match?.date!,
+                        winnerName: match.winnerName ?? undefined,
+                        resultType: resultType ? resultType : undefined,
+                        resultMargin: resultMargin ? resultMargin : 0,
+                    });
+
+                    await updateTeamsForCompletedMatch({
+                        ...match,
+                        date: match?.date!,
+                        winnerName: match.winnerName ?? undefined,
+                        resultType: resultType ? resultType : undefined,
+                        resultMargin: resultMargin ? resultMargin : 0,
+                    });
+                } else if (input.status === "abandoned") {
+                    await settleAbandonedPredictions({
+                        ...match,
+                        date: match?.date!,
+                        winnerName: match.winnerName ?? undefined,
+                        resultType: resultType ? resultType : undefined,
+                        resultMargin: resultMargin ? resultMargin : 0,
+                    });
+                    await tx
+                        .update(teams)
+                        .set({
+                            played: sql`${teams.played}+1`,
+                            points: sql`${teams.points}+1`,
+                        })
+                        .where(
+                            or(
+                                eq(
+                                    teams.shortName,
+                                    input.team1Name as TeamOption
+                                ),
+                                eq(
+                                    teams.shortName,
+                                    input.team2Name as TeamOption
+                                )
+                            )
+                        );
+                }
+            });
+            return match;
         });
 }
 

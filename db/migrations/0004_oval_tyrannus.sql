@@ -1,0 +1,1 @@
+ALTER TABLE "public"."matches" ALTER COLUMN "status" SET DATA TYPE "public"."match_status" USING "status"::"public"."match_status";

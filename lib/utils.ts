@@ -26,45 +26,6 @@ export const createEnumObject = <T extends readonly [string, ...string[]]>(
     return obj;
 };
 
-// export const getWon = (match: HistTotalsReturn, team: TeamOption) =>
-//     match.winner === team ? match.count : 0;
-
-// export const getLost = (match: HistTotalsReturn, team: TeamOption) =>
-//     match.winner !== team ? match.count : 0;
-
-// export const getHomePlayed = (match: HistTotalsReturn, team: TeamOption) =>
-//     match.team1 === team ? match.count : 0;
-
-// export const getHomeWon = (match: HistTotalsReturn, team: TeamOption) =>
-//     match.team1 === team && match.winner === team ? match.count : 0;
-
-// export const getAwayPlayed = (match: HistTotalsReturn, team: TeamOption) =>
-//     match.team2 === team ? match.count : 0;
-
-// export const getAwayWon = (match: HistTotalsReturn, team: TeamOption) =>
-//     match.team2 === team && match.winner === team ? match.count : 0;
-
-// export const getBatFirstPlayed = (match: HistTotalsReturn, team: TeamOption) =>
-//     (match.type === "runs" && match.winner === team) ||
-//     (match.type === "wickets" && match.winner !== team)
-//         ? match.count
-//         : 0;
-
-// export const getBatFirstWon = (match: HistTotalsReturn, team: TeamOption) =>
-//     match.type === "runs" && match.winner === team ? match.count : 0;
-
-// export const getBatSecondPlayed = (
-//     match: HistTotalsReturn,
-//     team: TeamOption
-// ) =>
-//     (match.type === "runs" && match.winner !== team) ||
-//     (match.type === "wickets" && match.winner === team)
-//         ? match.count
-//         : 0;
-
-// export const getBatSecondWon = (match: HistTotalsReturn, team: TeamOption) =>
-//     match.type === "wickets" && match.winner === team ? match.count : 0;
-
 export const objectToDb = (item: unknown): unknown => {
     if (Array.isArray(item)) {
         return item.map((el: unknown) => objectToDb(el));

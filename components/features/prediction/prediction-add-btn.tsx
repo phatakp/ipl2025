@@ -15,7 +15,7 @@ import {
     ModalTitle,
     ModalTrigger,
 } from "@/components/features/shared/modal";
-import PredictionProvider from "@/components/providers/prediction.context";
+import MatchProvider from "@/components/providers/match.context";
 import { Button } from "@/components/ui/button";
 
 import PredictionForm from "./prediction-form";
@@ -26,7 +26,7 @@ type Props = PropsWithChildren & {
 
 export default function PredictionButton({ children, match }: Props) {
     return (
-        <PredictionProvider match={match}>
+        <MatchProvider match={match}>
             <Modal id={`prediction-${match.num}`}>
                 <ModalTrigger asChild>{children}</ModalTrigger>
                 <ModalContent>
@@ -48,6 +48,6 @@ export default function PredictionButton({ children, match }: Props) {
                     </ModalFooter>
                 </ModalContent>
             </Modal>
-        </PredictionProvider>
+        </MatchProvider>
     );
 }

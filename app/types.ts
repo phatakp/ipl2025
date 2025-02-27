@@ -41,12 +41,16 @@ import {
 
 //Stats Table
 export type StatsTableData = {
+    pos: number;
     id: string;
     team: TeamOption | undefined;
     name1: string;
     name2: string | null;
     value: number;
     extra?: ReactNode;
+    title: string;
+    desc: string;
+    content: ReactNode;
 };
 
 //Teams
@@ -77,6 +81,8 @@ export type MatchResultType = z.infer<
 export type MatchType = z.infer<typeof matchTypeSchema>["type"];
 export type MatchStatus = z.infer<typeof matchStatusSchema>["status"];
 export type ShortMatch = {
+    date: string;
+    type: MatchType;
     minStake: number;
     team1Name?: TeamOption;
     team2Name?: TeamOption;
@@ -89,7 +95,7 @@ export type ShortMatch = {
 export type Pred = typeof predictions.$inferSelect;
 export type CompletePred = Pred & {
     team: ShortTeam;
-    match: ShortMatch;
+    match: MatchWithTeams;
     user: ShortProfile;
 };
 export type NewPredParams = z.infer<typeof insertPredParams>;
@@ -144,3 +150,22 @@ export type StatsWithTeams = Stats & {
 };
 export type NewStats = z.infer<typeof insertStatsSchema>;
 export type UpdateStats = z.infer<typeof updateStatsSchema>;
+export type MatchStats = {
+    played: number;
+    t1Wins: number;
+    t1WinPct: number;
+    t1HomeWins: number;
+    t1HomePct: number;
+    t1BatFirstWins: number;
+    t1BatFirstPct: number;
+    t1BatSecondWins: number;
+    t1BatSecondPct: number;
+    t2Wins: number;
+    t2WinPct: number;
+    t2AwayWins: number;
+    t2AwayPct: number;
+    t2BatFirstWins: number;
+    t2BatFirstPct: number;
+    t2BatSecondWins: number;
+    t2BatSecondPct: number;
+};

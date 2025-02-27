@@ -131,7 +131,7 @@ const loadMatches = async (
                           .join("")
                           .toLowerCase() as MatchType),
                 status: "scheduled" as MatchStatus,
-                winnerName: null,
+                winnerName: undefined,
                 minStake:
                     match.MatchRow < 36
                         ? 30

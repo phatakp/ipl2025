@@ -4,6 +4,16 @@ import { ReactNode } from "react";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import {
+    Modal,
+    ModalClose,
+    ModalContent,
+    ModalDescription,
+    ModalFooter,
+    ModalHeader,
+    ModalTitle,
+    ModalTrigger,
+} from "@/components/features/shared/modal";
 import TeamLogo from "@/components/features/team/team-logo";
 import { useStatsTableContext } from "@/components/providers/stats-table.context";
 import { Button } from "@/components/ui/button";
@@ -88,87 +98,139 @@ export default function StatsTable({ title, action }: Props) {
     return (
         <div className="flex w-[320px] flex-col gap-8 sm:w-[400px]">
             <div className="flex flex-col items-center gap-2">
-                <span className="title whitespace-break-spaces text-2xl font-semibold uppercase">
-                    {title}
+                <span className="title text-center text-2xl font-semibold uppercase">
+                    {title.split(" ")[0]} <br /> {title.split(" ")?.[1]}
                 </span>
                 {action}
             </div>
             <Card className="w-full rounded-none rounded-t-lg">
-                <CardHeader
-                    className={`relative h-full rounded-none rounded-t-lg bg-${String(top.team)}`}
-                >
-                    <TeamLogo
-                        teamName={top.team}
-                        className="absolute right-4 top-1/2 size-32 -translate-y-1/2"
-                        simple
-                    />
-                    <div
-                        className={`flex flex-col font-semibold uppercase text-${String(top.team)}-foreground`}
-                    >
-                        <span className="text-sm font-bold">1</span>
-                        <CardDescription
-                            className={`uppercase text-${String(top.team)}-foreground`}
+                <Modal id={`id-${top.id}`}>
+                    <ModalTrigger asChild>
+                        <CardHeader
+                            className={`relative h-full rounded-none rounded-t-lg bg-${String(top.team)} cursor-pointer transition-all duration-300 ease-in-out hover:border-4`}
                         >
-                            {top.name1}
-                        </CardDescription>
-                        <CardTitle className="w-full flex-nowrap truncate text-xl font-extrabold uppercase">
-                            {top.name2}
-                        </CardTitle>
-                        {top.extra}
-                        <span className="mt-4 text-4xl">{top.value}</span>
-                    </div>
-                </CardHeader>
+                            <TeamLogo
+                                teamName={top.team}
+                                className="absolute right-4 top-1/2 size-32 -translate-y-1/2"
+                                simple
+                            />
+                            <div
+                                className={`flex flex-col font-semibold uppercase text-${String(top.team)}-foreground`}
+                            >
+                                <span className="text-sm font-bold">
+                                    {top.pos}
+                                </span>
+                                <CardDescription
+                                    className={`uppercase text-${String(top.team)}-foreground`}
+                                >
+                                    {top.name1}
+                                </CardDescription>
+                                <CardTitle className="w-full flex-nowrap truncate text-xl font-extrabold uppercase">
+                                    {top.name2}
+                                </CardTitle>
+                                {top.extra}
+                                <span className="mt-4 text-4xl">
+                                    {top.value}
+                                </span>
+                            </div>
+                        </CardHeader>
+                    </ModalTrigger>
+                    <ModalContent>
+                        <ModalHeader>
+                            <ModalTitle>{top.title}</ModalTitle>
+                            <ModalDescription>{top.desc}</ModalDescription>
+                        </ModalHeader>
+                        {top.content}
+                        <ModalFooter>
+                            <ModalClose asChild>
+                                <Button variant="outline" className="uppercase">
+                                    Close
+                                </Button>
+                            </ModalClose>
+                        </ModalFooter>
+                    </ModalContent>
+                </Modal>
                 <CardContent className="p-0">
                     <div className="grid w-full divide-y">
                         <AnimatedList>
                             {rest.map((item, i) => (
-                                <div
-                                    key={item.id}
-                                    className="grid grid-cols-12 items-center gap-x-2 border-b px-4 py-2"
-                                >
-                                    <span className="col-span-1">
-                                        {page === 1
+                                <Modal id={`id-${item.id}`} key={item.id}>
+                                    <ModalTrigger asChild>
+                                        <div className="grid cursor-pointer grid-cols-12 items-center gap-x-2 border-b px-4 py-2 transition-all duration-300 ease-in-out hover:border-4">
+                                            <span className="col-span-1">
+                                                {/* {page === 1
                                             ? start + i + 2
                                             : start + i + 1}
-                                    </span>
-                                    <TeamLogo
-                                        teamName={item.team}
-                                        className="col-span-2 size-8"
-                                        simple
-                                    />
-                                    <div
-                                        className={cn(
-                                            "col-span-6 flex flex-col"
-                                        )}
-                                    >
-                                        <div
-                                            className={cn(
-                                                "flex",
-                                                item.extra
-                                                    ? "flex-row items-center gap-2"
-                                                    : "flex-col"
-                                            )}
-                                        >
-                                            <span className="text-sm font-thin uppercase">
-                                                {item.name1}
+                                             */}
+                                                {item.pos}
                                             </span>
-                                            <span
+                                            <TeamLogo
+                                                teamName={item.team}
+                                                className="col-span-2 size-8"
+                                                simple
+                                            />
+                                            <div
                                                 className={cn(
-                                                    "w-full flex-nowrap truncate text-sm uppercase",
-                                                    !item.extra &&
-                                                        "text-xs text-muted-foreground"
+                                                    "col-span-6 flex flex-col"
                                                 )}
                                             >
-                                                {item.name2}
+                                                <div
+                                                    className={cn(
+                                                        "flex",
+                                                        item.extra
+                                                            ? "flex-row items-center gap-2"
+                                                            : "flex-col"
+                                                    )}
+                                                >
+                                                    <span className="text-sm font-thin uppercase">
+                                                        {item.name1}
+                                                    </span>
+                                                    <span
+                                                        className={cn(
+                                                            "w-full flex-nowrap truncate text-sm uppercase",
+                                                            !item.extra &&
+                                                                "text-xs text-muted-foreground"
+                                                        )}
+                                                    >
+                                                        {item.name2}
+                                                    </span>
+                                                </div>
+
+                                                {item.extra}
+                                            </div>
+                                            <span
+                                                className={cn(
+                                                    "col-span-3 text-right",
+                                                    item.value < 0 &&
+                                                        "text-destructive"
+                                                )}
+                                            >
+                                                {item.value}
                                             </span>
                                         </div>
-
-                                        {item.extra}
-                                    </div>
-                                    <span className="col-span-3 text-right">
-                                        {item.value}
-                                    </span>
-                                </div>
+                                    </ModalTrigger>
+                                    <ModalContent>
+                                        <ModalHeader>
+                                            <ModalTitle>
+                                                {item.title}
+                                            </ModalTitle>
+                                            <ModalDescription>
+                                                {item.desc}
+                                            </ModalDescription>
+                                        </ModalHeader>
+                                        {item.content}
+                                        <ModalFooter>
+                                            <ModalClose asChild>
+                                                <Button
+                                                    variant="outline"
+                                                    className="uppercase"
+                                                >
+                                                    Close
+                                                </Button>
+                                            </ModalClose>
+                                        </ModalFooter>
+                                    </ModalContent>
+                                </Modal>
                             ))}
                             {nums > 0 &&
                                 Array.from(Array(nums).keys()).map((i) => (
@@ -177,7 +239,8 @@ export default function StatsTable({ title, action }: Props) {
                                         className="grid grid-cols-12 items-center gap-x-2 border-b px-4 py-2"
                                     >
                                         <span className="col-span-1">
-                                            {start + rest.length + i + 2}
+                                            {/* {start + rest.length + i + 2} */}{" "}
+                                            -
                                         </span>
                                         <TeamLogo
                                             teamName={undefined}

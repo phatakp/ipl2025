@@ -24,6 +24,10 @@ const schema = {
     ...stats,
     ...relations,
 };
+declare global {
+    // eslint-disable-next-line no-var
+    var db: NeonDatabase<typeof schema> | PostgresJsDatabase<typeof schema>; // <- Name it whatever you want, except "prisma".
+}
 
 let db: NeonDatabase<typeof schema> | PostgresJsDatabase<typeof schema>;
 if (env.NODE_ENV === "production") {
@@ -31,6 +35,7 @@ if (env.NODE_ENV === "production") {
     const pool = new Pool({ connectionString: process.env.DATABASE_URL });
     db = drizzle({ client: pool, schema });
 } else {
-    db = PostgresDrizzle(env.DATABASE_URL, { schema });
+    if (!global.db) global.db = PostgresDrizzle(env.DATABASE_URL, { schema });
+    db = global.db;
 }
 export { db };

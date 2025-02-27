@@ -82,7 +82,7 @@ export default function RootLayout({
                         >
                             <Navbar />
                             <Background>
-                                <div className="container z-0 min-h-screen py-8">
+                                <div className="container min-h-screen py-8">
                                     {children}
                                 </div>
                             </Background>

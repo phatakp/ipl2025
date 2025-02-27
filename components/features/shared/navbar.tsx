@@ -15,7 +15,7 @@ import MobileNav from "./mobile-nav";
 
 export default function Navbar() {
     return (
-        <nav className="z-99 sticky top-0 flex w-full justify-center bg-background">
+        <nav className="sticky top-0 z-[999] flex h-14 w-full justify-center bg-background">
             <header className="w-full overflow-hidden rounded-xl rounded-t-none border-2 bg-primary px-4 text-primary-foreground md:w-fit">
                 <div className="container flex w-full items-center gap-5 py-1 lg:gap-6">
                     <div className="hidden items-center gap-5 md:flex lg:gap-6">

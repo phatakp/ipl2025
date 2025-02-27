@@ -10,15 +10,11 @@ import {
 import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 import { z } from "zod";
 
-import { MATCH_RESULT_TYPE } from "@/lib/constants";
+import { MATCH_RESULT_TYPE, MATCH_STATUS, TEAMS } from "@/lib/constants";
 
 import { teamEnum, teams } from "./teams.schema";
 
-export const matchStatusEnum = pgEnum("match_status", [
-    "completed",
-    "abandoned",
-    "scheduled",
-]);
+export const matchStatusEnum = pgEnum("match_status", MATCH_STATUS);
 
 export const matchResultTypeEnum = pgEnum(
     "match_result_type",
@@ -82,6 +78,8 @@ export const matchParams = baseSchema.extend({
     num: z.coerce.number(),
     minStake: z.coerce.number().optional(),
     resultMargin: z.coerce.number().optional(),
+    winnerName: z.enum(TEAMS).optional(),
+    status: z.enum(MATCH_STATUS).optional(),
     resultType: z.enum(MATCH_RESULT_TYPE).optional(),
     team1Runs: z.coerce.number().optional(),
     team1Wickets: z.coerce.number().optional(),
@@ -95,6 +93,7 @@ export const matchNumSchema = baseSchema.pick({ num: true });
 export const matchDefaultSchema = baseSchema.pick({
     num: true,
     minStake: true,
+    date: true,
 });
 export const matchStatusSchema = baseSchema.pick({ status: true });
 export const matchTypeSchema = baseSchema.pick({ type: true });

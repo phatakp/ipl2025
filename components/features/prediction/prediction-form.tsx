@@ -18,7 +18,7 @@ import { TeamOption } from "@/app/types";
 import AmountInput from "@/components/inputs/amount-input";
 import CheckboxInput from "@/components/inputs/checkbox-input";
 import { useCurrUser } from "@/components/providers/auth.context";
-import { usePredictionContext } from "@/components/providers/prediction.context";
+import { useMatchContext } from "@/components/providers/match.context";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
@@ -42,7 +42,7 @@ const formSchema = z.object({
 export default function PredictionForm() {
     const router = useRouter();
     const queryClient = useQueryClient();
-    const { match, pred } = usePredictionContext();
+    const { match, pred } = useMatchContext();
     const { currUser } = useCurrUser();
     const { modalId, closeModal } = useModal();
     const istMatchDate = getISTDate(match.date);
@@ -53,12 +53,14 @@ export default function PredictionForm() {
     const isDoubleAllowed =
         !match.isDoublePlayed &&
         currUser.doublesLeft > 0 &&
+        currUser.isPaid &&
         currentISTTime >= istMatchDate &&
         currentISTTime < doubleCutoff;
     const isNewPredAllowed = currentISTTime < newPredCutoff;
     const isPredUpdAllowed = currentISTTime < istMatchDate;
     const isPredAllowed =
-        (!pred && isNewPredAllowed) || (pred && isPredUpdAllowed);
+        currUser.isPaid &&
+        ((!pred && isNewPredAllowed) || (pred && isPredUpdAllowed));
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -182,15 +184,17 @@ export default function PredictionForm() {
                     }
                     className="w-full justify-center text-pretty font-extralight uppercase"
                 >
-                    {!!pred && !isPredUpdAllowed && isDoubleAllowed
-                        ? "Can only play double now"
-                        : pred && !isPredUpdAllowed
-                          ? "No changes allowed now"
-                          : pred
-                            ? "Changes allowed"
-                            : !pred && !isNewPredAllowed
-                              ? "Prediction cutoff passed"
-                              : "No Predictions yet"}
+                    {!currUser.isPaid
+                        ? "You have not paid token"
+                        : !!pred && !isPredUpdAllowed && isDoubleAllowed
+                          ? "Can only play double now"
+                          : pred && !isPredUpdAllowed
+                            ? "No changes allowed now"
+                            : pred
+                              ? "Changes allowed"
+                              : !pred && !isNewPredAllowed
+                                ? "Prediction cutoff passed"
+                                : "No Predictions yet"}
                 </Badge>
                 <div className="flex flex-nowrap items-center justify-center gap-4">
                     <PredTeamButton

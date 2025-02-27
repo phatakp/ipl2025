@@ -6,6 +6,8 @@ export const QueryKeys = {
     ALL_RESULTS: "all_results",
     CURR_USER: "curr_user",
     USER_PRED: "user_pred",
+    MATCH_PREDS: "match_preds",
+    MATCH_STATS: "match_stats",
 };
 
 export const SiteLinks = ["dashboard", "matches", "rules"];
@@ -31,6 +33,7 @@ export const PRED_STATUS = [
     "default",
 ] as const;
 
+export const MATCH_STATUS = ["scheduled", "completed", "abandoned"] as const;
 export const MATCH_RESULT_TYPE = ["runs", "wickets", "superover"] as const;
 
 //Profile Routes

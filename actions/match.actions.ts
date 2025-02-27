@@ -2,7 +2,7 @@
 
 import { z } from "zod";
 
-import { matchNumSchema } from "@/db/schema/matches.schema";
+import { matchNumSchema, matchParams } from "@/db/schema/matches.schema";
 import { teamNameSchema } from "@/db/schema/teams.schema";
 import matchService from "@/services/match.services";
 
@@ -26,6 +26,10 @@ export const getMatchesByTeam = async (
     values: z.infer<typeof teamNameSchema>
 ) => {
     return await matchService.getMatchesByTeam(values);
+};
+
+export const updateMatch = async (values: z.infer<typeof matchParams>) => {
+    return await matchService.updateMatch(values);
 };
 
 export const getTotalCompletedMatches = async () => {
