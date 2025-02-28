@@ -125,6 +125,7 @@ function AccordionItem({ value, children, className }: AccordionItemProps) {
             {React.Children.map(children, (child) => {
                 if (React.isValidElement(child)) {
                     return React.cloneElement(child, {
+                        //@ts-expect-error
                         ...child.props,
                         value,
                         expanded: isExpanded,
