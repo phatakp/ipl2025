@@ -52,3 +52,15 @@ export const updateStatsForTeam2 = async (
         isDoublePlayed: !!values.isDoublePlayed,
     });
 };
+
+export const reverseStatsForTeam1 = async (
+    values: z.infer<typeof matchParams>
+) => {
+    return await statsService.reverseStatsForTeam1(values);
+};
+
+export const reverseStatsForTeam2 = async (
+    values: z.infer<typeof matchParams>
+) => {
+    return await statsService.reverseStatsForTeam2(values);
+};

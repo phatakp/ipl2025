@@ -1,3 +1,5 @@
+"use client";
+
 import { MatchWithTeams } from "@/app/types";
 import {
     Card,
@@ -27,8 +29,8 @@ export default function MatchCarousel({ type, matches }: Props) {
     if (matches.length === 0) return;
 
     return (
-        <div className="relative flex flex-col gap-4">
-            <span className="title whitespace-break-spaces text-2xl font-semibold uppercase">
+        <div className="relative flex w-full flex-col gap-4">
+            <span className="title whitespace-break-spaces text-center text-2xl font-semibold uppercase">
                 {type}
             </span>
             <Carousel>
@@ -61,6 +63,10 @@ export default function MatchCarousel({ type, matches }: Props) {
                     })}
                 </CarouselContent>
                 {/* <CarouselNavigation /> */}
+                {/* <CarouselNavigation
+                    className="absolute -bottom-14 left-0 top-auto w-full justify-center gap-2"
+                    alwaysShow
+                /> */}
                 <CarouselIndicator className="absolute left-auto w-full justify-center gap-2" />
             </Carousel>
         </div>

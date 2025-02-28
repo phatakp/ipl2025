@@ -124,7 +124,7 @@ const ModalContent = ({ className, children, ...props }: ModalProps) => {
             )}
             {...props}
         >
-            <ScrollArea className="max-h-[calc(90dvh-3rem)]">
+            <ScrollArea className="max-h-[calc(90dvh-3rem)] overflow-auto">
                 {children}
             </ScrollArea>
         </ModalContent>

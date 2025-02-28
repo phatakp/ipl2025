@@ -1,4 +1,4 @@
-import { asc, isNotNull, sql } from "drizzle-orm";
+import { and, asc, eq, isNotNull, sql } from "drizzle-orm";
 
 import {
     HistTotalsReturn,
@@ -177,6 +177,22 @@ class HistoryService {
                 isLeagueMatch: input.type === "league",
             };
             await db.insert(matchHistory).values(data);
+        });
+
+    deleteHistory = protectedProcedure
+        .createServerAction()
+        .input(matchParams)
+        .handler(async ({ ctx: { db }, input }) => {
+            const { team1Name, team2Name, date } = input;
+            await db
+                .delete(matchHistory)
+                .where(
+                    and(
+                        eq(matchHistory.team1Name, team1Name!),
+                        eq(matchHistory.team2Name, team2Name!),
+                        eq(matchHistory.date, date)
+                    )
+                );
         });
 }
 

@@ -30,3 +30,7 @@ export const getRecentHeadToHead = async (
 export const createHistory = async (values: z.infer<typeof matchParams>) => {
     return await historyServices.createHistory(values);
 };
+
+export const deleteHistory = async (values: z.infer<typeof matchParams>) => {
+    return await historyServices.deleteHistory(values);
+};

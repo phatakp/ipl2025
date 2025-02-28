@@ -32,6 +32,10 @@ export const updateMatch = async (values: z.infer<typeof matchParams>) => {
     return await matchService.updateMatch(values);
 };
 
+export const reverseMatch = async (values: z.infer<typeof matchParams>) => {
+    return await matchService.reverseMatch(values);
+};
+
 export const getTotalCompletedMatches = async () => {
     return await matchService.getTotalCompletedMatches();
 };

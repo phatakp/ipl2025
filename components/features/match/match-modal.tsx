@@ -1,10 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { PropsWithChildren } from "react";
 
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { format } from "date-fns";
 
+import { reverseMatch } from "@/actions/match.actions";
 import { getCurrUser } from "@/actions/user.actions";
 import { MatchWithTeams } from "@/app/types";
 import {
@@ -23,11 +25,18 @@ import MatchProvider, {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { QueryKeys } from "@/lib/constants";
-import { cn, getCurrentISTDate, getISTDate } from "@/lib/utils";
+import {
+    cn,
+    errorToast,
+    getCurrentISTDate,
+    getISTDate,
+    successToast,
+} from "@/lib/utils";
 
 import Loader from "../shared/loader";
 import TeamLogo from "../team/team-logo";
 import MatchTabs from "./match-tabs";
+import MatchUpdateButton from "./match-update-btn";
 
 type Props = PropsWithChildren & {
     match: MatchWithTeams;
@@ -38,12 +47,37 @@ export default function MatchModal({ children, match }: Props) {
         queryKey: [QueryKeys.CURR_USER],
         queryFn: getCurrUser,
     });
+    const router = useRouter();
+    const queryClient = useQueryClient();
     const istDate = getISTDate(match.date);
     const doubleCutoff = getISTDate(match.date, 60);
     const currISTTime = getCurrentISTDate();
     if (isLoading) return <Loader />;
 
     const user = data?.[0];
+
+    async function handleReverse() {
+        const [data, err] = await reverseMatch({
+            ...match,
+            winnerName: match.winnerName ? match.winnerName : undefined,
+            resultType: match.resultType ? match.resultType : undefined,
+            resultMargin: match.resultMargin ? match.resultMargin : 0,
+        });
+        if (err) errorToast("Error", err.message);
+        else {
+            await queryClient.invalidateQueries({
+                queryKey: [QueryKeys.USER_PRED],
+            });
+            await queryClient.invalidateQueries({
+                queryKey: [QueryKeys.MATCH_PREDS],
+            });
+            await queryClient.invalidateQueries({
+                queryKey: [QueryKeys.CURR_USER],
+            });
+            router.refresh();
+            successToast("Match reversed successfully");
+        }
+    }
     return (
         <MatchProvider match={match}>
             <Modal id={`match-modal-${match.num}`}>
@@ -76,6 +110,26 @@ export default function MatchModal({ children, match }: Props) {
                         />
                         <MatchTeamScore team={2} className="px-4" />
                         <MatchResult className="border-b px-4 pb-2" />
+
+                        {user?.isAdmin &&
+                            match.status === "scheduled" &&
+                            currISTTime > doubleCutoff && (
+                                <MatchUpdateButton match={match}>
+                                    <Button className="uppercase">
+                                        Update Match
+                                    </Button>
+                                </MatchUpdateButton>
+                            )}
+
+                        {user?.isAdmin && match.status !== "scheduled" && (
+                            <Button
+                                variant="destructive"
+                                className="uppercase"
+                                onClick={handleReverse}
+                            >
+                                Reverse Match
+                            </Button>
+                        )}
 
                         <MatchTabs match={match} />
                     </div>
@@ -168,6 +222,7 @@ export const MatchResult = ({ className }: { className?: string }) => {
         <div
             className={cn(
                 "w-full text-xs font-extralight uppercase text-muted-foreground",
+                match.status !== "scheduled" && "text-primary",
                 className
             )}
         >

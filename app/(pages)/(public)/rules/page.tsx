@@ -1,3 +1,5 @@
+import { ChevronDown } from "lucide-react";
+
 import {
     PageHeader,
     PageHeaderGrid,
@@ -29,13 +31,33 @@ export default function RulesPage() {
                 </PageHeaderGrid>
             </PageHeader>
             <Accordion
-                type="single"
-                collapsible
-                className="w-full bg-background"
+                className="flex w-full flex-col"
+                transition={{
+                    type: "spring",
+                    stiffness: 120,
+                    damping: 20,
+                    duration: 0.2,
+                    ease: "easeInOut",
+                }}
+                variants={{
+                    expanded: {
+                        opacity: 1,
+                        scale: 1,
+                    },
+                    collapsed: {
+                        opacity: 0,
+                        scale: 0.7,
+                    },
+                }}
             >
                 <AccordionItem value="item-1" className="border-none py-4">
-                    <AccordionTrigger className="rounded-sm bg-muted px-4 py-2 text-lg text-muted-foreground md:text-2xl">
-                        REGISTRATION
+                    <AccordionTrigger className="group w-full rounded-sm bg-muted px-4 py-2 text-left">
+                        <div className="flex items-center justify-between">
+                            <div className="text-lg md:text-2xl">
+                                REGISTRATION
+                            </div>
+                            <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[expanded]:-rotate-180" />
+                        </div>
                     </AccordionTrigger>
                     <AccordionContent className="text-pretty py-4 font-karla">
                         <ol className="list-inside list-disc space-y-4 text-base">
@@ -75,8 +97,13 @@ export default function RulesPage() {
                 </AccordionItem>
 
                 <AccordionItem value="item-2" className="border-none py-4">
-                    <AccordionTrigger className="rounded-sm bg-muted px-4 py-2 text-lg text-muted-foreground md:text-2xl">
-                        PREDICTION
+                    <AccordionTrigger className="group w-full rounded-sm bg-muted px-4 py-2 text-left">
+                        <div className="flex items-center justify-between">
+                            <div className="text-lg md:text-2xl">
+                                PREDICTION
+                            </div>
+                            <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[expanded]:-rotate-180" />
+                        </div>
                     </AccordionTrigger>
                     <AccordionContent className="text-pretty py-4 font-karla">
                         <ol className="list-inside list-disc space-y-4 text-base">
@@ -166,8 +193,11 @@ export default function RulesPage() {
                 </AccordionItem>
 
                 <AccordionItem value="item-3" className="border-none py-4">
-                    <AccordionTrigger className="rounded-sm bg-muted px-4 py-2 text-lg text-muted-foreground md:text-2xl">
-                        CHANGES
+                    <AccordionTrigger className="group w-full rounded-sm bg-muted px-4 py-2 text-left">
+                        <div className="flex items-center justify-between">
+                            <div className="text-lg md:text-2xl">CHANGES</div>
+                            <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[expanded]:-rotate-180" />
+                        </div>
                     </AccordionTrigger>
                     <AccordionContent className="text-pretty py-4 font-karla">
                         <ol className="list-inside list-disc space-y-4 text-base">
@@ -247,9 +277,15 @@ export default function RulesPage() {
                         </ol>
                     </AccordionContent>
                 </AccordionItem>
+
                 <AccordionItem value="item-4" className="border-none py-4">
-                    <AccordionTrigger className="rounded-sm bg-muted px-4 py-2 text-lg text-muted-foreground md:text-2xl">
-                        SETTLEMENT
+                    <AccordionTrigger className="group w-full rounded-sm bg-muted px-4 py-2 text-left">
+                        <div className="flex items-center justify-between">
+                            <div className="text-lg md:text-2xl">
+                                SETTLEMENT
+                            </div>
+                            <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[expanded]:-rotate-180" />
+                        </div>
                     </AccordionTrigger>
                     <AccordionContent className="text-pretty py-4 font-karla">
                         <ol className="list-inside list-disc space-y-4 text-base">
@@ -453,7 +489,7 @@ export default function RulesPage() {
                                             </TableCell>
                                             <TableCell>CSK 30</TableCell>
                                             <TableCell className="text-right text-success">
-                                                +49.1
+                                                +36.0
                                             </TableCell>
                                             <TableCell className="text-right text-destructive">
                                                 -30
@@ -470,12 +506,12 @@ export default function RulesPage() {
                                                     D
                                                 </Badge>
                                             </TableCell>
-                                            <TableCell>CSK 50</TableCell>
+                                            <TableCell>CSK 90</TableCell>
                                             <TableCell className="text-right text-success">
-                                                +261.8
+                                                +288.0
                                             </TableCell>
                                             <TableCell className="text-right text-destructive">
-                                                -100
+                                                -180
                                             </TableCell>
                                         </TableRow>
 
@@ -488,7 +524,7 @@ export default function RulesPage() {
                                                 -80
                                             </TableCell>
                                             <TableCell className="text-right text-success">
-                                                +35.6
+                                                +33.3
                                             </TableCell>
                                         </TableRow>
 
@@ -498,7 +534,7 @@ export default function RulesPage() {
                                             </TableCell>
                                             <TableCell>CSK 30</TableCell>
                                             <TableCell className="text-right text-success">
-                                                +49.1
+                                                +36.0
                                             </TableCell>
                                             <TableCell className="text-right text-destructive">
                                                 -30
@@ -514,7 +550,7 @@ export default function RulesPage() {
                                                 -160
                                             </TableCell>
                                             <TableCell className="text-right text-success">
-                                                +71.1
+                                                +66.6
                                             </TableCell>
                                         </TableRow>
 
@@ -527,7 +563,7 @@ export default function RulesPage() {
                                                 -120
                                             </TableCell>
                                             <TableCell className="text-right text-success">
-                                                +53.3
+                                                +49.9
                                             </TableCell>
                                         </TableRow>
                                     </TableBody>

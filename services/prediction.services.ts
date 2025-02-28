@@ -1,4 +1,4 @@
-import { and, eq, max, ne, sql } from "drizzle-orm";
+import { and, eq, isNull, max, sql } from "drizzle-orm";
 
 import { CompletePred, Pred } from "@/app/types";
 import {
@@ -66,6 +66,47 @@ class PredictionService {
             const rows = await db.query.predictions.findMany({
                 where: (predictions, { eq }) =>
                     eq(predictions.userId, session.user.id),
+                with: {
+                    user: {
+                        columns: shortProfile,
+                    },
+                    team: {
+                        columns: { longName: true },
+                    },
+                    match: {
+                        with: {
+                            team1: {
+                                columns: { longName: true },
+                            },
+                            team2: {
+                                columns: { longName: true },
+                            },
+                            winner: {
+                                columns: { longName: true },
+                            },
+                        },
+                    },
+                },
+                orderBy: (predictions, { desc }) => [
+                    desc(predictions.matchNum),
+                ],
+            });
+            return rows as CompletePred[];
+        });
+
+    getAllPredictions = protectedProcedure
+        .createServerAction()
+        .handler(async ({ ctx: { db, session } }) => {
+            const rows = await db.query.predictions.findMany({
+                where: (predictions, { ne, and, inArray }) =>
+                    and(
+                        ne(predictions.matchNum, 0),
+                        inArray(predictions.status, [
+                            "won",
+                            "lost",
+                            "no_result",
+                        ])
+                    ),
                 with: {
                     user: {
                         columns: shortProfile,
@@ -162,20 +203,26 @@ class PredictionService {
         .handler(async ({ ctx: { db, session }, input }) => {
             const newPredCutoff = getISTDate(input.date, -30);
             const currentISTTime = getCurrentISTDate();
+            console.log("pred", newPredCutoff);
+            console.log("curr", currentISTTime);
+
             if (currentISTTime >= newPredCutoff) {
-                const players = await db
-                    .select({ profile: profiles })
-                    .from(profiles)
-                    .leftJoin(
-                        predictions,
-                        eq(profiles.userId, predictions.userId)
-                    )
+                const sq = db
+                    .select()
+                    .from(predictions)
                     .where(
                         and(
                             eq(predictions.matchNum, input.num),
-                            ne(predictions.status, "placed")
+                            eq(predictions.status, "placed")
                         )
-                    );
+                    )
+                    .as("sq");
+                const players = await db
+                    .select({ profile: profiles })
+                    .from(profiles)
+                    .leftJoin(sq, eq(profiles.userId, sq.userId))
+                    .where(isNull(sq.id));
+
                 players?.forEach(async (p) => {
                     await db.insert(predictions).values({
                         matchNum: input.num,
@@ -255,12 +302,23 @@ class PredictionService {
                         r.teamName === input.winnerName ? acc + r.amount : acc,
                     0
                 ) ?? 0;
+            if (totalWon === 0) {
+                return await this.settleAbandonedPredictions(input);
+            }
             const totalLost =
                 preds?.reduce(
                     (acc, r) =>
-                        r.teamName !== input.winnerName ? acc + r.amount : acc,
+                        r.teamName !== input.winnerName && r.isDouble
+                            ? acc + r.amount * 2
+                            : r.teamName !== input.winnerName
+                              ? acc + r.amount
+                              : acc,
                     0
                 ) ?? 0;
+            const isDoubleWinner = !!preds?.find(
+                (p) => p.isDouble && p.teamName === input.winnerName
+            );
+
             preds?.forEach(async (pred: CompletePred) => {
                 const status =
                     pred.teamName === input.winnerName &&
@@ -282,7 +340,7 @@ class PredictionService {
                           ? (pred.amount / totalWon) * totalLost
                           : totalWon > 0 &&
                               totalLost > 0 &&
-                              input.isDoublePlayed
+                              (isDoubleWinner || pred.isDouble)
                             ? pred.amount * -2
                             : totalWon > 0 && totalLost > 0
                               ? pred.amount * -1
@@ -328,7 +386,7 @@ class PredictionService {
                     totalLost > 0 &&
                     pred.isDouble
                         ? (pred.amount / totalWon) * totalLost + totalLost
-                        : pred.teamName === input.winnerName &&
+                        : pred.status !== "default" &&
                             totalWon > 0 &&
                             totalLost > 0
                           ? (pred.amount / totalWon) * totalLost
@@ -348,6 +406,98 @@ class PredictionService {
                         .update(profiles)
                         .set({ balance: sql`${profiles.balance}+${resultAmt}` })
                         .where(eq(profiles.userId, pred.userId));
+            });
+        });
+
+    settleFinalPredictions = protectedProcedure
+        .createServerAction()
+        .input(matchParams)
+        .handler(async ({ ctx: { db, session }, input }) => {
+            const [preds] = await this.getMatchPredictions({ num: 0 });
+
+            const totalWon =
+                preds?.reduce(
+                    (acc, r) =>
+                        r.teamName === input.winnerName ? acc + r.amount : acc,
+                    0
+                ) ?? 0;
+            const totalLost =
+                preds?.reduce(
+                    (acc, r) =>
+                        r.teamName !== input.winnerName ? acc + r.amount : acc,
+                    0
+                ) ?? 0;
+            preds?.forEach(async (pred: CompletePred) => {
+                const status =
+                    pred.teamName === input.winnerName &&
+                    totalWon > 0 &&
+                    totalLost > 0
+                        ? "won"
+                        : totalWon > 0 && totalLost > 0
+                          ? "lost"
+                          : "no_result";
+                const resultAmt =
+                    pred.teamName === input.winnerName &&
+                    totalWon > 0 &&
+                    totalLost > 0
+                        ? (pred.amount / totalWon) * totalLost
+                        : totalWon > 0 && totalLost > 0
+                          ? pred.amount * -1
+                          : 0;
+                await db
+                    .update(predictions)
+                    .set({ status, resultAmt })
+                    .where(eq(predictions.id, pred.id));
+                if (resultAmt !== 0)
+                    await db
+                        .update(profiles)
+                        .set({ balance: sql`${profiles.balance}+${resultAmt}` })
+                        .where(eq(profiles.userId, pred.userId));
+            });
+        });
+
+    reversePredictions = protectedProcedure
+        .createServerAction()
+        .input(matchParams)
+        .handler(async ({ ctx: { db, session }, input }) => {
+            const [preds] = await this.getMatchPredictions({ num: input.num });
+
+            preds?.forEach(async (pred: CompletePred) => {
+                const status = pred.teamName ? "placed" : "default";
+                if (pred.resultAmt !== 0)
+                    await db
+                        .update(profiles)
+                        .set({
+                            balance: sql`${profiles.balance}-${pred.resultAmt}`,
+                        })
+                        .where(eq(profiles.userId, pred.userId));
+
+                await db
+                    .update(predictions)
+                    .set({ status, resultAmt: 0 })
+                    .where(eq(predictions.id, pred.id));
+            });
+        });
+
+    reverseFinalPredictions = protectedProcedure
+        .createServerAction()
+        .input(matchParams)
+        .handler(async ({ ctx: { db, session }, input }) => {
+            const [preds] = await this.getMatchPredictions({ num: 0 });
+
+            preds?.forEach(async (pred: CompletePred) => {
+                if (pred.resultAmt !== 0)
+                    await db
+                        .update(profiles)
+                        .set({
+                            balance: sql`${profiles.balance}-${pred.resultAmt}`,
+                        })
+                        .where(eq(profiles.userId, pred.userId));
+
+                await db
+                    .update(predictions)
+                    .set({ status: "placed", resultAmt: 0 })
+                    .where(eq(predictions.id, pred.id));
             });
         });
 }

@@ -25,3 +25,9 @@ export const updateTeamsForCompletedMatch = async (
 ) => {
     return await teamService.updateTeamsForCompletedMatch(values);
 };
+
+export const reverseTeamsForCompletedMatch = async (
+    values: z.infer<typeof matchParams>
+) => {
+    return await teamService.reverseTeamsForCompletedMatch(values);
+};

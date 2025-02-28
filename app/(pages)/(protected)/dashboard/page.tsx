@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { redirect } from "next/navigation";
+
+import { IndianRupeeIcon } from "lucide-react";
 
 import { getAllFixtures, getAllResults } from "@/actions/match.actions";
 import { getCurrUser, getRank } from "@/actions/user.actions";
@@ -13,7 +14,6 @@ import {
 } from "@/components/features/shared/page-header";
 import AuthProvider from "@/components/providers/auth.context";
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
 
 export default async function DashboardPage() {
     const [user] = await getCurrUser();
@@ -46,23 +46,19 @@ export default async function DashboardPage() {
                                     <span className="font-extralight uppercase">
                                         {user?.firstName} {user?.lastName}
                                     </span>
-                                    <span className="font-karla text-muted-foreground">
-                                        |
-                                    </span>
-
-                                    <span className="text-2xl">
-                                        {user?.balance}
-                                    </span>
+                                </Badge>
+                                <Badge
+                                    variant={
+                                        user?.balance < 0
+                                            ? "destructive"
+                                            : "success"
+                                    }
+                                    className="flex items-center text-2xl"
+                                >
+                                    <IndianRupeeIcon className="size-4" />
+                                    {user?.balance.toFixed()}
                                 </Badge>
                             </div>
-                            <Link
-                                href={"/profile/update"}
-                                className={cn(
-                                    "font-karla underline underline-offset-2 hover:opacity-90"
-                                )}
-                            >
-                                Update Profile
-                            </Link>
                         </PageActions>
                     </PageHeaderGrid>
                 </PageHeader>

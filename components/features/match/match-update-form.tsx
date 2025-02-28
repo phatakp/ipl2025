@@ -13,7 +13,12 @@ import InputWithLabel from "@/components/inputs/input-with-label";
 import SelectWithLabel from "@/components/inputs/select-with-label";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
-import { MATCH_RESULT_TYPE, MATCH_STATUS, TEAMS } from "@/lib/constants";
+import {
+    MATCH_RESULT_TYPE,
+    MATCH_STATUS,
+    QueryKeys,
+    TEAMS,
+} from "@/lib/constants";
 import { errorToast, successToast } from "@/lib/utils";
 
 import { useModal } from "../shared/modal";
@@ -114,9 +119,18 @@ export default function MatchUpdateForm({ match }: Props) {
     async function onSuccess() {
         successToast(`Match updated successfully`);
         closeModal(modalId);
+        await queryClient.invalidateQueries({
+            queryKey: [QueryKeys.USER_PRED],
+        });
+        await queryClient.invalidateQueries({
+            queryKey: [QueryKeys.MATCH_PREDS],
+        });
+        await queryClient.invalidateQueries({
+            queryKey: [QueryKeys.CURR_USER],
+        });
         router.refresh();
     }
-    console.log(form.formState.errors);
+
     async function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values);
 

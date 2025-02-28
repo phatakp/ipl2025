@@ -1,17 +1,25 @@
 import { and, eq, ne, or, sql } from "drizzle-orm";
 import { z } from "zod";
 
-import { createHistory } from "@/actions/history.actions";
+import { createHistory, deleteHistory } from "@/actions/history.actions";
 import {
     addDefaultPredictionsForMatch,
+    reverseFinalPredictions,
+    reversePredictions,
     settleAbandonedPredictions,
     settleCompletedPredictions,
+    settleFinalPredictions,
 } from "@/actions/prediction.actions";
 import {
+    reverseStatsForTeam1,
+    reverseStatsForTeam2,
     updateStatsForTeam1,
     updateStatsForTeam2,
 } from "@/actions/stats.actions";
-import { updateTeamsForCompletedMatch } from "@/actions/team.actions";
+import {
+    reverseTeamsForCompletedMatch,
+    updateTeamsForCompletedMatch,
+} from "@/actions/team.actions";
 import { getCurrUser } from "@/actions/user.actions";
 import { Match, MatchWithTeams, TeamOption } from "@/app/types";
 import {
@@ -241,7 +249,7 @@ class MatchService {
             if (!match) throw "Could not update Matches table";
 
             await db.transaction(async (tx) => {
-                if (winnerName) {
+                if (match.winnerName && match.status === "completed") {
                     await createHistory(input);
                     await updateStatsForTeam1({
                         ...match,
@@ -264,14 +272,23 @@ class MatchService {
                         resultMargin: resultMargin ? resultMargin : 0,
                     });
 
-                    await updateTeamsForCompletedMatch({
-                        ...match,
-                        date: match?.date!,
-                        winnerName: match.winnerName ?? undefined,
-                        resultType: resultType ? resultType : undefined,
-                        resultMargin: resultMargin ? resultMargin : 0,
-                    });
-                } else if (input.status === "abandoned") {
+                    if (match.type === "league")
+                        await updateTeamsForCompletedMatch({
+                            ...match,
+                            date: match?.date!,
+                            winnerName: match.winnerName ?? undefined,
+                            resultType: resultType ? resultType : undefined,
+                            resultMargin: resultMargin ? resultMargin : 0,
+                        });
+                    else if (match.type === "final")
+                        await settleFinalPredictions({
+                            ...match,
+                            date: match?.date!,
+                            winnerName: match.winnerName ?? undefined,
+                            resultType: resultType ? resultType : undefined,
+                            resultMargin: resultMargin ? resultMargin : 0,
+                        });
+                } else if (match.status === "abandoned") {
                     await settleAbandonedPredictions({
                         ...match,
                         date: match?.date!,
@@ -300,6 +317,59 @@ class MatchService {
                 }
             });
             return match;
+        });
+
+    reverseMatch = protectedProcedure
+        .createServerAction()
+        .input(matchParams)
+        .handler(async ({ ctx: { db, session }, input }) => {
+            const [user] = await getCurrUser();
+            if (!user?.isAdmin) throw "You are not authorized";
+            const { winnerName, resultType, resultMargin } = input;
+
+            return await db.transaction(async (tx) => {
+                const [match] = await this.updateMatchTable({
+                    ...input,
+                    status: "scheduled",
+                    winnerName: undefined,
+                    resultType: undefined,
+                    resultMargin: 0,
+                });
+                if (!match) throw "Could not reverse Matches table";
+                if (winnerName) {
+                    await deleteHistory(input);
+                    await reverseStatsForTeam1(input);
+                    await reverseStatsForTeam2(input);
+
+                    await reversePredictions(input);
+
+                    if (match.type === "league")
+                        await reverseTeamsForCompletedMatch(input);
+                    else if (match.type === "final")
+                        await reverseFinalPredictions(input);
+                } else if (input.status === "abandoned") {
+                    await reversePredictions(input);
+                    await tx
+                        .update(teams)
+                        .set({
+                            played: sql`${teams.played}-1`,
+                            points: sql`${teams.points}-1`,
+                        })
+                        .where(
+                            or(
+                                eq(
+                                    teams.shortName,
+                                    input.team1Name as TeamOption
+                                ),
+                                eq(
+                                    teams.shortName,
+                                    input.team2Name as TeamOption
+                                )
+                            )
+                        );
+                }
+                return match;
+            });
         });
 }
 

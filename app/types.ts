@@ -90,6 +90,7 @@ export type ShortMatch = {
     team2: ShortTeam;
     winner: ShortTeam;
 };
+export type MatchListType = "fixtures" | "results";
 
 //Predictions
 export type Pred = typeof predictions.$inferSelect;

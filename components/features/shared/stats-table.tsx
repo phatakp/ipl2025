@@ -96,7 +96,7 @@ export default function StatsTable({ title, action }: Props) {
     const nums = PAGE_SIZE - rest.length - 1;
 
     return (
-        <div className="flex w-[320px] flex-col gap-8 sm:w-[400px]">
+        <div className="flex w-[320px] flex-col gap-8 md:w-[400px]">
             <div className="flex flex-col items-center gap-2">
                 <span className="title text-center text-2xl font-semibold uppercase">
                     {title.split(" ")[0]} <br /> {title.split(" ")?.[1]}
@@ -107,7 +107,7 @@ export default function StatsTable({ title, action }: Props) {
                 <Modal id={`id-${top.id}`}>
                     <ModalTrigger asChild>
                         <CardHeader
-                            className={`relative h-full rounded-none rounded-t-lg bg-${String(top.team)} cursor-pointer transition-all duration-300 ease-in-out hover:border-4`}
+                            className={`relative h-full rounded-none rounded-t-lg bg-${String(top.team ?? "primary")} cursor-pointer transition-all duration-300 ease-in-out hover:border-4`}
                         >
                             <TeamLogo
                                 teamName={top.team}
@@ -115,13 +115,13 @@ export default function StatsTable({ title, action }: Props) {
                                 simple
                             />
                             <div
-                                className={`flex flex-col font-semibold uppercase text-${String(top.team)}-foreground`}
+                                className={`flex flex-col font-semibold uppercase text-${String(top.team ?? "primary")}-foreground`}
                             >
                                 <span className="text-sm font-bold">
                                     {top.pos}
                                 </span>
                                 <CardDescription
-                                    className={`uppercase text-${String(top.team)}-foreground`}
+                                    className={`uppercase text-${String(top.team ?? "primary")}-foreground`}
                                 >
                                     {top.name1}
                                 </CardDescription>
@@ -130,7 +130,7 @@ export default function StatsTable({ title, action }: Props) {
                                 </CardTitle>
                                 {top.extra}
                                 <span className="mt-4 text-4xl">
-                                    {top.value}
+                                    {Math.floor(top.value)}
                                 </span>
                             </div>
                         </CardHeader>
@@ -182,30 +182,36 @@ export default function StatsTable({ title, action }: Props) {
                                                             : "flex-col"
                                                     )}
                                                 >
-                                                    <span className="text-sm font-thin uppercase">
+                                                    <span className="flex-nowrap whitespace-nowrap text-sm font-thin uppercase">
                                                         {item.name1}
                                                     </span>
                                                     <span
                                                         className={cn(
                                                             "w-full flex-nowrap truncate text-sm uppercase",
                                                             !item.extra &&
-                                                                "text-xs text-muted-foreground"
+                                                                "font-karla text-sm text-muted-foreground"
                                                         )}
                                                     >
                                                         {item.name2}
                                                     </span>
                                                 </div>
-
                                                 {item.extra}
                                             </div>
                                             <span
                                                 className={cn(
                                                     "col-span-3 text-right",
                                                     item.value < 0 &&
-                                                        "text-destructive"
+                                                        "text-destructive",
+                                                    item.value > 0 &&
+                                                        title
+                                                            .toLowerCase()
+                                                            .includes(
+                                                                "predictions"
+                                                            ) &&
+                                                        "text-success"
                                                 )}
                                             >
-                                                {item.value}
+                                                {Math.floor(item.value)}
                                             </span>
                                         </div>
                                     </ModalTrigger>
@@ -233,6 +239,7 @@ export default function StatsTable({ title, action }: Props) {
                                 </Modal>
                             ))}
                             {nums > 0 &&
+                                title !== "" &&
                                 Array.from(Array(nums).keys()).map((i) => (
                                     <div
                                         key={i}

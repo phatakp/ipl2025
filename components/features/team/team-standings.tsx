@@ -1,6 +1,7 @@
 import { getAllTeams } from "@/actions/team.actions";
 import StatsTable from "@/components/features/shared/stats-table";
 import StatsTableProvider from "@/components/providers/stats-table.context";
+import { cn } from "@/lib/utils";
 
 export default async function TeamStandings() {
     const [teams] = await getAllTeams();
@@ -11,7 +12,12 @@ export default async function TeamStandings() {
         name1: t.longName.split(" ")[0],
         name2: t.longName.split(" ").slice(1).join(" "),
         extra: (
-            <div className="flex items-center text-xs font-extralight text-muted-foreground">
+            <div
+                className={cn(
+                    "flex items-center font-karla",
+                    i > 0 && "text-sm text-muted-foreground"
+                )}
+            >
                 {t.nrr >= 0 && "+"}
                 {t.nrr.toFixed(3)}
             </div>

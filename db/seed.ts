@@ -144,9 +144,6 @@ const loadMatches = async (
             data.push(matchCurr);
         }
     });
-    // const mtches = data
-    //     .sort((a, b) => (a.date > b.date ? 1 : -1))
-    //     .map((m, i) => ({ ...m, num: i + 1 }));
     await db.delete(matchesSchema.matches);
     await db.insert(matchesSchema.matches).values({
         num: 0,

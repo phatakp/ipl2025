@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useQueryClient } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useForm, useFormContext } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -14,10 +14,10 @@ import {
     playDoublePrediction,
     updatePrediction,
 } from "@/actions/prediction.actions";
+import { getCurrUser } from "@/actions/user.actions";
 import { TeamOption } from "@/app/types";
 import AmountInput from "@/components/inputs/amount-input";
 import CheckboxInput from "@/components/inputs/checkbox-input";
-import { useCurrUser } from "@/components/providers/auth.context";
 import { useMatchContext } from "@/components/providers/match.context";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -31,6 +31,7 @@ import {
     successToast,
 } from "@/lib/utils";
 
+import Loader from "../shared/loader";
 import { useModal } from "../shared/modal";
 
 const formSchema = z.object({
@@ -42,15 +43,22 @@ const formSchema = z.object({
 export default function PredictionForm() {
     const router = useRouter();
     const queryClient = useQueryClient();
-    const { match, pred } = useMatchContext();
-    const { currUser } = useCurrUser();
     const { modalId, closeModal } = useModal();
+    const { match, pred } = useMatchContext();
+    const { data, isLoading } = useQuery({
+        queryKey: [QueryKeys.CURR_USER],
+        queryFn: getCurrUser,
+    });
+    const currUser = data?.[0];
+    if (isLoading) return <Loader />;
+    if (!currUser) return;
     const istMatchDate = getISTDate(match.date);
     const doubleCutoff = getISTDate(match.date, 60);
     const newPredCutoff = getISTDate(match.date, -30);
 
     const currentISTTime = getCurrentISTDate();
     const isDoubleAllowed =
+        match.type === "league" &&
         !match.isDoublePlayed &&
         currUser.doublesLeft > 0 &&
         currUser.isPaid &&
@@ -79,6 +87,12 @@ export default function PredictionForm() {
         closeModal(modalId);
         await queryClient.invalidateQueries({
             queryKey: [QueryKeys.USER_PRED],
+        });
+        await queryClient.invalidateQueries({
+            queryKey: [QueryKeys.MATCH_PREDS],
+        });
+        await queryClient.invalidateQueries({
+            queryKey: [QueryKeys.CURR_USER],
         });
         router.refresh();
     }
@@ -217,7 +231,7 @@ export default function PredictionForm() {
                     disabled={!isPredAllowed}
                 />
 
-                {!!pred && (
+                {!!pred && match.type === "league" && (
                     <CheckboxInput
                         name="isDouble"
                         label="Play double"

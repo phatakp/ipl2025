@@ -24,6 +24,10 @@ export const getUserPredictions = async () => {
     return await predictionService.getUserPredictions();
 };
 
+export const getAllPredictions = async () => {
+    return await predictionService.getAllPredictions();
+};
+
 export const getUserPredictionForMatch = async (
     values: z.infer<typeof matchNumSchema>
 ) => {
@@ -69,4 +73,22 @@ export const settleAbandonedPredictions = async (
     values: z.infer<typeof matchParams>
 ) => {
     return await predictionService.settleAbandonedPredictions(values);
+};
+
+export const settleFinalPredictions = async (
+    values: z.infer<typeof matchParams>
+) => {
+    return await predictionService.settleFinalPredictions(values);
+};
+
+export const reversePredictions = async (
+    values: z.infer<typeof matchParams>
+) => {
+    return await predictionService.reversePredictions(values);
+};
+
+export const reverseFinalPredictions = async (
+    values: z.infer<typeof matchParams>
+) => {
+    return await predictionService.reverseFinalPredictions(values);
 };

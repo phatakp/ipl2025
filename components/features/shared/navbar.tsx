@@ -4,13 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { SignedIn, SignedOut, UserButton, useAuth } from "@clerk/nextjs";
+import { SignedIn, SignedOut, useAuth } from "@clerk/nextjs";
 import { HomeIcon } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
 import { SiteLinks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
+import UserDropdown from "../profile/user-dropdown";
 import MobileNav from "./mobile-nav";
 
 export default function Navbar() {
@@ -37,11 +38,7 @@ export default function Navbar() {
                     </div>
                     <div className="ml-auto flex items-center justify-end">
                         <SignedIn>
-                            <UserButton
-                                appearance={{
-                                    variables: { fontFamily: "Karla" },
-                                }}
-                            />
+                            <UserDropdown />
                         </SignedIn>
                         <SignedOut>
                             <Link

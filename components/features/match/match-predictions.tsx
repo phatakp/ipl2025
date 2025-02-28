@@ -31,9 +31,6 @@ export default function MatchPredictions({ match }: Props) {
     const preds = matchPreds?.[0];
     const currentISTTime = getCurrentISTDate();
     const newPredCutoff = getISTDate(match.date, -30);
-    console.log(currentISTTime);
-    console.log(newPredCutoff);
-    console.log(preds);
 
     const data = preds
         ?.filter(
@@ -50,11 +47,10 @@ export default function MatchPredictions({ match }: Props) {
             extra: (
                 <div
                     className={cn(
-                        "flex items-center gap-2 font-karla text-sm font-semibold",
-                        pred.status === "default" && "text-destructive"
+                        "flex items-center gap-2 font-karla text-sm font-semibold"
                     )}
                 >
-                    Stake: {pred.amount}
+                    <span className="opacity-70">Stake: {pred.amount}</span>
                     {pred.isDouble && (
                         <span className="flex items-center justify-center rounded-lg bg-success px-2 text-xs text-success-foreground">
                             Double
@@ -82,7 +78,7 @@ export default function MatchPredictions({ match }: Props) {
 
     if (!data || data?.length === 0)
         return (
-            <div className="mt-8 flex w-full flex-col items-center gap-8 uppercase">
+            <div className="flex w-full flex-col items-center gap-8 uppercase">
                 <Badge className="font-extralight">
                     {!preds || preds?.length === 0
                         ? "No Predictions made yet!"
@@ -97,10 +93,10 @@ export default function MatchPredictions({ match }: Props) {
         );
 
     return (
-        <div className="mt-8 flex w-full flex-col items-center">
+        <div className="flex w-full flex-col items-center">
             <StatsTableProvider data={data ?? []}>
                 <StatsTable
-                    title="Predictions"
+                    title=""
                     action={
                         match.status === "scheduled" ? (
                             <PredictionButton match={match}>
