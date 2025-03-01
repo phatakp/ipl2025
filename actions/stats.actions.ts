@@ -7,16 +7,13 @@ import { matchTeamsSchema } from "@/db/schema/history.schema";
 import { matchParams } from "@/db/schema/matches.schema";
 import statsService from "@/services/stats.services";
 
-export const getMatchStats = async (
-    values: z.infer<typeof matchTeamsSchema>
-) => {
-    return await statsService.getStatsForTeams(values);
-};
+export const getMatchStats = async (values: z.infer<typeof matchTeamsSchema>) =>
+    await statsService.getStatsForTeams(values);
 
 export const updateStatsForTeam1 = async (
     values: z.infer<typeof matchParams>
-) => {
-    return await statsService.updateStatsForTeam1({
+) =>
+    await statsService.updateStatsForTeam1({
         ...values,
         winnerName: values.winnerName ?? null,
         status: values.status as MatchStatus,
@@ -31,12 +28,11 @@ export const updateStatsForTeam1 = async (
         team2Wickets: values.team2Wickets ?? 0,
         isDoublePlayed: !!values.isDoublePlayed,
     });
-};
 
 export const updateStatsForTeam2 = async (
     values: z.infer<typeof matchParams>
-) => {
-    return await statsService.updateStatsForTeam2({
+) =>
+    await statsService.updateStatsForTeam2({
         ...values,
         winnerName: values.winnerName ?? null,
         status: values.status as MatchStatus,
@@ -51,16 +47,11 @@ export const updateStatsForTeam2 = async (
         team2Wickets: values.team2Wickets ?? 0,
         isDoublePlayed: !!values.isDoublePlayed,
     });
-};
 
 export const reverseStatsForTeam1 = async (
     values: z.infer<typeof matchParams>
-) => {
-    return await statsService.reverseStatsForTeam1(values);
-};
+) => await statsService.reverseStatsForTeam1(values);
 
 export const reverseStatsForTeam2 = async (
     values: z.infer<typeof matchParams>
-) => {
-    return await statsService.reverseStatsForTeam2(values);
-};
+) => await statsService.reverseStatsForTeam2(values);

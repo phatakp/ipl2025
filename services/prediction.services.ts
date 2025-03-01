@@ -1,4 +1,4 @@
-import { and, eq, isNull, max, sql } from "drizzle-orm";
+import { and, eq, isNull, max, min, ne, sql } from "drizzle-orm";
 
 import { CompletePred, Pred } from "@/app/types";
 import {
@@ -13,7 +13,7 @@ import {
     predictions,
     updatePredParams,
 } from "@/db/schema/predictions.schema";
-import { profiles } from "@/db/schema/profiles.schema";
+import { profileIdSchema, profiles } from "@/db/schema/profiles.schema";
 import { getCurrentISTDate, getISTDate } from "@/lib/utils";
 import { protectedProcedure } from "@/lib/zsa";
 
@@ -184,6 +184,71 @@ class PredictionService {
                     )
                 );
             return row.maxAmt ?? 0;
+        });
+
+    getMaxWonAmount = protectedProcedure
+        .createServerAction()
+        .input(profileIdSchema)
+        .handler(async ({ ctx: { db, session }, input }) => {
+            const [row] = await db
+                .select({ maxAmt: max(predictions.resultAmt) })
+                .from(predictions)
+                .where(
+                    and(
+                        eq(predictions.userId, input.userId),
+                        ne(predictions.matchNum, 0),
+                        eq(predictions.status, "won")
+                    )
+                );
+            return row.maxAmt ?? 0;
+        });
+
+    getMaxLostAmount = protectedProcedure
+        .createServerAction()
+        .input(profileIdSchema)
+        .handler(async ({ ctx: { db, session }, input }) => {
+            const [row] = await db
+                .select({ maxAmt: min(predictions.resultAmt) })
+                .from(predictions)
+                .where(
+                    and(
+                        eq(predictions.userId, input.userId),
+                        ne(predictions.matchNum, 0),
+                        eq(predictions.status, "lost")
+                    )
+                );
+            return row.maxAmt ?? 0;
+        });
+
+    getPredictionAccuracy = protectedProcedure
+        .createServerAction()
+        .input(profileIdSchema)
+        .handler(async ({ ctx: { db, session }, input }) => {
+            const [row] = await db.query.predictions.findMany({
+                extras: {
+                    total: db
+                        .$count(
+                            predictions,
+                            and(
+                                eq(predictions.userId, input.userId),
+                                ne(predictions.matchNum, 0),
+                                ne(predictions.status, "placed")
+                            )
+                        )
+                        .as("total"),
+                    correct: db
+                        .$count(
+                            predictions,
+                            and(
+                                eq(predictions.userId, input.userId),
+                                eq(predictions.status, "won"),
+                                ne(predictions.matchNum, 0)
+                            )
+                        )
+                        .as("correct"),
+                },
+            });
+            return { total: row.total, correct: row.correct };
         });
 
     createPrediction = protectedProcedure

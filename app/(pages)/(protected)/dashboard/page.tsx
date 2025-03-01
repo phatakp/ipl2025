@@ -6,6 +6,7 @@ import { getAllFixtures, getAllResults } from "@/actions/match.actions";
 import { getCurrUser, getRank } from "@/actions/user.actions";
 import MatchCarousel from "@/components/features/match/match-carousel";
 import DashboardStatsCarousel from "@/components/features/profile/dashboard-stats-carousel";
+import StatsSlider from "@/components/features/profile/stats-slider";
 import {
     PageActions,
     PageHeader,
@@ -37,11 +38,6 @@ export default async function DashboardPage() {
                                     <span className="hidden font-karla text-muted-foreground md:flex">
                                         |
                                     </span>
-                                    {/* <TeamLogo
-                                        teamName={user?.teamName! as TeamOption}
-                                        className="size-10"
-                                        simple
-                                        /> */}
 
                                     <span className="font-extralight uppercase">
                                         {user?.firstName} {user?.lastName}
@@ -62,8 +58,9 @@ export default async function DashboardPage() {
                         </PageActions>
                     </PageHeaderGrid>
                 </PageHeader>
-                <MatchCarousel matches={results ?? []} type="results" />
+                <StatsSlider />
                 <MatchCarousel matches={fixtures ?? []} type="fixtures" />
+                <MatchCarousel matches={results ?? []} type="results" />
                 <DashboardStatsCarousel />
             </div>
         </AuthProvider>

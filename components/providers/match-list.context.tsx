@@ -19,6 +19,7 @@ type MatchListContextProps = {
     fixtures: MatchWithTeams[];
     results: MatchWithTeams[];
     limit: number;
+    isLoading: boolean;
     loadMore: () => void;
     reset: () => void;
 };
@@ -30,11 +31,13 @@ export default function MatchListProvider({ children }: PropsWithChildren) {
     const [fixtures, setFixtures] = useState<MatchWithTeams[]>([]);
     const [results, setResults] = useState<MatchWithTeams[]>([]);
     const [type, setType] = useState<MatchListType>("fixtures");
+    const [isLoading, setIsLoading] = useState(false);
     const [limit, setLimit] = useState(10);
     const loadMore = () => setLimit((prev) => prev + 10);
     const reset = () => setLimit(10);
 
     useEffect(() => {
+        setIsLoading(true);
         async function fetch() {
             if (type === "fixtures") {
                 const [data] = await getAllFixtures(limit);
@@ -45,6 +48,7 @@ export default function MatchListProvider({ children }: PropsWithChildren) {
             }
         }
         fetch();
+        setIsLoading(false);
     }, [limit, type]);
 
     return (
@@ -57,6 +61,7 @@ export default function MatchListProvider({ children }: PropsWithChildren) {
                 limit,
                 reset,
                 loadMore,
+                isLoading,
             }}
         >
             {children}

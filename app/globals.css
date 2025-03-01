@@ -602,3 +602,18 @@ h1[data-localization-key="userProfile.navbar.title"] {
     @apply bg-background text-foreground;
     }
 }
+
+
+
+
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+}

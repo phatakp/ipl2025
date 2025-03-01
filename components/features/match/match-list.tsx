@@ -13,14 +13,19 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { TransitionPanel } from "@/components/ui/transition-panel";
 import { cn } from "@/lib/utils";
 
+import Loader from "../shared/loader";
+
 export default function MatchList() {
-    const { setType, fixtures, results, loadMore, limit, reset } =
+    const [activeIndex, setActiveIndex] = useState(0);
+    const { setType, fixtures, results, loadMore, limit, reset, isLoading } =
         useMatchListContext();
+
+    if (isLoading) return <Loader />;
+
     const fMatches = Object.groupBy(fixtures, ({ date }) =>
         format(date, "PPP")
     );
     const rMatches = Object.groupBy(results, ({ date }) => format(date, "PPP"));
-    const [activeIndex, setActiveIndex] = useState(0);
 
     const ITEMS = [
         {
