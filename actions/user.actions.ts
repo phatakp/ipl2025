@@ -1,9 +1,15 @@
 "use server";
 
+import { z } from "zod";
+
 import { ProfileParams } from "@/app/types";
+import { profileIdSchema } from "@/db/schema/profiles.schema";
 import userService from "@/services/user.services";
 
 export const getAllUsers = async () => await userService.getAllUsers();
+
+export const getProfileById = async (values: z.infer<typeof profileIdSchema>) =>
+    await userService.getProfileById(values);
 
 export const getCurrUser = async () => await userService.getCurrUser();
 

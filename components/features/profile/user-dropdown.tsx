@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 
 import { useClerk } from "@clerk/nextjs";
 import { useQuery } from "@tanstack/react-query";
@@ -19,6 +20,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { QueryKeys } from "@/lib/constants";
 
 export default function UserDropdown() {
+    const [open, setOpen] = useState(false);
     const { signOut } = useClerk();
     const { data, isLoading } = useQuery({
         queryKey: [QueryKeys.CURR_USER],
@@ -29,7 +31,7 @@ export default function UserDropdown() {
     if (!user) return;
 
     return (
-        <DropdownMenu>
+        <DropdownMenu open={open} onOpenChange={setOpen}>
             <DropdownMenuTrigger>
                 <Avatar>
                     <AvatarImage
@@ -52,12 +54,15 @@ export default function UserDropdown() {
                     </div>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setOpen(false)}>
                     <Link href={"/profile/update"}>Update Profile</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem
                     className="cursor-pointer"
-                    onClick={() => signOut({ redirectUrl: "/sign-in" })}
+                    onClick={() => {
+                        signOut({ redirectUrl: "/sign-in" });
+                        setOpen(false);
+                    }}
                 >
                     Sign Out
                 </DropdownMenuItem>

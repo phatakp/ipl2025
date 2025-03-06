@@ -24,18 +24,21 @@ const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
     variable: "--font-geist-sans",
     weight: "100 900",
+    preload: true,
 });
 
 const quickSans = localFont({
     src: "./fonts/Quick Starter.otf",
     variable: "--font-quick-sans",
     weight: "100 400 600 900",
+    preload: true,
 });
 
 const karla = Karla({
     subsets: ["latin"],
     display: "swap",
     variable: "--font-karla",
+    preload: true,
 });
 
 export const metadata: Metadata = {

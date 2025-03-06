@@ -249,8 +249,8 @@ export default function RulesPage() {
                                                         From 30 mins prior to
                                                         until start of match -{" "}
                                                         <span className="font-semibold">
-                                                            Stake amount to be
-                                                            double.
+                                                            Stake amount should
+                                                            be double.
                                                         </span>
                                                     </li>
                                                     <li>
@@ -268,7 +268,7 @@ export default function RulesPage() {
                                             </TableCell>
                                             <TableCell>
                                                 Allowed until completion of
-                                                Match 50.
+                                                Match 50. (Use Update Profile)
                                             </TableCell>
                                         </TableRow>
                                     </TableBody>
@@ -337,7 +337,8 @@ export default function RulesPage() {
                                             </TableCell>
                                             <TableCell>
                                                 2 x Stake amount to be debited
-                                                from balance.
+                                                from balance (only if double
+                                                winner).
                                             </TableCell>
                                         </TableRow>
 
@@ -348,7 +349,8 @@ export default function RulesPage() {
                                             <TableCell>
                                                 2 x Min Stake amount for match
                                                 to be debited from balance
-                                                (irrespective of match result).
+                                                (irrespective of match result
+                                                but only if double winner).
                                             </TableCell>
                                         </TableRow>
 

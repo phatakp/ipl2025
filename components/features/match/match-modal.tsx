@@ -65,15 +65,7 @@ export default function MatchModal({ children, match }: Props) {
         });
         if (err) errorToast("Error", err.message);
         else {
-            await queryClient.invalidateQueries({
-                queryKey: [QueryKeys.USER_PRED],
-            });
-            await queryClient.invalidateQueries({
-                queryKey: [QueryKeys.MATCH_PREDS],
-            });
-            await queryClient.invalidateQueries({
-                queryKey: [QueryKeys.CURR_USER],
-            });
+            await queryClient.invalidateQueries();
             router.refresh();
             successToast("Match reversed successfully");
         }
@@ -227,7 +219,7 @@ export const MatchResult = ({ className }: { className?: string }) => {
             )}
         >
             {match.status === "completed"
-                ? `${match.winnerName} won by ${match.resultMargin} ${match.resultType}`
+                ? `${match.winnerName} won by ${match.resultMargin === 0 ? "" : match.resultMargin} ${match.resultType}`
                 : match.status === "abandoned"
                   ? "Match Abandoned"
                   : currISTTime > istDate

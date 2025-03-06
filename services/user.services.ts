@@ -1,8 +1,13 @@
 import { and, eq } from "drizzle-orm";
 
+import { getTotalCompletedMatches } from "@/actions/match.actions";
 import { Profile, ProfileWithTeam } from "@/app/types";
 import { predictions } from "@/db/schema/predictions.schema";
-import { profileParams, profiles } from "@/db/schema/profiles.schema";
+import {
+    profileIdSchema,
+    profileParams,
+    profiles,
+} from "@/db/schema/profiles.schema";
 import { protectedProcedure } from "@/lib/zsa";
 
 class UserService {
@@ -18,6 +23,21 @@ class UserService {
                 orderBy: (profiles, { desc }) => [desc(profiles.balance)],
             });
             return rows as ProfileWithTeam[];
+        });
+
+    getProfileById = protectedProcedure
+        .createServerAction()
+        .input(profileIdSchema)
+        .handler(async ({ ctx: { db }, input }) => {
+            const row = await db.query.profiles.findFirst({
+                where: (profiles, { eq }) => eq(profiles.userId, input.userId),
+                with: {
+                    team: {
+                        columns: { longName: true },
+                    },
+                },
+            });
+            return row as ProfileWithTeam;
         });
 
     getRank = protectedProcedure
@@ -74,19 +94,16 @@ class UserService {
         .input(profileParams)
         .handler(async ({ ctx: { db, session }, input }) => {
             const { email, ...values } = input;
+            const [completed] = await getTotalCompletedMatches();
+            const updatedAllowed =
+                (!!completed && completed < 50) || !completed;
             const profile = await db.transaction(async (tx) => {
                 const prof = await tx.query.profiles.findFirst({
                     where: (profiles, { eq }) =>
                         eq(profiles.userId, session.user.id),
                 });
 
-                const [row] = await tx
-                    .update(profiles)
-                    .set(values)
-                    .where(eq(profiles.userId, session.user.id))
-                    .returning();
-
-                if (prof?.teamName !== input.teamName) {
+                if (prof?.teamName !== input.teamName && updatedAllowed) {
                     await tx
                         .update(predictions)
                         .set({
@@ -98,7 +115,19 @@ class UserService {
                                 eq(predictions.matchNum, 0)
                             )
                         );
+                } else if (
+                    prof?.teamName !== input.teamName &&
+                    !updatedAllowed
+                ) {
+                    throw "Team update not allowed";
                 }
+
+                const [row] = await tx
+                    .update(profiles)
+                    .set(values)
+                    .where(eq(profiles.userId, session.user.id))
+                    .returning();
+
                 return row;
             });
 

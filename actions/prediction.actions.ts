@@ -22,6 +22,13 @@ export const getMatchPredictions = async (
 export const getUserPredictions = async () =>
     await predictionService.getUserPredictions();
 
+export const getCompletedPredictionsForUser = async (
+    values: z.infer<typeof profileIdSchema>
+) => await predictionService.getCompletedPredictionsForUser(values);
+
+export const getAllIPLPredictions = async () =>
+    await predictionService.getAllIPLPredictions();
+
 export const getAllPredictions = async () =>
     await predictionService.getAllPredictions();
 

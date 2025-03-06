@@ -96,7 +96,7 @@ export default function StatsTable({ title, action }: Props) {
     const nums = PAGE_SIZE - rest.length - 1;
 
     return (
-        <div className="flex w-[320px] flex-col gap-8 md:w-[400px]">
+        <div className="flex w-full max-w-[350px] flex-col gap-8 md:w-[400px]">
             <div className="flex flex-col items-center gap-2">
                 <span className="title text-center text-2xl font-semibold uppercase">
                     {title.split(" ")[0]} <br /> {title.split(" ")?.[1]}

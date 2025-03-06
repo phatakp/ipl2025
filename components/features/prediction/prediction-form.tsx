@@ -83,18 +83,20 @@ export default function PredictionForm() {
     const { teamName, amount } = form.watch();
 
     async function onSuccess(action: "create" | "update") {
-        successToast(`Prediction ${action}d successfully`);
+        await Promise.all([
+            queryClient.invalidateQueries({
+                queryKey: [QueryKeys.USER_PRED],
+            }),
+            queryClient.invalidateQueries({
+                queryKey: [QueryKeys.MATCH_PREDS, match.num],
+            }),
+            queryClient.invalidateQueries({
+                queryKey: [QueryKeys.CURR_USER],
+            }),
+        ]);
         closeModal(modalId);
-        await queryClient.invalidateQueries({
-            queryKey: [QueryKeys.USER_PRED],
-        });
-        await queryClient.invalidateQueries({
-            queryKey: [QueryKeys.MATCH_PREDS],
-        });
-        await queryClient.invalidateQueries({
-            queryKey: [QueryKeys.CURR_USER],
-        });
         router.refresh();
+        successToast(`Prediction ${action}d successfully`);
     }
 
     async function onSubmit(values: z.infer<typeof formSchema>) {

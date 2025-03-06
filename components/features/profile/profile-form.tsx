@@ -3,10 +3,12 @@
 import { useRouter } from "next/navigation";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useQuery } from "@tanstack/react-query";
 import { useTheme } from "next-themes";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
+import { getTotalCompletedMatches } from "@/actions/match.actions";
 import { createProfile, updateProfile } from "@/actions/user.actions";
 import { TeamOption } from "@/app/types";
 import InputWithLabel from "@/components/inputs/input-with-label";
@@ -14,8 +16,10 @@ import SelectWithLabel from "@/components/inputs/select-with-label";
 import { useTeamContext } from "@/components/providers/teams.context";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
-import { TEAMS } from "@/lib/constants";
+import { QueryKeys, TEAMS } from "@/lib/constants";
 import { errorToast, successToast } from "@/lib/utils";
+
+import Loader from "../shared/loader";
 
 const formSchema = z.object({
     email: z.string().email(),
@@ -42,8 +46,13 @@ export default function ProfileForm({
     teamName,
     action = "add",
 }: Props) {
+    const router = useRouter();
     const { teams } = useTeamContext();
     const { setTheme } = useTheme();
+    const { data, isLoading } = useQuery({
+        queryKey: [QueryKeys.COMPLETED_MATCHES],
+        queryFn: getTotalCompletedMatches,
+    });
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         mode: "onBlur",
@@ -56,7 +65,10 @@ export default function ProfileForm({
         },
     });
 
-    const router = useRouter();
+    if (isLoading) return <Loader />;
+    const completed = data?.[0];
+    const disabled = completed && completed >= 50;
+
     const options = teams.map((t) => ({
         value: t.shortName,
         label: t.longName,
@@ -109,6 +121,7 @@ export default function ProfileForm({
                     label="IPL Winner Team"
                     options={options}
                     placeholder="Select IPL Winner"
+                    disabled={!!disabled}
                 />
                 <Button type="submit" className="uppercase">
                     Submit

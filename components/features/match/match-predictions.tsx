@@ -15,6 +15,7 @@ import { QueryKeys } from "@/lib/constants";
 import { cn, getCurrentISTDate, getISTDate } from "@/lib/utils";
 
 import PredictionButton from "../prediction/prediction-add-btn";
+import UserProfile from "../profile/user-profile";
 import Loader from "../shared/loader";
 
 type Props = {
@@ -26,6 +27,7 @@ export default function MatchPredictions({ match }: Props) {
         queryKey: [QueryKeys.MATCH_PREDS, match.num],
         queryFn: async () => getMatchPredictions({ num: match.num }),
     });
+
     const { userId } = useAuth();
     if (isLoading) return <Loader />;
     const preds = matchPreds?.[0];
@@ -38,31 +40,34 @@ export default function MatchPredictions({ match }: Props) {
                 currentISTTime >= newPredCutoff ||
                 (currentISTTime < newPredCutoff && pred.userId === userId)
         )
-        .map((pred, i) => ({
-            pos: i + 1,
-            id: pred.id,
-            team: pred.teamName ?? undefined,
-            name1: pred.user.firstName,
-            name2: pred.user.lastName,
-            extra: (
-                <div
-                    className={cn(
-                        "flex items-center gap-2 font-karla text-sm font-semibold"
-                    )}
-                >
-                    <span className="opacity-70">Stake: {pred.amount}</span>
-                    {pred.isDouble && (
-                        <span className="flex items-center justify-center rounded-lg bg-success px-2 text-xs text-success-foreground">
-                            Double
-                        </span>
-                    )}
-                </div>
-            ),
-            value: pred.resultAmt,
-            title: `${pred.user.firstName} ${pred.user.lastName ?? ""}`,
-            desc: "",
-            content: <></>,
-        }));
+        .map((pred, i) => {
+            return {
+                pos: i + 1,
+                id: pred.id,
+                team: pred.teamName ?? undefined,
+                name1: pred.user.firstName,
+                name2: pred.user.lastName,
+                extra: (
+                    <div
+                        key={pred.id}
+                        className={cn(
+                            "flex items-center gap-2 font-karla text-sm font-semibold"
+                        )}
+                    >
+                        <span className="opacity-70">Stake: {pred.amount}</span>
+                        {pred.isDouble && (
+                            <span className="flex items-center justify-center rounded-lg bg-success px-2 text-xs text-success-foreground">
+                                Double
+                            </span>
+                        )}
+                    </div>
+                ),
+                value: pred.resultAmt,
+                title: `${pred.user.firstName} ${pred.user.lastName ?? ""}`,
+                desc: "",
+                content: <UserProfile key={pred.id} id={pred.userId} />,
+            };
+        });
 
     if (!userId)
         return (

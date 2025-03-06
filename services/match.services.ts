@@ -296,6 +296,14 @@ class MatchService {
                         resultType: resultType ? resultType : undefined,
                         resultMargin: resultMargin ? resultMargin : 0,
                     });
+                    if (match.type === "final")
+                        await settleFinalPredictions({
+                            ...match,
+                            date: match?.date!,
+                            winnerName: match.winnerName ?? undefined,
+                            resultType: resultType ? resultType : undefined,
+                            resultMargin: resultMargin ? resultMargin : 0,
+                        });
                     await tx
                         .update(teams)
                         .set({
@@ -349,6 +357,8 @@ class MatchService {
                         await reverseFinalPredictions(input);
                 } else if (input.status === "abandoned") {
                     await reversePredictions(input);
+                    if (match.type === "final")
+                        await reverseFinalPredictions(input);
                     await tx
                         .update(teams)
                         .set({

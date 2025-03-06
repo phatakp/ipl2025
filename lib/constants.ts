@@ -1,13 +1,20 @@
 export const PAGE_SIZE = 5;
 
 export const QueryKeys = {
+    ALL_USERS: "all_users",
+    USER: "user",
     ALL_TEAMS: "all_teams",
     ALL_FIXTURES: "all_fixtures",
     ALL_RESULTS: "all_results",
     CURR_USER: "curr_user",
     USER_PRED: "user_pred",
     MATCH_PREDS: "match_preds",
+    COMPLETED_MATCHES: "completed_matches",
+    COMPLETED_MATCH_PREDS: "completed_match_preds",
     MATCH_STATS: "match_stats",
+    MAX_WON_AMT: "max_won_amt",
+    MAX_LOST_AMT: "max_lost_amt",
+    PRED_ACCURACY: "pred_accuracy",
 };
 
 export const SiteLinks = ["dashboard", "matches", "rules"];

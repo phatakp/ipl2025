@@ -19,7 +19,7 @@ export default async function UserPredictions() {
             name1: `${pred.match?.team1Name ?? "IPL"} ${pred.match?.team1Name ? "v" : ""}`,
             name2: `${pred.match?.team2Name ?? "Winner"}`,
             extra: (
-                <div className={cn("font-karla")}>
+                <div key={pred.id} className={cn("font-karla")}>
                     {pred.teamName ?? "Default"}:{pred.amount}
                 </div>
             ),
@@ -29,9 +29,9 @@ export default async function UserPredictions() {
                     ? `Match ${pred.matchNum}`
                     : pred.match.type
             }
-                        | ${pred.match.team1Name ?? "TBD"} vs ${pred.match.team2Name ?? "TBD"}`,
+                        | ${pred.match.team1Name ?? "IPL"}${pred.match.team1Name ? " vs " : " "}${pred.match.team2Name ?? "Winner"}`,
             desc: "",
-            content: <MatchTabs match={pred.match} />,
+            content: <MatchTabs key={pred.id} match={pred.match} />,
         }))[0];
 
     const data = preds
@@ -43,7 +43,7 @@ export default async function UserPredictions() {
             name1: `${pred.match?.team1Name ?? "IPL"} ${pred.match?.team1Name ? "v" : ""}`,
             name2: `${pred.match?.team2Name ?? "Winner"}`,
             extra: (
-                <div className="flex items-center gap-1">
+                <div key={pred.id} className="flex items-center gap-1">
                     <span className="font-karla text-sm text-muted-foreground">
                         {pred.teamName ?? "Default"}:{pred.amount}
                     </span>
@@ -63,9 +63,9 @@ export default async function UserPredictions() {
                     ? `Match ${pred.matchNum}`
                     : pred.match.type
             }
-                        | ${pred.match.team1Name} vs ${pred.match.team2Name}`,
+                        | ${pred.match.team1Name ?? "IPL"}${pred.match.team1Name ? " vs " : ""}${pred.match.team2Name ?? "Winner"}`,
             desc: format(getISTDate(pred.match.date), "PPpp"),
-            content: <MatchTabs match={pred.match} />,
+            content: <MatchTabs key={pred.id} match={pred.match} />,
         }))
         .toSpliced(0, 0, top!);
 

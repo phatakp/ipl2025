@@ -1,4 +1,4 @@
-import { and, eq, isNull, max, min, ne, sql } from "drizzle-orm";
+import { and, eq, inArray, isNull, max, min, ne, sql } from "drizzle-orm";
 
 import { CompletePred, Pred } from "@/app/types";
 import {
@@ -94,6 +94,84 @@ class PredictionService {
             return rows as CompletePred[];
         });
 
+    getCompletedPredictionsForUser = protectedProcedure
+        .createServerAction()
+        .input(profileIdSchema)
+        .handler(async ({ ctx: { db, session }, input }) => {
+            const rows = await db.query.predictions.findMany({
+                limit: 5,
+                where: (predictions, { eq, and }) =>
+                    and(
+                        eq(predictions.userId, input.userId),
+                        inArray(predictions.status, [
+                            "won",
+                            "lost",
+                            "no_result",
+                        ])
+                    ),
+
+                with: {
+                    user: {
+                        columns: shortProfile,
+                    },
+                    team: {
+                        columns: { longName: true },
+                    },
+                    match: {
+                        with: {
+                            team1: {
+                                columns: { longName: true },
+                            },
+                            team2: {
+                                columns: { longName: true },
+                            },
+                            winner: {
+                                columns: { longName: true },
+                            },
+                        },
+                    },
+                },
+                orderBy: (predictions, { desc }) => [
+                    desc(predictions.matchNum),
+                ],
+            });
+            const ipl = await db.query.predictions.findFirst({
+                where: (predictions, { eq, and }) =>
+                    and(
+                        eq(predictions.userId, input.userId),
+                        eq(predictions.matchNum, 0),
+                        inArray(predictions.status, [
+                            "won",
+                            "lost",
+                            "no_result",
+                        ])
+                    ),
+
+                with: {
+                    user: {
+                        columns: shortProfile,
+                    },
+                    team: {
+                        columns: { longName: true },
+                    },
+                    match: {
+                        with: {
+                            team1: {
+                                columns: { longName: true },
+                            },
+                            team2: {
+                                columns: { longName: true },
+                            },
+                            winner: {
+                                columns: { longName: true },
+                            },
+                        },
+                    },
+                },
+            });
+            return [ipl ?? {}, ...rows] as CompletePred[];
+        });
+
     getAllPredictions = protectedProcedure
         .createServerAction()
         .handler(async ({ ctx: { db, session } }) => {
@@ -131,6 +209,44 @@ class PredictionService {
                 orderBy: (predictions, { desc }) => [
                     desc(predictions.matchNum),
                 ],
+            });
+            return rows as CompletePred[];
+        });
+
+    getAllIPLPredictions = protectedProcedure
+        .createServerAction()
+        .handler(async ({ ctx: { db, session }, input }) => {
+            const rows = await db.query.predictions.findMany({
+                where: (predictions, { eq, and, inArray }) =>
+                    and(
+                        eq(predictions.matchNum, 0),
+                        inArray(predictions.status, [
+                            "won",
+                            "lost",
+                            "no_result",
+                        ])
+                    ),
+                with: {
+                    user: {
+                        columns: shortProfile,
+                    },
+                    team: {
+                        columns: { longName: true },
+                    },
+                    match: {
+                        with: {
+                            team1: {
+                                columns: { longName: true },
+                            },
+                            team2: {
+                                columns: { longName: true },
+                            },
+                            winner: {
+                                columns: { longName: true },
+                            },
+                        },
+                    },
+                },
             });
             return rows as CompletePred[];
         });
@@ -438,6 +554,10 @@ class PredictionService {
                     (acc, r) => (r.status === "default" ? acc + r.amount : acc),
                     0
                 ) ?? 0;
+            const isDoubleWinner = !!preds?.find(
+                (p) => p.isDouble && p.teamName === input.winnerName
+            );
+
             preds?.forEach(async (pred: CompletePred) => {
                 const status =
                     pred.status !== "default" && totalWon > 0 && totalLost > 0
@@ -449,7 +569,10 @@ class PredictionService {
                     pred.status !== "default" &&
                     totalWon > 0 &&
                     totalLost > 0 &&
-                    pred.isDouble
+                    pred.isDouble &&
+                    (input.status === "abandoned" ||
+                        (input.status === "completed" &&
+                            pred.teamName === input.winnerName))
                         ? (pred.amount / totalWon) * totalLost + totalLost
                         : pred.status !== "default" &&
                             totalWon > 0 &&
@@ -457,7 +580,8 @@ class PredictionService {
                           ? (pred.amount / totalWon) * totalLost
                           : totalWon > 0 &&
                               totalLost > 0 &&
-                              input.isDoublePlayed
+                              input.isDoublePlayed &&
+                              (input.status === "abandoned" || isDoubleWinner)
                             ? pred.amount * -2
                             : totalWon > 0 && totalLost > 0
                               ? pred.amount * -1

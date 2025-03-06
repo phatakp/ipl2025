@@ -1,21 +1,33 @@
 import { ChevronRight } from "lucide-react";
 
-import { getAllPredictions } from "@/actions/prediction.actions";
+import {
+    getAllIPLPredictions,
+    getAllPredictions,
+} from "@/actions/prediction.actions";
 import { getAllUsers } from "@/actions/user.actions";
 import StatsTable from "@/components/features/shared/stats-table";
 import StatsTableProvider from "@/components/providers/stats-table.context";
 import { cn } from "@/lib/utils";
 
+import UserProfile from "./user-profile";
+
 export default async function PlayerStandings() {
     const [users] = await getAllUsers();
     const [preds] = await getAllPredictions();
+    const [iplPreds] = await getAllIPLPredictions();
 
     const data = users?.map((u, i) => {
-        const form = preds
-            ?.filter((p) => p.userId === u.userId)
+        let form = preds
+            ?.filter(
+                (p) =>
+                    p.userId === u.userId &&
+                    ["won", "lost", "no_result"].includes(p.status)
+            )
             .sort((a, b) => b.matchNum - a.matchNum)
-            .slice(0, 5)
-            .map((p) => p.status.charAt(0));
+            .slice(0, 5);
+        const ipl = iplPreds?.find((p) => p.userId === u.userId);
+        if (!!ipl?.id && !!form) form = [ipl, ...form];
+
         return {
             pos: i + 1,
             id: u.userId,
@@ -24,18 +36,23 @@ export default async function PlayerStandings() {
             name2: u.lastName ?? "",
             extra:
                 form && form.length > 0 ? (
-                    <div className="flex items-center gap-1 font-karla text-sm text-muted-foreground">
+                    <div
+                        key={u.userId}
+                        className="flex items-center gap-1 font-karla text-sm text-muted-foreground"
+                    >
                         <ChevronRight className="size-3" />
                         {form.map((f, i) => (
                             <span
                                 key={i}
                                 className={cn(
                                     "uppercase",
-                                    f === "w" && "text-success",
-                                    f === "l" && "text-destructive"
+                                    f.status === "won" && "text-success",
+                                    f.status === "lost" && "text-destructive"
                                 )}
                             >
-                                {["w", "l"].includes(f) ? f : "X"}
+                                {["won", "lost"].includes(f.status)
+                                    ? f.status.charAt(0)
+                                    : "X"}
                             </span>
                         ))}
                     </div>
@@ -43,7 +60,9 @@ export default async function PlayerStandings() {
             value: u.balance,
             title: `${u.firstName} ${u.lastName ?? ""}`,
             desc: "",
-            content: "Content",
+            content: (
+                <UserProfile key={u.userId} id={u.userId} userPreds={form} />
+            ),
         };
     });
 
