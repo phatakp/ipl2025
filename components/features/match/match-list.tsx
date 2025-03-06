@@ -37,7 +37,7 @@ export default function MatchList() {
                     )}
                 >
                     <AnimatedList>
-                        {fixtures.length === 0 && <div>No Matches yet.</div>}
+                        {fixtures.length === 0 && <Loader />}
                         {Object.entries(fMatches).map(([date, dMatches]) => (
                             <MatchListCard
                                 date={date}
@@ -64,7 +64,9 @@ export default function MatchList() {
                 >
                     <AnimatedList>
                         {results.length === 0 && (
-                            <div>No Completed Matches yet.</div>
+                            <div className="uppercase">
+                                No Completed Matches yet.
+                            </div>
                         )}
                         {Object.entries(rMatches).map(([date, dMatches]) => (
                             <MatchListCard
