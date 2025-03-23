@@ -93,8 +93,9 @@ export default function PredictionForm() {
                 queryKey: [QueryKeys.MATCH_PREDS, match.num],
             }),
             queryClient.invalidateQueries({
-                queryKey: [QueryKeys.MATCH_PREDS_STATS, match.num],
+                queryKey: [QueryKeys.MATCH_PREDS_STATSS, match.num],
             }),
+
             queryClient.invalidateQueries({
                 queryKey: [QueryKeys.CURR_USER],
             }),
