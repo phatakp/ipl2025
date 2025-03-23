@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useTransition } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQuery } from "@tanstack/react-query";
@@ -48,6 +49,7 @@ export default function ProfileForm({
 }: Props) {
     const router = useRouter();
     const { teams } = useTeamContext();
+    const [isPending, startTransition] = useTransition();
     const { setTheme } = useTheme();
     const { data, isLoading } = useQuery({
         queryKey: [QueryKeys.COMPLETED_MATCHES],
@@ -76,22 +78,26 @@ export default function ProfileForm({
 
     async function handleSubmit(values: z.infer<typeof formSchema>) {
         try {
-            let data, err;
-            if (action === "add") [data, err] = await createProfile(values);
-            else [data, err] = await updateProfile(values);
-            if (err) errorToast("Error", err.message);
-            if (data) {
-                let theme = teams.find((t) => t.shortName === data.teamName)
-                    ?.shortName as string;
-                theme = theme ? `dark-${theme}` : "dark";
-                setTheme(theme);
-                successToast("Profile Updated Successfully");
-                router.replace("/dashboard");
-            }
+            startTransition(async () => {
+                let data, err;
+                if (action === "add") [data, err] = await createProfile(values);
+                else [data, err] = await updateProfile(values);
+                if (err) errorToast("Error", err.message);
+                if (data) {
+                    let theme = teams.find((t) => t.shortName === data.teamName)
+                        ?.shortName as string;
+                    theme = theme ? `dark-${theme}` : "dark";
+                    setTheme(theme);
+                    successToast("Profile Updated Successfully");
+                    router.replace("/dashboard");
+                }
+            });
         } catch (err) {
             errorToast("Error", JSON.stringify(err, null, 2));
         }
     }
+
+    if (isPending) return <Loader />;
 
     return (
         <Form {...form}>

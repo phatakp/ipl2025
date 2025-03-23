@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useTransition } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
@@ -43,6 +44,7 @@ const formSchema = z.object({
 export default function PredictionForm() {
     const router = useRouter();
     const queryClient = useQueryClient();
+    const [isPending, startTransition] = useTransition();
     const { modalId, closeModal } = useModal();
     const { match, pred } = useMatchContext();
     const { data, isLoading } = useQuery({
@@ -91,6 +93,9 @@ export default function PredictionForm() {
                 queryKey: [QueryKeys.MATCH_PREDS, match.num],
             }),
             queryClient.invalidateQueries({
+                queryKey: [QueryKeys.MATCH_PREDS_STATS, match.num],
+            }),
+            queryClient.invalidateQueries({
                 queryKey: [QueryKeys.CURR_USER],
             }),
         ]);
@@ -113,13 +118,19 @@ export default function PredictionForm() {
                 return;
             }
             if (isNewPredAllowed) {
-                const [data, err] = await updatePrediction({
-                    ...values,
-                    matchNum: match.num,
-                    id: pred.id,
-                });
-                if (err) errorToast("Error", err.message);
-                else if (data) onSuccess("update");
+                try {
+                    startTransition(async () => {
+                        const [data, err] = await updatePrediction({
+                            ...values,
+                            matchNum: match.num,
+                            id: pred.id,
+                        });
+                        if (err) errorToast("Error", err.message);
+                        else if (data) onSuccess("update");
+                    });
+                } catch (error) {
+                    errorToast("Error", String(error));
+                }
             } else if (isPredUpdAllowed) {
                 if (
                     pred.teamName !== values.teamName &&
@@ -140,13 +151,19 @@ export default function PredictionForm() {
                 } else if (values.isDouble) {
                     errorToast("Double", `Operation not allowed`);
                 } else {
-                    const [data, err] = await updatePrediction({
-                        ...values,
-                        matchNum: match.num,
-                        id: pred.id,
-                    });
-                    if (err) errorToast("Error", err.message);
-                    else if (data) onSuccess("update");
+                    try {
+                        startTransition(async () => {
+                            const [data, err] = await updatePrediction({
+                                ...values,
+                                matchNum: match.num,
+                                id: pred.id,
+                            });
+                            if (err) errorToast("Error", err.message);
+                            else if (data) onSuccess("update");
+                        });
+                    } catch (error) {
+                        errorToast("Error", String(error));
+                    }
                 }
             } else {
                 if (values.isDouble && !isDoubleAllowed) {
@@ -156,13 +173,19 @@ export default function PredictionForm() {
                 } else if (!values.isDouble && pred.isDouble) {
                     errorToast("Error", `Cannot remove an applied double`);
                 } else if (values.isDouble) {
-                    const [data, err] = await playDoublePrediction({
-                        matchNum: match.num,
-                        id: pred.id,
-                        amount: pred.amount,
-                    });
-                    if (err) errorToast("Error", err.message);
-                    else if (data) onSuccess("update");
+                    try {
+                        startTransition(async () => {
+                            const [data, err] = await playDoublePrediction({
+                                matchNum: match.num,
+                                id: pred.id,
+                                amount: pred.amount,
+                            });
+                            if (err) errorToast("Error", err.message);
+                            else if (data) onSuccess("update");
+                        });
+                    } catch (error) {
+                        errorToast("Error", String(error));
+                    }
                 }
             }
         } else {
@@ -170,17 +193,25 @@ export default function PredictionForm() {
             if (values.isDouble) {
                 errorToast("Double", `Operation not allowed`);
             } else if (isNewPredAllowed) {
-                const [data, err] = await createPrediction({
-                    ...values,
-                    matchNum: match.num,
-                });
-                if (err) errorToast("Error", err.message);
-                else if (data) onSuccess("create");
+                try {
+                    startTransition(async () => {
+                        const [data, err] = await createPrediction({
+                            ...values,
+                            matchNum: match.num,
+                        });
+                        if (err) errorToast("Error", err.message);
+                        else if (data) onSuccess("create");
+                    });
+                } catch (error) {
+                    errorToast("Error", String(error));
+                }
             } else {
                 errorToast("Prediction", `Operation cutoff passed`);
             }
         }
     }
+
+    if (isPending) return <Loader />;
 
     return (
         <Form {...form}>

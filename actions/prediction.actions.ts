@@ -19,6 +19,14 @@ export const getMatchPredictions = async (
     values: z.infer<typeof matchNumSchema>
 ) => await predictionService.getMatchPredictions(values);
 
+export const getScheduledPredictionStats = async (
+    values: z.infer<typeof matchNumSchema>
+) => await predictionService.getScheduledPredictionStats(values);
+
+export const getCompletedPredictionStats = async (
+    values: z.infer<typeof matchNumSchema>
+) => await predictionService.getCompletedPredictionStats(values);
+
 export const getUserPredictions = async () =>
     await predictionService.getUserPredictions();
 

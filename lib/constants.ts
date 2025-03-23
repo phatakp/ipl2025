@@ -9,6 +9,8 @@ export const QueryKeys = {
     CURR_USER: "curr_user",
     USER_PRED: "user_pred",
     MATCH_PREDS: "match_preds",
+    MATCH_PREDS_STATSS: "match_pred_statss",
+    MATCH_PREDS_STATSC: "match_pred_statsc",
     COMPLETED_MATCHES: "completed_matches",
     COMPLETED_MATCH_PREDS: "completed_match_preds",
     MATCH_STATS: "match_stats",

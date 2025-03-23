@@ -130,7 +130,7 @@ export default function StatsTable({ title, action }: Props) {
                                 </CardTitle>
                                 {top.extra}
                                 <span className="mt-4 text-4xl">
-                                    {Math.floor(top.value)}
+                                    {top.value.toFixed()}
                                 </span>
                             </div>
                         </CardHeader>
@@ -211,7 +211,7 @@ export default function StatsTable({ title, action }: Props) {
                                                         "text-success"
                                                 )}
                                             >
-                                                {Math.floor(item.value)}
+                                                {item.value.toFixed()}
                                             </span>
                                         </div>
                                     </ModalTrigger>

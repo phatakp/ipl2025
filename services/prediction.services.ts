@@ -60,6 +60,38 @@ class PredictionService {
             return rows as CompletePred[];
         });
 
+    getScheduledPredictionStats = protectedProcedure
+        .createServerAction()
+        .input(matchNumSchema)
+        .handler(async ({ ctx: { db }, input: { num } }) => {
+            return await db
+                .select({
+                    team: predictions.teamName,
+                    count: sql<number>`cast(count(${predictions.teamName}) as int)`,
+                    amount: sql`sum(${predictions.amount})`.mapWith(Number),
+                })
+                .from(predictions)
+                .where(eq(predictions.matchNum, num))
+                .groupBy(predictions.teamName);
+        });
+
+    getCompletedPredictionStats = protectedProcedure
+        .createServerAction()
+        .input(matchNumSchema)
+        .handler(async ({ ctx: { db }, input: { num } }) => {
+            return await db
+                .select({
+                    status: predictions.status,
+                    count: sql<number>`cast(count(${predictions.teamName}) as int)`,
+                    resultAmt: sql`sum(${predictions.resultAmt})`.mapWith(
+                        Number
+                    ),
+                })
+                .from(predictions)
+                .where(eq(predictions.matchNum, num))
+                .groupBy(predictions.status);
+        });
+
     getUserPredictions = protectedProcedure
         .createServerAction()
         .handler(async ({ ctx: { db, session } }) => {

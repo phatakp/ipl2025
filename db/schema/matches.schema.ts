@@ -90,6 +90,7 @@ export const matchParams = baseSchema.extend({
     isDoublePlayed: z.boolean().optional(),
 });
 export const matchNumSchema = baseSchema.pick({ num: true });
+export const matchStatsSchema = baseSchema.pick({ num: true, status: true });
 export const matchDefaultSchema = baseSchema.pick({
     num: true,
     minStake: true,

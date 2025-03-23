@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useTransition } from "react";
 
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { format } from "date-fns";
@@ -49,6 +49,7 @@ export default function MatchModal({ children, match }: Props) {
     });
     const router = useRouter();
     const queryClient = useQueryClient();
+    const [isPending, startTransition] = useTransition();
     const istDate = getISTDate(match.date);
     const doubleCutoff = getISTDate(match.date, 60);
     const currISTTime = getCurrentISTDate();
@@ -57,19 +58,28 @@ export default function MatchModal({ children, match }: Props) {
     const user = data?.[0];
 
     async function handleReverse() {
-        const [data, err] = await reverseMatch({
-            ...match,
-            winnerName: match.winnerName ? match.winnerName : undefined,
-            resultType: match.resultType ? match.resultType : undefined,
-            resultMargin: match.resultMargin ? match.resultMargin : 0,
-        });
-        if (err) errorToast("Error", err.message);
-        else {
-            await queryClient.invalidateQueries();
-            router.refresh();
-            successToast("Match reversed successfully");
+        try {
+            startTransition(async () => {
+                const [data, err] = await reverseMatch({
+                    ...match,
+                    winnerName: match.winnerName ? match.winnerName : undefined,
+                    resultType: match.resultType ? match.resultType : undefined,
+                    resultMargin: match.resultMargin ? match.resultMargin : 0,
+                });
+                if (err) errorToast("Error", err.message);
+                else {
+                    await queryClient.invalidateQueries();
+                    router.refresh();
+                    successToast("Match reversed successfully");
+                }
+            });
+        } catch (error) {
+            errorToast("Error", JSON.stringify(error, null, 2));
         }
     }
+
+    if (isPending) return <Loader />;
+
     return (
         <MatchProvider match={match}>
             <Modal id={`match-modal-${match.num}`}>
