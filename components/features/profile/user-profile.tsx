@@ -146,9 +146,9 @@ export default function UserProfile({ id, userPreds }: Props) {
                                     key={f.id}
                                 >
                                     <span>
-                                        {f.match.team1Name ?? "IPL"}{" "}
-                                        {f.match.team1Name ? " v " : ""}
-                                        {f.match.team2Name ?? "Winner"}
+                                        {f.match?.team1Name ?? "IPL"}{" "}
+                                        {f.match?.team1Name ? " v " : ""}
+                                        {f.match?.team2Name ?? "Winner"}
                                     </span>
                                     <span className="text-muted-foreground">
                                         ({f.teamName ?? "DEFAULT"})

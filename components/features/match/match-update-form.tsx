@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useTransition } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient } from "@tanstack/react-query";
@@ -93,6 +94,7 @@ const resultOptions = MATCH_RESULT_TYPE.map((s) => ({
 export default function MatchUpdateForm({ match }: Props) {
     const router = useRouter();
     const queryClient = useQueryClient();
+    const [isPending, startTransition] = useTransition();
     const { modalId, closeModal } = useModal();
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -133,21 +135,30 @@ export default function MatchUpdateForm({ match }: Props) {
                         (values.team2Runs ?? 0) - (values.team1Runs ?? 0);
                 else resultMargin = 10 - (values.team2Wickets ?? 0);
         }
+        try {
+            startTransition(async () => {
+                const [data, err] = await updateMatch({
+                    ...match,
+                    ...values,
+                    winnerName: values.winnerName
+                        ? values.winnerName
+                        : undefined,
+                    status: values.status ? values.status : undefined,
+                    resultType: values.resultType
+                        ? values.resultType
+                        : undefined,
+                    resultMargin,
+                });
 
-        const [data, err] = await updateMatch({
-            ...match,
-            ...values,
-            winnerName: values.winnerName ? values.winnerName : undefined,
-            status: values.status ? values.status : undefined,
-            resultType: values.resultType ? values.resultType : undefined,
-            resultMargin,
-        });
-
-        if (err) errorToast("Error", err.message);
-        else if (data) onSuccess();
+                if (err) errorToast("Error", err.message);
+                else if (data) onSuccess();
+            });
+        } catch (error) {
+            errorToast("Error", String(error));
+        }
     }
 
-    if (form.formState.isSubmitting) return <Loader />;
+    if (isPending) return <Loader />;
 
     return (
         <Form {...form}>
@@ -223,12 +234,8 @@ export default function MatchUpdateForm({ match }: Props) {
                     placeholder="Select Result Type"
                 />
 
-                <Button
-                    type="submit"
-                    className="uppercase"
-                    disabled={form.formState.isSubmitting}
-                >
-                    {form.formState.isSubmitting ? "Please wait..." : "Submit"}
+                <Button type="submit" className="uppercase">
+                    Submit
                 </Button>
             </form>
         </Form>

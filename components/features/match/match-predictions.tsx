@@ -114,7 +114,6 @@ export default function MatchPredictions({ match }: Props) {
             </div>
         );
 
-    console.log(stats);
     const t1Count = stats?.find((s) => s.team === match.team1Name)?.count ?? 0;
     const t2Count = stats?.find((s) => s.team === match.team2Name)?.count ?? 0;
     const t1Amount =
@@ -158,7 +157,7 @@ export default function MatchPredictions({ match }: Props) {
                                 Rs.
                                 {match.status === "scheduled"
                                     ? t1Amount
-                                    : t1Result}
+                                    : t1Result.toFixed()}
                                 /-
                             </span>
                             {match.status === "scheduled" && (
@@ -182,7 +181,7 @@ export default function MatchPredictions({ match }: Props) {
                                 Rs.
                                 {match.status === "scheduled"
                                     ? t2Amount
-                                    : t2Result}
+                                    : t2Result.toFixed()}
                                 /-
                             </span>
                             {match.status === "scheduled" && (
