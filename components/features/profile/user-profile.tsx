@@ -169,7 +169,7 @@ export default function UserProfile({ id, userPreds }: Props) {
                                                 : "text-success"
                                         )}
                                     >
-                                        {f.status} {f.resultAmt.toFixed()}
+                                        {f.status} {f.resultAmt?.toFixed()}
                                     </span>
                                 </div>
                             ))}
