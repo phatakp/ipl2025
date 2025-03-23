@@ -32,14 +32,14 @@ export default async function DashboardPage() {
                         <PageActions>
                             <div className="flex items-center gap-2">
                                 <Badge className="w-full justify-center gap-2">
-                                    <span className="mr-2 hidden text-lg font-extralight md:flex">
+                                    <span className="mr-2 text-lg font-extralight">
                                         #{rank}
                                     </span>
-                                    <span className="hidden font-karla text-muted-foreground md:flex">
+                                    <span className="font-karla text-muted-foreground">
                                         |
                                     </span>
 
-                                    <span className="font-extralight uppercase">
+                                    <span className="truncate font-extralight uppercase">
                                         {user?.firstName} {user?.lastName}
                                     </span>
                                 </Badge>
