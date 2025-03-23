@@ -416,8 +416,6 @@ class PredictionService {
         .handler(async ({ ctx: { db, session }, input }) => {
             const newPredCutoff = getISTDate(input.date, -30);
             const currentISTTime = getCurrentISTDate();
-            console.log("pred", newPredCutoff);
-            console.log("curr", currentISTTime);
 
             if (currentISTTime >= newPredCutoff) {
                 const sq = db
@@ -468,12 +466,12 @@ class PredictionService {
         .createServerAction()
         .input(predDoubleSchema)
         .handler(async ({ ctx: { db, session }, input }) => {
-            const [maxAmt] = await this.getMaxPredictionForMatch({
-                num: input.matchNum,
-            });
-            let amt = input.amount * 2;
-            if ((maxAmt ?? 0) > amt) amt = (maxAmt ?? 0) + 10;
             return await db.transaction(async (tx) => {
+                const [maxAmt] = await this.getMaxPredictionForMatch({
+                    num: input.matchNum,
+                });
+                let amt = input.amount * 2;
+                if ((maxAmt ?? 0) > amt) amt = (maxAmt ?? 0) + 10;
                 await tx
                     .update(matches)
                     .set({ isDoublePlayed: true })
