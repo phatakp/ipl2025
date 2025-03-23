@@ -16,6 +16,7 @@ import { Form } from "@/components/ui/form";
 import { MATCH_RESULT_TYPE, MATCH_STATUS, TEAMS } from "@/lib/constants";
 import { errorToast, successToast } from "@/lib/utils";
 
+import Loader from "../shared/loader";
 import { useModal } from "../shared/modal";
 
 type Props = {
@@ -145,6 +146,8 @@ export default function MatchUpdateForm({ match }: Props) {
         if (err) errorToast("Error", err.message);
         else if (data) onSuccess();
     }
+
+    if (form.formState.isSubmitting) return <Loader />;
 
     return (
         <Form {...form}>

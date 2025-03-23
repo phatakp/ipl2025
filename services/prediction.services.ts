@@ -435,12 +435,15 @@ class PredictionService {
                     .where(isNull(sq.id));
 
                 players?.forEach(async (p) => {
-                    await db.insert(predictions).values({
-                        matchNum: input.num,
-                        userId: p.profile.userId,
-                        amount: input.minStake,
-                        status: "default",
-                    });
+                    await db
+                        .insert(predictions)
+                        .values({
+                            matchNum: input.num,
+                            userId: p.profile.userId,
+                            amount: input.minStake,
+                            status: "default",
+                        })
+                        .onConflictDoNothing();
                 });
             }
         });
