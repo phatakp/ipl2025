@@ -49,7 +49,6 @@ export default function MatchPredictions({ match }: Props) {
     const statsC = matchPredStatsC?.[0];
     const currentISTTime = getCurrentISTDate();
     const newPredCutoff = getISTDate(match.date, -30);
-    const doubleCutoff = getISTDate(match.date, 60);
 
     const data = preds
         ?.filter(

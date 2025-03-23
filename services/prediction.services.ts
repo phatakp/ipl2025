@@ -201,7 +201,8 @@ class PredictionService {
                     },
                 },
             });
-            return [ipl ?? {}, ...rows] as CompletePred[];
+            if (!!ipl) return [ipl, ...rows] as CompletePred[];
+            else return rows as CompletePred[];
         });
 
     getAllPredictions = protectedProcedure
