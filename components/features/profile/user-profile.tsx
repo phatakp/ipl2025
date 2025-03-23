@@ -164,12 +164,12 @@ export default function UserProfile({ id, userPreds }: Props) {
                                     <span
                                         className={cn(
                                             "flex-1 text-right",
-                                            f.resultAmt < 0
+                                            !!f.resultAmt && f.resultAmt < 0
                                                 ? "text-destructive"
                                                 : "text-success"
                                         )}
                                     >
-                                        {f.status} {f.resultAmt?.toFixed()}
+                                        {f.status} {f.resultAmt?.toFixed() ?? 0}
                                     </span>
                                 </div>
                             ))}
