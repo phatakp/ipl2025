@@ -3,6 +3,7 @@ export const PAGE_SIZE = 5;
 export const QueryKeys = {
     ALL_USERS: "all_users",
     USER: "user",
+    MATCH: "match",
     ALL_TEAMS: "all_teams",
     ALL_FIXTURES: "all_fixtures",
     ALL_RESULTS: "all_results",

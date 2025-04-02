@@ -1,4 +1,5 @@
 import { and, eq, inArray, isNull, max, min, ne, sql } from "drizzle-orm";
+import { ZSAError } from "zsa";
 
 import { CompletePred, Pred } from "@/app/types";
 import {
@@ -324,15 +325,22 @@ class PredictionService {
         .input(matchNumSchema)
         .handler(async ({ ctx: { db, session }, input: { num } }) => {
             const [row] = await db
-                .select({ maxAmt: max(predictions.amount) })
+                .select({
+                    maxAmt: max(predictions.amount),
+                    isDoublePlayed: matches.isDoublePlayed,
+                })
                 .from(predictions)
+                .innerJoin(matches, eq(matches.num, predictions.matchNum))
                 .where(
                     and(
                         eq(predictions.matchNum, num),
                         eq(predictions.status, "placed")
                     )
                 );
-            return row.maxAmt ?? 0;
+            return {
+                maxAmt: row.maxAmt ?? 0,
+                isDoublePlayed: row.isDoublePlayed,
+            };
         });
 
     getMaxWonAmount = protectedProcedure
@@ -471,11 +479,19 @@ class PredictionService {
         .input(predDoubleSchema)
         .handler(async ({ ctx: { db, session }, input }) => {
             return await db.transaction(async (tx) => {
-                const [maxAmt] = await this.getMaxPredictionForMatch({
+                const [data] = await this.getMaxPredictionForMatch({
                     num: input.matchNum,
                 });
+                console.log(data);
+
+                if (!!data?.isDoublePlayed)
+                    throw new ZSAError(
+                        "FORBIDDEN",
+                        "Double already played for match"
+                    );
+
                 let amt = input.amount * 2;
-                if ((maxAmt ?? 0) > amt) amt = (maxAmt ?? 0) + 10;
+                if ((data?.maxAmt ?? 0) > amt) amt = (data?.maxAmt ?? 0) + 10;
                 await tx
                     .update(matches)
                     .set({ isDoublePlayed: true })

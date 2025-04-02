@@ -10,6 +10,7 @@ import { useForm, useFormContext } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
+import { getMatchByNum } from "@/actions/match.actions";
 import {
     createPrediction,
     playDoublePrediction,
@@ -46,14 +47,29 @@ export default function PredictionForm() {
     const queryClient = useQueryClient();
     const [isPending, startTransition] = useTransition();
     const { modalId, closeModal } = useModal();
-    const { match, pred } = useMatchContext();
+    const { match: mtch, pred } = useMatchContext();
     const { data, isLoading } = useQuery({
         queryKey: [QueryKeys.CURR_USER],
         queryFn: getCurrUser,
     });
+    const { data: mData, isLoading: isMatchLoading } = useQuery({
+        queryKey: [QueryKeys.MATCH, mtch.num],
+        queryFn: async () => await getMatchByNum({ num: mtch.num }),
+    });
     const currUser = data?.[0];
-    if (isLoading) return <Loader />;
-    if (!currUser) return;
+    const match = mData?.[0];
+    const form = useForm<z.infer<typeof formSchema>>({
+        resolver: zodResolver(formSchema),
+        mode: "onBlur",
+        defaultValues: {
+            teamName: pred?.teamName,
+            isDouble: pred?.isDouble ?? false,
+            amount: pred?.amount ?? mtch.minStake,
+        },
+    });
+    if (isLoading || isMatchLoading) return <Loader />;
+    if (!currUser || !match) return;
+
     const istMatchDate = getISTDate(match.date);
     const doubleCutoff = getISTDate(match.date, 60);
     const newPredCutoff = getISTDate(match.date, -30);
@@ -72,28 +88,21 @@ export default function PredictionForm() {
         currUser.isPaid &&
         ((!pred && isNewPredAllowed) || (pred && isPredUpdAllowed));
 
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
-        mode: "onBlur",
-        defaultValues: {
-            teamName: pred?.teamName,
-            isDouble: pred?.isDouble ?? false,
-            amount: pred?.amount ?? match.minStake,
-        },
-    });
-
     const { teamName, amount } = form.watch();
 
     async function onSuccess(action: "create" | "update") {
         await Promise.all([
             queryClient.invalidateQueries({
+                queryKey: [QueryKeys.MATCH, mtch.num],
+            }),
+            queryClient.invalidateQueries({
                 queryKey: [QueryKeys.USER_PRED],
             }),
             queryClient.invalidateQueries({
-                queryKey: [QueryKeys.MATCH_PREDS, match.num],
+                queryKey: [QueryKeys.MATCH_PREDS, mtch.num],
             }),
             queryClient.invalidateQueries({
-                queryKey: [QueryKeys.MATCH_PREDS_STATSS, match.num],
+                queryKey: [QueryKeys.MATCH_PREDS_STATSS, mtch.num],
             }),
 
             queryClient.invalidateQueries({
@@ -123,7 +132,7 @@ export default function PredictionForm() {
                     startTransition(async () => {
                         const [data, err] = await updatePrediction({
                             ...values,
-                            matchNum: match.num,
+                            matchNum: mtch.num,
                             id: pred.id,
                         });
                         if (err) errorToast("Error", err.message);
@@ -156,7 +165,7 @@ export default function PredictionForm() {
                         startTransition(async () => {
                             const [data, err] = await updatePrediction({
                                 ...values,
-                                matchNum: match.num,
+                                matchNum: mtch.num,
                                 id: pred.id,
                             });
                             if (err) errorToast("Error", err.message);
@@ -169,7 +178,7 @@ export default function PredictionForm() {
             } else {
                 if (values.isDouble && !isDoubleAllowed) {
                     errorToast("Double", `Operation not allowed`);
-                } else if (values.isDouble && match.isDoublePlayed) {
+                } else if (values.isDouble && match?.isDoublePlayed) {
                     errorToast("Double", `Already exists for match`);
                 } else if (!values.isDouble && pred.isDouble) {
                     errorToast("Error", `Cannot remove an applied double`);
@@ -177,7 +186,7 @@ export default function PredictionForm() {
                     try {
                         startTransition(async () => {
                             const [data, err] = await playDoublePrediction({
-                                matchNum: match.num,
+                                matchNum: mtch.num,
                                 id: pred.id,
                                 amount: pred.amount,
                             });
@@ -198,7 +207,7 @@ export default function PredictionForm() {
                     startTransition(async () => {
                         const [data, err] = await createPrediction({
                             ...values,
-                            matchNum: match.num,
+                            matchNum: mtch.num,
                         });
                         if (err) errorToast("Error", err.message);
                         else if (data) onSuccess("create");
