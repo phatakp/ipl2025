@@ -24,6 +24,7 @@ import { useMatchContext } from "@/components/providers/match.context";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
+import { Skeleton } from "@/components/ui/skeleton";
 import { QueryKeys, TEAMS } from "@/lib/constants";
 import {
     cn,
@@ -33,7 +34,6 @@ import {
     successToast,
 } from "@/lib/utils";
 
-import Loader from "../shared/loader";
 import { useModal } from "../shared/modal";
 
 const formSchema = z.object({
@@ -67,7 +67,7 @@ export default function PredictionForm() {
             amount: pred?.amount ?? mtch.minStake,
         },
     });
-    if (isLoading || isMatchLoading) return <Loader />;
+    const isNotReady = isLoading || isMatchLoading || isPending;
     if (!currUser || !match) return;
 
     const istMatchDate = getISTDate(match.date);
@@ -221,8 +221,6 @@ export default function PredictionForm() {
         }
     }
 
-    if (isPending) return <Loader />;
-
     return (
         <Form {...form}>
             <form
@@ -253,43 +251,63 @@ export default function PredictionForm() {
                                 ? "Prediction cutoff passed"
                                 : "No Predictions yet"}
                 </Badge>
-                <div className="flex flex-nowrap items-center justify-center gap-4">
-                    <PredTeamButton
-                        matchTeam={match.team1Name}
+                {isNotReady ? (
+                    <div className="flex flex-nowrap items-center justify-center gap-4">
+                        <Skeleton className="size-24 rounded-md" />
+                        <Skeleton className="size-24 rounded-md" />
+                    </div>
+                ) : (
+                    <div className="flex flex-nowrap items-center justify-center gap-4">
+                        <PredTeamButton
+                            matchTeam={match.team1Name}
+                            disabled={!isPredAllowed}
+                        />
+                        <PredTeamButton
+                            matchTeam={match.team2Name}
+                            disabled={!isPredAllowed}
+                        />
+                    </div>
+                )}
+
+                {isNotReady ? (
+                    <Skeleton className="h-9 w-full rounded-md" />
+                ) : (
+                    <AmountInput<z.infer<typeof formSchema>>
+                        label="Amount"
+                        name="amount"
+                        min={match.minStake}
+                        step={10}
+                        onIncrement={() => form.setValue("amount", amount + 10)}
+                        onDecrement={() => form.setValue("amount", amount - 10)}
                         disabled={!isPredAllowed}
                     />
-                    <PredTeamButton
-                        matchTeam={match.team2Name}
-                        disabled={!isPredAllowed}
-                    />
-                </div>
+                )}
 
-                <AmountInput<z.infer<typeof formSchema>>
-                    label="Amount"
-                    name="amount"
-                    min={match.minStake}
-                    step={10}
-                    onIncrement={() => form.setValue("amount", amount + 10)}
-                    onDecrement={() => form.setValue("amount", amount - 10)}
-                    disabled={!isPredAllowed}
-                />
-
-                {!!pred && match.type === "league" && (
+                {!isNotReady && !!pred && match.type === "league" ? (
                     <CheckboxInput
                         name="isDouble"
                         label="Play double"
                         desc="You win or lose double the amount!"
                         disabled={!isDoubleAllowed || match.isDoublePlayed}
                     />
-                )}
+                ) : isNotReady ? (
+                    <div className="flex flex-row items-start space-x-3 space-y-0 py-4">
+                        <Skeleton className="h-4 w-4 shrink-0 rounded-sm" />
+                        <Skeleton className="h-12 w-full" />
+                    </div>
+                ) : undefined}
 
                 <div className="flex w-full">
-                    <Button
-                        className="w-full uppercase"
-                        disabled={!isPredAllowed && !isDoubleAllowed}
-                    >
-                        Submit
-                    </Button>
+                    {isNotReady ? (
+                        <Skeleton className="h-10 w-full px-4 py-2" />
+                    ) : (
+                        <Button
+                            className="w-full uppercase"
+                            disabled={!isPredAllowed && !isDoubleAllowed}
+                        >
+                            Submit
+                        </Button>
+                    )}
                 </div>
             </form>
         </Form>

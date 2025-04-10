@@ -15,12 +15,12 @@ import StatsTable from "@/components/features/shared/stats-table";
 import StatsTableProvider from "@/components/providers/stats-table.context";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { QueryKeys } from "@/lib/constants";
 import { cn, getCurrentISTDate, getISTDate } from "@/lib/utils";
 
 import PredictionButton from "../prediction/prediction-add-btn";
 import UserProfile from "../profile/user-profile";
-import Loader from "../shared/loader";
 
 type Props = {
     match: MatchWithTeams;
@@ -43,12 +43,25 @@ export default function MatchPredictions({ match }: Props) {
     });
 
     const { userId } = useAuth();
-    if (isLoading || isStatsLoading || isStatsCLoading) return <Loader />;
+    const isNotReady = isLoading || isStatsLoading || isStatsCLoading;
     const preds = matchPreds?.[0];
     const stats = matchPredStats?.[0];
     const statsC = matchPredStatsC?.[0];
     const currentISTTime = getCurrentISTDate();
     const newPredCutoff = getISTDate(match.date, -30);
+
+    if (isNotReady)
+        return (
+            <div className="flex w-full flex-col items-center gap-8">
+                <Skeleton className="h-10 w-20 px-4 py-2" />
+                <Skeleton className="flex w-full max-w-[350px] flex-col gap-8 rounded-none rounded-t-lg md:w-[400px]">
+                    <Skeleton className="h-10 w-full px-4 py-2" />
+                    <Skeleton className="h-10 w-full px-4 py-2" />
+                    <Skeleton className="h-10 w-full px-4 py-2" />
+                    <Skeleton className="h-10 w-full px-4 py-2" />
+                </Skeleton>
+            </div>
+        );
 
     const data = preds
         ?.filter(
