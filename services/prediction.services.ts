@@ -338,7 +338,7 @@ class PredictionService {
                     )
                 );
             return {
-                maxAmt: row.maxAmt ?? 0,
+                maxAmt: row.maxAmt,
                 isDoublePlayed: row.isDoublePlayed,
             };
         });
@@ -490,7 +490,8 @@ class PredictionService {
                     );
 
                 let amt = input.amount * 2;
-                if ((data?.maxAmt ?? 0) >= amt) amt = (data?.maxAmt ?? 0) + 10;
+                if ((data?.maxAmt as number) >= amt)
+                    amt = (data?.maxAmt as number) + 10;
                 await tx
                     .update(matches)
                     .set({ isDoublePlayed: true })
