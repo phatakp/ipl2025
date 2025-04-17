@@ -10,13 +10,15 @@ import {
 import { publicProcedure } from "@/lib/zsa";
 
 class TeamService {
-    getAllTeams = publicProcedure.createServerAction().handler(async () => {
-        const rows = await db
-            .select()
-            .from(teams)
-            .orderBy(desc(teams.points), desc(teams.nrr));
-        return rows as Team[];
-    });
+    getAllTeams = publicProcedure
+        .createServerAction()
+        .handler(async ({ ctx: { db } }) => {
+            const rows = await db
+                .select()
+                .from(teams)
+                .orderBy(desc(teams.points), desc(teams.nrr));
+            return rows as Team[];
+        });
 
     getTeamByName = publicProcedure
         .createServerAction()
