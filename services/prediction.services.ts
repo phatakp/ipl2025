@@ -324,22 +324,25 @@ class PredictionService {
         .createServerAction()
         .input(matchNumSchema)
         .handler(async ({ ctx: { db, session }, input: { num } }) => {
-            const [row] = await db
+            const [pred] = await db
                 .select({
                     maxAmt: max(predictions.amount),
-                    isDoublePlayed: matches.isDoublePlayed,
                 })
                 .from(predictions)
-                .innerJoin(matches, eq(matches.num, predictions.matchNum))
-                .where(
-                    and(
-                        eq(predictions.matchNum, num),
-                        eq(predictions.status, "placed")
-                    )
-                );
+                .where(eq(predictions.matchNum, num));
+            const [row] = await db
+                .select({
+                    isDoublePlayed: matches.isDoublePlayed,
+                    date: matches.date,
+                    minStake: matches.minStake,
+                })
+                .from(matches)
+                .where(eq(matches.num, num));
+
             return {
-                maxAmt: row.maxAmt,
+                maxAmt: pred.maxAmt ?? row.minStake,
                 isDoublePlayed: row.isDoublePlayed,
+                date: row.date,
             };
         });
 
@@ -482,16 +485,29 @@ class PredictionService {
                 const [data] = await this.getMaxPredictionForMatch({
                     num: input.matchNum,
                 });
+                if (!data)
+                    throw new ZSAError("ERROR", "Could not get match details");
 
-                if (!!data?.isDoublePlayed)
+                const matchStart = getISTDate(data.date);
+                const doubleCutoff = getISTDate(data.date, 60);
+                const currentISTTime = getCurrentISTDate();
+
+                if (
+                    currentISTTime < matchStart ||
+                    currentISTTime > doubleCutoff
+                )
+                    throw new ZSAError(
+                        "FORBIDDEN",
+                        "Double cannot be played at this moment"
+                    );
+                if (!!data.isDoublePlayed)
                     throw new ZSAError(
                         "FORBIDDEN",
                         "Double already played for match"
                     );
 
                 let amt = input.amount * 2;
-                if ((data?.maxAmt as number) >= amt)
-                    amt = (data?.maxAmt as number) + 10;
+                if (amt <= data.maxAmt) amt = data.maxAmt + 10;
                 await tx
                     .update(matches)
                     .set({ isDoublePlayed: true })
